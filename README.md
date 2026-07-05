@@ -7,6 +7,11 @@ Takım 126
 
 - **Product Owner & Developer:** Burak Baygün
 - **Scrum Master & Developer:** Büşra Demir
+- **Developer:** Asil Doğukan Samay, Ece Toygun, Nuri Duldar
+
+Not: Sprint 1 kapsamındaki geliştirmeler (fikir, agent mimarisi, dosya yükleme, düzenlemeler) Burak ve Büşra tarafından yürütülmüştür. Diğer takım üyeleri resmi
+olarak takımda yer almaktadır; ekip içi görev dağılımı ilerleyen sprintlerde
+katılımlarına göre netleştirilecektir.
   
 
 ## Ürün İsmi
