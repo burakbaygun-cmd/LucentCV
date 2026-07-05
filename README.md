@@ -25,6 +25,12 @@ ikisi arasındaki uyumu değerlendiren bir yapay zeka uygulamasıdır. Tek bir p
    sorumlulukları çıkarır.
 3. **Matcher Agent** — İlk iki agent'ın çıktısını karşılaştırarak bir uyum skoru, eksik
    kalan noktaları ve CV'yi güçlendirmek için somut öneriler üretir.
+4. **Interview Generator Agent** — CV analizi, ilan analizi ve uyum değerlendirmesine göre
+   adaya özel 5 mülakat sorusu üretir (güçlü noktalar, eksik beceriler, senaryo ve
+   deneyim soruları karışık şekilde).
+5. **Interview Evaluator Agent** — Kullanıcının mülakat sorularına verdiği cevapları
+   değerlendirir; soru bazlı puan, genel skor, güçlü yönler ve geliştirilmesi gereken
+   alanlar üretir.
 
 Uygulama ayrıca basit bir **hafıza (memory) katmanı** içerir: kullanıcının geçmişte yaptığı
 analizler yerel bir JSON dosyasında saklanır ve tekrar görüntülenebilir, böylece zaman
@@ -32,8 +38,11 @@ içindeki gelişim takip edilebilir.
 
 ## Ürün Özellikleri
 - CV ve ilan metni girişi (metin kutusu, dosya yükleme gerekmez — MVP için hızlı)
-- 3 agent'lı orkestrasyon (CV Analyzer → Job Analyzer → Matcher)
+- 5 agent'lı orkestrasyon (CV Analyzer → Job Analyzer → Matcher → Interview
+  Generator → Interview Evaluator)
 - Uyum skoru (0-100), eksik beceri/anahtar kelime listesi, somut iyileştirme önerileri
+- **Akıllı Mülakat Simülasyonu**: CV ve ilana özel üretilen 5 mülakat sorusu, kullanıcının
+  cevaplarının AI tarafından değerlendirilmesi (soru bazlı puan + genel geri bildirim)
 - Geçmiş analizleri saklayan basit hafıza sistemi (JSON tabanlı)
 - Streamlit tabanlı tek-sayfa arayüz (frontend + backend aynı dosyada, hızlı deploy)
 
@@ -53,8 +62,10 @@ Sprint bazlı backlog için `sprints/` klasörüne bakınız.
 | 3 | Kullanıcı olarak ilan gereksinimlerinin analizini görebilmeliyim | Yüksek | Sprint 1 |
 | 4 | Kullanıcı olarak bir uyum skoru ve öneriler alabilmeliyim | Yüksek | Sprint 2 |
 | 5 | Kullanıcı olarak geçmiş analizlerimi görebilmeliyim (hafıza) | Orta | Sprint 2 |
-| 6 | Kullanıcı olarak sonuçları dışa aktarabilmeliyim (PDF/metin) | Düşük | Sprint 3 |
-| 7 | Uygulama canlıya alınmalı (Streamlit Cloud) | Orta | Sprint 3 |
+| 6 | Kullanıcı olarak CV-ilan analizime özel mülakat soruları alabilmeliyim | Yüksek | Sprint 1 |
+| 7 | Kullanıcı olarak mülakat cevaplarım için AI geri bildirimi alabilmeliyim | Yüksek | Sprint 1 |
+| 8 | Kullanıcı olarak sonuçları dışa aktarabilmeliyim (PDF/metin) | Düşük | Sprint 3 |
+| 9 | Uygulama canlıya alınmalı (Streamlit Cloud) | Orta | Sprint 3 |
 
 ## Teknolojiler
 - **Backend/Logic:** Python
