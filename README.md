@@ -16,7 +16,7 @@ LucentCV
 ## Ürün Açıklaması
 LucentCV, bir kullanıcının CV metnini ve başvurmak istediği iş ilanının metnini analiz ederek,
 ikisi arasındaki uyumu değerlendiren bir yapay zeka uygulamasıdır. Tek bir prompt'a değil,
-**birbirini besleyen 3 ayrı AI agent'ına** dayanır:
+**birbirini besleyen 5 ayrı AI agent'ına** dayanır:
 
 1. **CV Analyzer Agent** — CV'deki beceri, deneyim ve eğitim bilgilerini yapılandırılmış
    şekilde çıkarır.
@@ -56,7 +56,6 @@ Sprint bazlı backlog için `sprints/` klasörüne bakınız.
 ### Genel Backlog (yüksek seviye)
 | # | User Story | Öncelik | Durum |
 |---|---|---|---|
-| 1 | Kullanıcı olarak CV'yi pdf/word dökümanı olarak yükleyebilmeliyim | Yüksek | Sprint 1 |
 | 1 | Kullanıcı olarak CV metnimi ve ilan metnini bir arayüze yapıştırabilmeliyim | Yüksek | Sprint 1 |
 | 2 | Kullanıcı olarak CV'mden çıkarılan becerileri görebilmeliyim | Yüksek | Sprint 1 |
 | 3 | Kullanıcı olarak ilan gereksinimlerinin analizini görebilmeliyim | Yüksek | Sprint 1 |
@@ -66,6 +65,7 @@ Sprint bazlı backlog için `sprints/` klasörüne bakınız.
 | 7 | Kullanıcı olarak mülakat cevaplarım için AI geri bildirimi alabilmeliyim | Yüksek | Sprint 1 |
 | 8 | Kullanıcı olarak sonuçları dışa aktarabilmeliyim (PDF/metin) | Düşük | Sprint 3 |
 | 9 | Uygulama canlıya alınmalı (Streamlit Cloud) | Orta | Sprint 3 |
+| 10 | Kullanıcı olarak CV'yi pdf/word dökümanı olarak yükleyebilmeliyim | Yüksek | Sprint 1 |
 
 ## Teknolojiler
 - **Backend/Logic:** Python
