@@ -1,14 +1,13 @@
 # LucentCV — Çok Adımlı AI Agent ile CV-İlan Uyum Analizi
 
 ## Takım İsmi
-Solo Takım — Burak Baygün
+Takım 126
 
 ## Takım Rolleri
-Bu bootcamp döneminde takım arkadaşlarımla iletişim sağlanamadığı için, asistanımın da bilgisi üzerine süreci tek başıma sürdürüyorum. Tüm Scrum rollerini kendim üstleniyorum:
 
-- **Product Owner:** Burak Baygün
-- **Scrum Master:** Burak Baygün
-- **Developer:** Burak Baygün
+- **Product Owner & Developer:** Burak Baygün
+- **Scrum Master & Developer:** Büşra Demir
+  
 
 ## Ürün İsmi
 LucentCV
