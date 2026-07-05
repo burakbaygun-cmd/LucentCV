@@ -1,9 +1,5 @@
 """
-UygunCV - Streamlit Ana Uygulama
-
-Calistirma:
-    export GEMINI_API_KEY="senin-api-keyin"
-    streamlit run app.py
+LucentCV - Streamlit Application
 """
 
 import os
@@ -11,96 +7,114 @@ import streamlit as st
 from google import genai
 
 from agents import run_full_analysis, run_interview_generator, run_interview_evaluator
-from memory import save_analysis, get_history
-
-st.set_page_config(page_title="UygunCV", layout="wide")
-
-API_KEY = os.environ.get("GEMINI_API_KEY")
-
-st.title("UygunCV — CV-İlan Uyum Analizi")
-st.caption(
-    "CV'nizi ve başvurmak istediğiniz iş ilanını yapıştırın; "
-    "3 aşamalı AI agent zinciri uyum skorunuzu ve önerilerinizi çıkarsın."
+from services.supabase_service import (
+    save_analysis,
+    get_history,
+    save_interview_questions,
+    get_interview_questions,
+    save_interview_answers
 )
 
-if not API_KEY:
-    st.error(
-        "GEMINI_API_KEY ortam değişkeni bulunamadı. "
-        "Terminalde `export GEMINI_API_KEY=\"...\"` çalıştırıp uygulamayı yeniden başlatın."
-    )
-    st.stop()
+from components.hero import render_hero
+from components.cards import empty_state
+from components.loading import animated_loading
+from components.results import render_results_dashboard
+from components.interview import render_interview_questions, render_interview_feedback
+from components.history import render_history_card
+from components.icons import get_icon
 
+st.set_page_config(page_title="LucentCV", layout="wide", initial_sidebar_state="collapsed")
+
+# Inject Custom CSS
+def load_css():
+    css_path = os.path.join(os.path.dirname(__file__), "assets", "styles.css")
+    if os.path.exists(css_path):
+        with open(css_path, "r", encoding="utf-8") as f:
+            st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+
+load_css()
+
+# API Initialization
+API_KEY = os.environ.get("GEMINI_API_KEY")
+if not API_KEY:
+    st.error("GEMINI_API_KEY environment variable not found. Please export it and restart.")
+    st.stop()
 client = genai.Client(api_key=API_KEY)
 
+# Session State Initialization
 if "last_result" not in st.session_state:
     st.session_state.last_result = None
+if "last_analysis_id" not in st.session_state:
+    st.session_state.last_analysis_id = None
 if "interview_questions" not in st.session_state:
     st.session_state.interview_questions = None
 if "interview_answers" not in st.session_state:
     st.session_state.interview_answers = {}
 if "interview_feedback" not in st.session_state:
     st.session_state.interview_feedback = None
+if "viewing_history_id" not in st.session_state:
+    st.session_state.viewing_history_id = None
 
-tab_analiz, tab_mulakat, tab_gecmis = st.tabs(
-    ["Yeni Analiz", "Akıllı Mülakat", "Geçmiş Analizler"]
-)
+# Hero Section
+render_hero()
+
+# Main Tabs (No emojis)
+tab_analiz, tab_mulakat, tab_gecmis = st.tabs([
+    "New Analysis", 
+    "Interview", 
+    "History"
+])
 
 with tab_analiz:
-    col1, col2 = st.columns(2)
-    with col1:
-        cv_text = st.text_area("CV Metni", height=300, placeholder="CV'nizi buraya yapıştırın...")
-    with col2:
-        job_text = st.text_area("İş İlanı Metni", height=300, placeholder="İlan metnini buraya yapıştırın...")
-
-    if st.button("Analiz Et", type="primary"):
-        if not cv_text.strip() or not job_text.strip():
-            st.warning("Lütfen hem CV hem de ilan metnini girin.")
-        else:
-            with st.spinner("Agent'lar çalışıyor: CV analiz ediliyor..."):
-                result = run_full_analysis(client, cv_text, job_text)
-
-            save_analysis(cv_text, job_text, result)
+    # If viewing a historical analysis from the history tab, show a "Back" button
+    if st.session_state.viewing_history_id and st.session_state.last_result:
+        if st.button("New Analysis"):
+            st.session_state.viewing_history_id = None
+            st.session_state.last_result = None
+            st.session_state.last_analysis_id = None
+            st.rerun()
+            
+        render_results_dashboard(st.session_state.last_result)
+        
+    elif st.session_state.last_result:
+        # Just finished a new analysis
+        if st.button("New Analysis"):
+            st.session_state.last_result = None
+            st.session_state.last_analysis_id = None
+            st.rerun()
+            
+        render_results_dashboard(st.session_state.last_result)
+        
+    else:
+        # Empty Form
+        col1, col2 = st.columns(2)
+        with col1:
+            st.markdown(f"<div style='display: flex; align-items: center; gap: 8px; margin-bottom: 8px;'><span style='color: #4F46E5;'>{get_icon('file_text', size=20)}</span><h3 style='margin: 0 !important; font-size: 17px !important;'>Resume</h3></div>", unsafe_allow_html=True)
+            cv_text = st.text_area("Resume", height=350, placeholder="Paste your resume here...", label_visibility="collapsed")
+        with col2:
+            st.markdown(f"<div style='display: flex; align-items: center; gap: 8px; margin-bottom: 8px;'><span style='color: #4F46E5;'>{get_icon('briefcase', size=20)}</span><h3 style='margin: 0 !important; font-size: 17px !important;'>Job Description</h3></div>", unsafe_allow_html=True)
+            job_text = st.text_area("Job Description", height=350, placeholder="Paste the job description here...", label_visibility="collapsed")
+        
+        st.markdown("<br>", unsafe_allow_html=True)
+        
+        button_disabled = not cv_text.strip() or not job_text.strip()
+        
+        if st.button("Analyze Resume", type="primary", use_container_width=True, disabled=button_disabled):
+            result = animated_loading(run_full_analysis, client, cv_text, job_text)
+            
+            analysis_id = save_analysis(cv_text, job_text, result)
+            
             st.session_state.last_result = result
-            # Yeni bir analiz yapildiginda eski mulakat verilerini sifirla
+            st.session_state.last_analysis_id = analysis_id
             st.session_state.interview_questions = None
             st.session_state.interview_answers = {}
             st.session_state.interview_feedback = None
-
-            match = result.get("match_result", {})
-            cv_analysis = result.get("cv_analysis", {})
-            job_analysis = result.get("job_analysis", {})
-
-            st.subheader(f"Uyum Skoru: {match.get('match_score', 'N/A')} / 100")
-            st.progress(min(max(match.get("match_score", 0), 0), 100) / 100)
-
-            col_a, col_b, col_c = st.columns(3)
-            with col_a:
-                st.markdown("**Eşleşen Beceriler**")
-                for s in match.get("matching_skills", []):
-                    st.write(f"- {s}")
-            with col_b:
-                st.markdown("**Eksik Beceriler**")
-                for s in match.get("missing_skills", []):
-                    st.write(f"- {s}")
-            with col_c:
-                st.markdown("**Öneriler**")
-                for r in match.get("recommendations", []):
-                    st.write(f"- {r}")
-
-            with st.expander("Detaylı CV Analizi"):
-                st.json(cv_analysis)
-            with st.expander("Detaylı İlan Analizi"):
-                st.json(job_analysis)
+            
+            st.rerun()
 
 with tab_mulakat:
-    st.subheader("Akıllı Mülakat Simülasyonu")
-    st.caption(
-        "Önce 'Yeni Analiz' sekmesinde bir CV-ilan analizi yapın; ardından burada "
-        "size özel hazırlanmış mülakat sorularını cevaplayabilirsiniz."
-    )
-
     if st.session_state.last_result is None:
-        st.info("Önce 'Yeni Analiz' sekmesinden bir CV-ilan analizi yapmalısınız.")
+        empty_state(get_icon("target", size=48), "Run a resume analysis first to generate tailored interview questions.")
     else:
         result = st.session_state.last_result
         cv_analysis = result.get("cv_analysis", {})
@@ -108,71 +122,110 @@ with tab_mulakat:
         match_result = result.get("match_result", {})
 
         if st.session_state.interview_questions is None:
-            if st.button("Mülakat Sorularını Oluştur", type="primary"):
-                with st.spinner("Mülakat soruları hazırlanıyor..."):
-                    q_result = run_interview_generator(client, cv_analysis, job_analysis, match_result)
-                st.session_state.interview_questions = q_result.get("questions", [])
+            existing_questions = get_interview_questions(st.session_state.last_analysis_id) if st.session_state.last_analysis_id else []
+            
+            if existing_questions:
+                mapped_questions = []
+                for q in existing_questions:
+                    mapped_questions.append({
+                        "id": q["order_index"] + 1,
+                        "question": q["question"],
+                        "focus_area": q["category"],
+                        "question_type": q["category"],
+                        "difficulty": q.get("difficulty", "Medium")
+                    })
+                st.session_state.interview_questions = mapped_questions
                 st.rerun()
+            else:
+                empty_state(get_icon("lightbulb", size=48), "No interview questions generated yet.")
+                st.write("")
+                if st.button("Generate Interview Questions", type="primary", use_container_width=True):
+                    with st.spinner("Generating questions..."):
+                        q_result = run_interview_generator(client, cv_analysis, job_analysis, match_result)
+                        questions = q_result.get("questions", [])
+                        if st.session_state.last_analysis_id:
+                            save_interview_questions(st.session_state.last_analysis_id, questions)
+                    st.session_state.interview_questions = questions
+                    st.rerun()
         else:
-            questions = st.session_state.interview_questions
-            st.markdown("### Sorularınız")
-
-            with st.form("interview_form"):
-                for q in questions:
-                    qid = q.get("id")
-                    st.markdown(f"**{qid}. {q.get('question')}**  \n*Odak: {q.get('focus_area', '')}*")
-                    answer = st.text_area(
-                        f"Cevabınız (Soru {qid})",
-                        key=f"answer_{qid}",
-                        value=st.session_state.interview_answers.get(qid, ""),
-                        height=100,
-                    )
-                    st.session_state.interview_answers[qid] = answer
-
-                submitted = st.form_submit_button("Cevapları Değerlendir")
-
-            if submitted:
-                with st.spinner("Cevaplarınız değerlendiriliyor..."):
-                    feedback = run_interview_evaluator(
-                        client, questions, st.session_state.interview_answers
-                    )
-                st.session_state.interview_feedback = feedback
-
             if st.session_state.interview_feedback:
-                fb = st.session_state.interview_feedback
-                st.markdown("---")
-                st.subheader(f"Genel Mülakat Skoru: {fb.get('overall_score', 'N/A')} / 100")
+                render_interview_feedback(st.session_state.interview_feedback)
+                st.markdown("<br>", unsafe_allow_html=True)
+                if st.button("Regenerate Questions"):
+                    st.session_state.interview_questions = None
+                    st.session_state.interview_answers = {}
+                    st.session_state.interview_feedback = None
+                    st.rerun()
+            else:
+                st.markdown("<p style='color: #6B7280; font-size: 17px; margin-bottom: 24px;'>Answer each question below and click evaluate when you're finished.</p>", unsafe_allow_html=True)
+                
+                with st.form("interview_form", border=False):
+                    updated_answers = render_interview_questions(st.session_state.interview_questions, st.session_state.interview_answers)
+                    
+                    st.markdown("<br>", unsafe_allow_html=True)
+                    submitted = st.form_submit_button("Finish Interview & Evaluate", type="primary", use_container_width=True)
+                    
+                if submitted:
+                    st.session_state.interview_answers = updated_answers
+                    with st.spinner("Evaluating your answers..."):
+                        feedback = run_interview_evaluator(
+                            client, st.session_state.interview_questions, st.session_state.interview_answers
+                        )
+                    
+                    if st.session_state.last_analysis_id:
+                        db_questions = get_interview_questions(st.session_state.last_analysis_id)
+                        q_map = {q["order_index"] + 1: q["id"] for q in db_questions}
+                        
+                        answers_to_save = []
+                        for q in st.session_state.interview_questions:
+                            qid = q.get("id")
+                            db_id = q_map.get(qid)
+                            if db_id:
+                                q_score = 0
+                                q_fb = ""
+                                for pf in feedback.get("per_question_feedback", []):
+                                    if pf.get("question_id") == qid:
+                                        q_score = pf.get("score", 0)
+                                        q_fb = pf.get("feedback", "")
+                                        break
+                                answers_to_save.append({
+                                    "question_id": db_id,
+                                    "answer": st.session_state.interview_answers.get(qid, ""),
+                                    "score": q_score,
+                                    "feedback": q_fb
+                                })
+                        if answers_to_save:
+                            save_interview_answers(answers_to_save)
 
-                for pf in fb.get("per_question_feedback", []):
-                    st.markdown(
-                        f"**Soru {pf.get('question_id')} — Puan: {pf.get('score')}/10**  \n"
-                        f"{pf.get('feedback')}"
-                    )
-
-                col_s, col_i = st.columns(2)
-                with col_s:
-                    st.markdown("**Güçlü Yönler**")
-                    for s in fb.get("strengths", []):
-                        st.write(f"- {s}")
-                with col_i:
-                    st.markdown("**Geliştirilmesi Gerekenler**")
-                    for a in fb.get("areas_to_improve", []):
-                        st.write(f"- {a}")
-
-            if st.button("Soruları Yeniden Oluştur"):
-                st.session_state.interview_questions = None
-                st.session_state.interview_answers = {}
-                st.session_state.interview_feedback = None
-                st.rerun()
+                    st.session_state.interview_feedback = feedback
+                    st.rerun()
 
 with tab_gecmis:
-    history = get_history()
-    if not history:
-        st.info("Henüz kayıtlı analiz yok.")
+    if st.session_state.get("viewing_history_in_tab"):
+        if st.button("← Back to History"):
+            st.session_state.viewing_history_in_tab = False
+            st.rerun()
+            
+        if st.session_state.last_result:
+            render_results_dashboard(st.session_state.last_result)
     else:
-        for entry in history:
-            score = entry.get("match_score", "N/A")
-            with st.expander(f"{entry['timestamp']} — Skor: {score}"):
-                st.write("**CV (ilk 100 karakter):**", entry["cv_snippet"])
-                st.write("**İlan (ilk 100 karakter):**", entry["job_snippet"])
-                st.json(entry["result"])
+        history = get_history()
+        
+        if not history:
+            empty_state(get_icon("clock", size=48), "No historical analyses found.")
+        else:
+            st.markdown(f"<div style='display: flex; align-items: center; gap: 8px; margin-bottom: 24px;'><span style='color: #111827;'>{get_icon('clock', size=28)}</span><h2 style='margin: 0 !important;'>History</h2></div>", unsafe_allow_html=True)
+            
+            cols = st.columns(2)
+            for i, entry in enumerate(history):
+                col_idx = i % 2
+                with cols[col_idx]:
+                    if render_history_card(entry):
+                        st.session_state.viewing_history_id = entry["id"]
+                        st.session_state.last_result = entry["result"]
+                        st.session_state.last_analysis_id = entry["id"]
+                        st.session_state.interview_questions = None
+                        st.session_state.interview_answers = {}
+                        st.session_state.interview_feedback = None
+                        st.session_state.viewing_history_in_tab = True
+                        st.rerun()
