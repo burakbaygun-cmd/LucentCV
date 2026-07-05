@@ -11,10 +11,10 @@ Bu bootcamp döneminde takım arkadaşlarımla iletişim sağlanamadığı için
 - **Developer:** Burak Baygün
 
 ## Ürün İsmi
-UygunCV
+LucentCV
 
 ## Ürün Açıklaması
-UygunCV, bir kullanıcının CV metnini ve başvurmak istediği iş ilanının metnini analiz ederek,
+LucentCV, bir kullanıcının CV metnini ve başvurmak istediği iş ilanının metnini analiz ederek,
 ikisi arasındaki uyumu değerlendiren bir yapay zeka uygulamasıdır. Tek bir prompt'a değil,
 **birbirini besleyen 3 ayrı AI agent'ına** dayanır:
 
