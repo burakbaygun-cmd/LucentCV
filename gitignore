@@ -1,0 +1,6 @@
+.DS_Store
+sprints/.DS_Store
+__pycache__/
+*.pyc
+memory_store.json
+.env
