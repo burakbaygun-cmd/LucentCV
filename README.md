@@ -1,11 +1,10 @@
-# UygunCV — Çok Adımlı AI Agent ile CV-İlan Uyum Analizi
+# LucentCV — Çok Adımlı AI Agent ile CV-İlan Uyum Analizi
 
 ## Takım İsmi
 Solo Takım — Burak Baygün
 
 ## Takım Rolleri
-Bu bootcamp döneminde takım arkadaşlarımla iletişim sağlanamadığı için (bkz. Slack #bootcamp-2026
-kanalındaki bildirim), süreci tek başıma sürdürüyorum. Tüm Scrum rollerini kendim üstleniyorum:
+Bu bootcamp döneminde takım arkadaşlarımla iletişim sağlanamadığı için, asistanımın da bilgisi üzerine süreci tek başıma sürdürüyorum. Tüm Scrum rollerini kendim üstleniyorum:
 
 - **Product Owner:** Burak Baygün
 - **Scrum Master:** Burak Baygün
