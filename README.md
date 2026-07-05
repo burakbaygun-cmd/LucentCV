@@ -56,6 +56,7 @@ Sprint bazlı backlog için `sprints/` klasörüne bakınız.
 ### Genel Backlog (yüksek seviye)
 | # | User Story | Öncelik | Durum |
 |---|---|---|---|
+| 1 | Kullanıcı olarak CV'yi pdf/word dökümanı olarak yükleyebilmeliyim | Yüksek | Sprint 1 |
 | 1 | Kullanıcı olarak CV metnimi ve ilan metnini bir arayüze yapıştırabilmeliyim | Yüksek | Sprint 1 |
 | 2 | Kullanıcı olarak CV'mden çıkarılan becerileri görebilmeliyim | Yüksek | Sprint 1 |
 | 3 | Kullanıcı olarak ilan gereksinimlerinin analizini görebilmeliyim | Yüksek | Sprint 1 |
