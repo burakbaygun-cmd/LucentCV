@@ -91,7 +91,35 @@ Ekip üyelerimizin profesyonel çalışma takvimlerinin yoğunluğu ve son döne
 
 Projenin genel gidişatı, görev dağılımı ve anlık ilerleme durumu Slack grup sohbetimizde paylaşılan mesajlar üzerinden yürütülmüştür. İlgili iletişim süreci ekteki bağlantıda sunulmuştur: [iletişim sürecinden kesitler](https://imgur.com/a/R4R2gFU)
 
+Toplantı Özeti:
 
+**Genel Durum ve Proje Birleştirme:**
+İletişim kopuklukları ve iş ile mezuniyet gibi kişisel yoğunluklar nedeniyle başlangıçta projeye bireysel olarak devam edilmiştir.
+Burak ve Büşra, kendi bireysel projelerinin ilk sprint aşamalarını bağımsız olarak tamamlamıştır.
+İletişim problemlerinin çözülmesi sonucu mevcut projelerden biri üzerinden ortak ilerleme kararı alınarak ekip içi görev dağılımları tekrardan oluşturulmuştur.
+
+**Görev Dağılımı (Sprint 1):** 
+Asil Doğukan Samay: Backlog Dağıtma Mantığı (Sprint Planning, User Story'ler, Story Point'ler, Backlog açıklaması ve GitHub Project linki).
+Burak Baygün: Daily Scrum sürecinin belgelenmesi.
+Büşra Demir: Sprint Retrospective, Ürün Durumu ve Sprint Review aşamalarının hazırlanması.
+Nuri Duldar: Sprint Board'un Miro kullanılarak hazırlanması.
+
+**Sprint 2 Vizyonu:**
+
+**Veritabanı:** Veriler yerel JSON yerine Supabase'e taşınacak. Ortam değişkeni
+tanımlı değilse sistem otomatik olarak `local_db.json` ile çalışmaya devam edecek
+(local fallback).
+
+**Model Çıktı Kararlılığı:** Gemini'nin geçersiz JSON döndürme sorununu çözmek için
+`google-genai` SDK'sının Pydantic şema desteği entegre edilecek.
+
+**Frontend:** Next.js, React, Tailwind ve TypeScript ile modern mimariye geçilecek.
+
+**Kullanıcı Deneyimi:**
+- Sürükle-bırak dosya yükleme + PDF/DOCX'ten otomatik metin çıkarma (parser)
+- Analiz sonuçlarını PDF/Markdown olarak dışa aktarma
+- Uyum skorunu dairesel grafik ve ilerleme barlarıyla gösteren dashboard
+- Google hesabıyla giriş (kimlik doğrulama)
 
 ---
 
