@@ -90,9 +90,9 @@ Dışa aktarma (Export), Google Authentication ve modern React tabanlı frontend
 Ekip üyelerimizin profesyonel çalışma takvimlerinin yoğunluğu ve son dönemde özel
 hayatlarında gelişen durumların sebebiyet verdiği meşguliyetler nedeniyle, gün
 içerisinde herkesin katılabileceği ortak bir zaman dilimi oluşturmak mümkün
-olmamıştır. Süreçlerimizi aksatmamak, birbirimize destek olmak ve ilerlememizi
-şeffaf bir şekilde sürdürebilmek adına iletişimimizi Slack üzerinden asenkron
-olarak yürütme kararı aldık.
+olmamıştır. Süreci aksatmamak, birbirimize destek olmak ve ilerlememizi
+şeffaf bir şekilde sürdürebilmek adına iletişimin Slack üzerinden asenkron
+olarak yürütülmesine karar verilmiştir.
  
 Projenin genel gidişatı, görev dağılımı ve anlık ilerleme durumu Slack grup
 sohbetimizde paylaşılan mesajlar üzerinden yürütülmüştür. İlgili iletişim süreci
