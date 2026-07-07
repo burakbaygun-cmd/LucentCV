@@ -118,21 +118,18 @@ ekteki bağlantıda sunulmuştur: [iletişim sürecinden kesitler](https://imgur
 
 ### Sprint 2 Vizyonu
  
-- Veriler yerel JSON yerine Supabase'e taşınacak. Ortam değişkeni tanımlı
-değilse sistem otomatik olarak `local_db.json` ile çalışmaya devam edecek
-(local fallback).
- 
-- Gemini'nin geçersiz JSON döndürme sorununu çözmek için `google-genai`
-SDK'sının Pydantic şema desteği entegre edilecek.
- 
-- Frontendde Next.js, React, Tailwind ve TypeScript ile modern mimariye geçilecek.
- 
-**Kullanıcı Deneyimi**
-- Sürükle-bırak dosya yükleme + PDF/DOCX'ten otomatik metin çıkarma (parser)
-- Analiz sonuçlarını PDF/Markdown olarak dışa aktarma
-- Uyum skorunu dairesel grafik ve ilerleme barlarıyla gösteren dashboard
-- Google hesabıyla giriş (kimlik doğrulama)
-
+- **Veritabanı:** Veriler yerel JSON yerine Supabase'e taşınacak. Ortam
+  değişkeni tanımlı değilse sistem otomatik olarak `local_db.json` ile
+  çalışmaya devam edecek (local fallback).
+- **Model Çıktı Kararlılığı:** Gemini'nin geçersiz JSON döndürme sorununu
+  çözmek için `google-genai` SDK'sının Pydantic şema desteği entegre edilecek.
+- **Frontend:** Next.js, React, Tailwind ve TypeScript ile modern mimariye
+  geçilecek.
+- **Kullanıcı Deneyimi:**
+  - Sürükle-bırak dosya yükleme + PDF/DOCX'ten otomatik metin çıkarma (parser)
+  - Analiz sonuçlarını PDF/Markdown olarak dışa aktarma
+  - Uyum skorunu dairesel grafik ve ilerleme barlarıyla gösteren dashboard
+  - Google hesabıyla giriş (kimlik doğrulama)
 ---
 
 ## Sprint Board Update
