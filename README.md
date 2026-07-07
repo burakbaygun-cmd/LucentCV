@@ -101,13 +101,11 @@ ekteki bağlantıda sunulmuştur: [iletişim sürecinden kesitler](https://imgur
 ### Toplantı Özeti
  
 #### Genel Durum ve Proje Birleştirme
-- İletişim kopuklukları ve iş ile mezuniyet gibi kişisel yoğunluklar nedeniyle
-  başlangıçta projeye bireysel olarak devam edilmiştir.
-- Burak ve Büşra, kendi bireysel projelerinin ilk sprint aşamalarını bağımsız
-  olarak tamamlamıştır.
+- Ekip içi iletişim kopukluğu nedeniyle başlangıçta Burak ve Büşra, diğer üyeler tarafından katılım sağlanmayacağını varsayarak projelerine bağımsız olarak başlamıştır.
 - İletişim problemlerinin çözülmesi sonucu mevcut projelerden biri üzerinden
   ortak ilerleme kararı alınarak ekip içi görev dağılımları tekrardan
-  oluşturulmuştur.
+  oluşturulmuş ve tüm ekip üyelerinin görev dağılımları yapılarak aktif katılımları sağlanmıştır.
+  
 #### Görev Dağılımı (Sprint 1)
 - **Asil Doğukan Samay:** Backlog Dağıtma Mantığı (Sprint Planning, User
   Story'ler, Story Point'ler, Backlog açıklaması ve GitHub Project linki)
