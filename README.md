@@ -41,13 +41,23 @@ içindeki gelişim takip edilebilir.
 
 ## Ürün Özellikleri
 - CV ve ilan metni girişi
-- 5 agent'lı orkestrasyon (CV Analyzer → Job Analyzer → Matcher → Interview
-  Generator → Interview Evaluator)
+- 5 agent'lı orkestrasyon (CV Analyzer → Job Analyzer → Matcher → Interview Generator → Interview Evaluator)
 - Uyum skoru (0-100), eksik beceri/anahtar kelime listesi, somut iyileştirme önerileri
-- **Akıllı Mülakat Simülasyonu**: CV ve ilana özel üretilen 5 mülakat sorusu, kullanıcının
-  cevaplarının AI tarafından değerlendirilmesi (soru bazlı puan + genel geri bildirim)
-- Geçmiş analizleri saklayan basit hafıza sistemi (JSON tabanlı)
-- Streamlit tabanlı tek-sayfa arayüz (frontend + backend aynı dosyada, hızlı deploy)
+- **Akıllı Mülakat Simülasyonu**: CV ve ilana özel üretilen 5 mülakat sorusu, kullanıcının cevaplarının AI tarafından değerlendirilmesi (soru bazlı puan + genel geri bildirim)
+- Geçmiş analizleri saklayan Supabase tabanlı bulut veritabanı
+- Premium SaaS standartlarında, modern arayüz ve kullanıcı deneyimi
+
+## Ekran Görüntüleri
+
+<div align="center">
+  <img src="images/home.png" alt="Home Page" width="800"/>
+  <br/><br/>
+  <img src="images/analysis.png" alt="Analysis Dashboard" width="800"/>
+  <br/><br/>
+  <img src="images/interview.png" alt="Smart Interview Simulation" width="800"/>
+  <br/><br/>
+  <img src="images/history.png" alt="History Dashboard" width="800"/>
+</div>
 
 ## Hedef Kitle
 - Aktif iş başvurusu yapan üniversite mezunları ve yeni başlayanlar
