@@ -87,7 +87,11 @@ Dışa aktarma (Export), Google Authentication ve modern React tabanlı frontend
 
 ## Daily Scrum
 
-> Bu bölüm ekip tarafından doldurulacaktır.
+Ekip üyelerimizin profesyonel çalışma takvimlerinin yoğunluğu ve son dönemde özel hayatlarında gelişen durumların sebebiyet verdiği meşguliyetler nedeniyle, gün içerisinde herkesin katılabileceği ortak bir zaman dilimi oluşturmak mümkün olmamıştır. Süreçlerimizi aksatmamak, birbirimize destek olmak ve ilerlememizi şeffaf bir şekilde sürdürebilmek adına iletişimimizi Slack üzerinden asenkron olarak yürütme kararı aldık.
+
+Projenin genel gidişatı, görev dağılımı ve anlık ilerleme durumu Slack grup sohbetimizde paylaşılan mesajlar üzerinden yürütülmüştür. İlgili iletişim süreci ekteki bağlantıda sunulmuştur: [iletişim sürecinden kesitler](https://imgur.com/a/R4R2gFU)
+
+
 
 ---
 
