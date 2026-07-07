@@ -1,7 +1,7 @@
 # Sprint 1 — Backlog Dağıtma Mantığı ve Story Seçimleri
 
 ## 1. Sprint Planlama (Sprint Planning)
-Sprint 1 planlama toplantısı 19 Haziran 2026 tarihinde yapılmıştır. Bu sprintte projenin temel iskeletini oluşturmak, LLM orkestrasyonunu (CV Analizi, İlan Analizi, Eşleştirme ve Mülakat modülleri) kurmak ve veritabanı (Supabase) katmanını tamamlamak hedeflenmiştir. Toplam sprint kapasitesi **20 Story Point (SP)** olarak belirlenmiştir.
+Sprint 1 planlama toplantısı yapılmıştır. Bu sprintte projenin temel iskeletini oluşturmak, LLM orkestrasyonunu (CV Analizi, İlan Analizi, Eşleştirme ve Mülakat modülleri) kurmak ve veritabanı (Supabase) katmanını tamamlamak hedeflenmiştir. Toplam sprint kapasitesi **20 Story Point (SP)** olarak belirlenmiştir.
 
 ## 2. User Story'ler (Kullanıcı Hikayeleri) & Story Point'ler
 Sprint 1 kapsamında ele alınan ana işler kullanıcı hikayelerine (User Story) bölünmüş ve Fibonacci serisi kullanılarak puanlandırılmıştır:
