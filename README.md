@@ -115,6 +115,7 @@ ekteki bağlantıda sunulmuştur: [iletişim sürecinden kesitler](https://imgur
 - **Büşra Demir:** Sprint Retrospective, Ürün Durumu ve Sprint Review
   aşamalarının hazırlanması
 - **Nuri Duldar:** Sprint Board'un Miro kullanılarak hazırlanması
+
 ### Sprint 2 Vizyonu
  
 **Veritabanı**
