@@ -22,17 +22,29 @@ def clean_json(text: str) -> str:
     return text.strip()
 
 
-def call_gemini(client: genai.Client, system_prompt: str, user_content: str) -> dict:
+import time
+from google.genai import errors
+
+def call_gemini(client: genai.Client, system_prompt: str, user_content: str, retries=3) -> dict:
     full_prompt = f"{system_prompt}\n\n{user_content}"
-    response = client.models.generate_content(
-        model=MODEL_NAME,
-        contents=full_prompt,
-    )
-    cleaned = clean_json(response.text)
-    try:
-        return json.loads(cleaned)
-    except json.JSONDecodeError:
-        return {"error": "JSON parse edilemedi", "raw_response": response.text}
+    
+    for attempt in range(retries):
+        try:
+            response = client.models.generate_content(
+                model=MODEL_NAME,
+                contents=full_prompt,
+            )
+            cleaned = clean_json(response.text)
+            try:
+                return json.loads(cleaned)
+            except json.JSONDecodeError:
+                return {"error": "JSON parse edilemedi", "raw_response": response.text}
+        except errors.ClientError as e:
+            if "429" in str(e) or "RESOURCE_EXHAUSTED" in str(e):
+                if attempt < retries - 1:
+                    time.sleep(5)  # Hız sınırına takılırsak 5 saniye bekle
+                    continue
+            raise e
 
 
 # ---------------------------------------------------------------------------
