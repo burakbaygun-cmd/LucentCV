@@ -44,4 +44,4 @@ Miro board üzerinde mavi kartlar ana **User Story**'leri, kırmızı kartlar is
 
 ## 4. GitHub Project Linki
 Proje süreçlerini takip ettiğimiz Kanban tahtasına ve iş listesine aşağıdaki bağlantıdan ulaşabilirsiniz:
-[LucentCV GitHub Project Board]((https://github.com/users/AsilDogukanSamay/projects/1/views/1))
+[LucentCV GitHub Project Board](https://github.com/users/AsilDogukanSamay/projects/1/views/1)
