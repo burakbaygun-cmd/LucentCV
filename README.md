@@ -132,9 +132,7 @@ ekteki bağlantıda sunulmuştur: [iletişim sürecinden kesitler](https://imgur
 
 ## Sprint Board Update
 
-> Bu bölüme Sprint Board (Miro) ekran görüntüleri eklenecektir.
-
----
+![Sprint Board](Sprint%20Board%20(Sprint%201).png)
 
 ## Ürün Durumu
 
