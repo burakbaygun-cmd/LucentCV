@@ -1,0 +1,493 @@
+2026-07-12 01:38:35,530 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/docs
+2026-07-12 01:38:35,532 - app.core.logging - INFO - Request GET http://localhost:8000/docs completed in 0.0015 secs with status 200
+2026-07-12 01:38:36,000 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/openapi.json
+2026-07-12 01:38:36,067 - app.core.logging - INFO - Request GET http://localhost:8000/openapi.json completed in 0.0661 secs with status 200
+2026-07-12 02:04:15,516 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/v1/history?user_id=guest
+2026-07-12 02:04:15,525 - app.core.logging - INFO - Request GET http://localhost:8000/api/v1/history?user_id=guest completed in 0.0091 secs with status 404
+2026-07-12 02:04:17,387 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/v1/history?user_id=guest
+2026-07-12 02:04:17,391 - app.core.logging - INFO - Request GET http://localhost:8000/api/v1/history?user_id=guest completed in 0.0016 secs with status 404
+2026-07-12 02:04:19,841 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/v1/history?user_id=guest
+2026-07-12 02:04:19,842 - app.core.logging - INFO - Request GET http://localhost:8000/api/v1/history?user_id=guest completed in 0.0010 secs with status 404
+2026-07-12 13:54:57,352 - app.core.logging - INFO - Incoming request: OPTIONS http://localhost:8000/api/v1/analyze
+2026-07-12 13:54:57,353 - app.core.logging - INFO - Request OPTIONS http://localhost:8000/api/v1/analyze completed in 0.0010 secs with status 200
+2026-07-12 13:54:57,369 - app.core.logging - INFO - Incoming request: POST http://localhost:8000/api/v1/analyze
+2026-07-12 13:54:57,370 - app.core.logging - INFO - Request POST http://localhost:8000/api/v1/analyze completed in 0.0010 secs with status 404
+2026-07-12 13:56:08,488 - app.core.logging - INFO - Incoming request: OPTIONS http://localhost:8000/api/analyze
+2026-07-12 13:56:08,488 - app.core.logging - INFO - Request OPTIONS http://localhost:8000/api/analyze completed in 0.0000 secs with status 200
+2026-07-12 13:56:08,499 - app.core.logging - INFO - Incoming request: POST http://localhost:8000/api/analyze
+2026-07-12 13:56:08,966 - app.core.logging - INFO - Starting full analysis for user guest
+2026-07-12 13:56:08,967 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 13:56:09,263 - app.core.logging - ERROR - Failed to analyze resume: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)
+2026-07-12 13:56:09,265 - app.core.logging - INFO - Request POST http://localhost:8000/api/analyze completed in 0.7658 secs with status 500
+2026-07-12 13:59:17,354 - app.core.logging - INFO - Incoming request: POST http://localhost:8000/api/analyze
+2026-07-12 13:59:17,387 - app.core.logging - ERROR - Request POST http://localhost:8000/api/analyze failed in 0.0326 secs
+2026-07-12 13:59:17,390 - app.core.logging - ERROR - Unhandled Exception on http://localhost:8000/api/analyze: 1 validation error for HttpOptions
+verify
+  Extra inputs are not permitted [type=extra_forbidden, input_value=False, input_type=bool]
+    For further information visit https://errors.pydantic.dev/2.12/v/extra_forbidden
+2026-07-12 14:01:02,869 - app.core.logging - INFO - Incoming request: POST http://localhost:8000/api/analyze
+2026-07-12 14:01:02,870 - app.core.logging - ERROR - Request POST http://localhost:8000/api/analyze failed in 0.0015 secs
+2026-07-12 14:01:02,871 - app.core.logging - ERROR - Unhandled Exception on http://localhost:8000/api/analyze: 1 validation error for HttpOptions
+verify
+  Extra inputs are not permitted [type=extra_forbidden, input_value=False, input_type=bool]
+    For further information visit https://errors.pydantic.dev/2.12/v/extra_forbidden
+2026-07-12 14:12:32,188 - app.core.logging - INFO - Incoming request: OPTIONS http://localhost:8000/api/analyze
+2026-07-12 14:12:32,190 - app.core.logging - INFO - Request OPTIONS http://localhost:8000/api/analyze completed in 0.0015 secs with status 200
+2026-07-12 14:12:32,202 - app.core.logging - INFO - Incoming request: POST http://localhost:8000/api/analyze
+2026-07-12 14:12:32,993 - app.core.logging - INFO - Starting full analysis for user guest
+2026-07-12 14:12:32,993 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 14:12:38,257 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-12 14:12:38,266 - app.core.logging - INFO - CV analysis completed
+2026-07-12 14:12:38,266 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 14:12:43,539 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-12 14:12:43,541 - app.core.logging - INFO - Job analysis completed
+2026-07-12 14:12:43,542 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 14:13:10,264 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-12 14:13:10,268 - app.core.logging - INFO - Match analysis completed
+2026-07-12 14:13:10,268 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 14:13:18,387 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-12 14:13:18,389 - app.core.logging - INFO - Summary generated
+2026-07-12 14:13:18,389 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 14:13:31,881 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-12 14:13:31,884 - app.core.logging - INFO - Markdown report generated
+2026-07-12 14:13:33,512 - httpx - INFO - HTTP Request: POST https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/profiles "HTTP/2 401 Unauthorized"
+2026-07-12 14:13:34,430 - httpx - INFO - HTTP Request: POST https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses "HTTP/2 401 Unauthorized"
+2026-07-12 14:13:34,431 - app.repositories.analysis_repository - ERROR - Error creating analysis: {'message': 'new row violates row-level security policy for table "analyses"', 'code': '42501', 'hint': None, 'details': None}
+2026-07-12 14:13:34,431 - app.core.logging - ERROR - Failed to analyze resume: {'message': 'new row violates row-level security policy for table "analyses"', 'code': '42501', 'hint': None, 'details': None}
+2026-07-12 14:13:34,432 - app.core.logging - INFO - Request POST http://localhost:8000/api/analyze completed in 62.2301 secs with status 500
+2026-07-12 14:17:11,302 - app.core.logging - INFO - Incoming request: POST http://localhost:8000/api/analyze
+2026-07-12 14:17:12,266 - app.core.logging - INFO - Starting full analysis for user guest
+2026-07-12 14:17:12,266 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 14:17:19,097 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-12 14:17:19,102 - app.core.logging - INFO - CV analysis completed
+2026-07-12 14:17:19,102 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 14:17:27,700 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-12 14:17:27,703 - app.core.logging - INFO - Job analysis completed
+2026-07-12 14:17:27,703 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 14:17:45,418 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-12 14:17:45,419 - app.core.logging - INFO - Match analysis completed
+2026-07-12 14:17:45,419 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 14:17:53,095 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-12 14:17:53,101 - app.core.logging - INFO - Summary generated
+2026-07-12 14:17:53,101 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 14:18:12,498 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-12 14:18:12,505 - app.core.logging - INFO - Markdown report generated
+2026-07-12 14:18:13,784 - httpx - INFO - HTTP Request: POST https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/profiles "HTTP/2 409 Conflict"
+2026-07-12 14:18:14,718 - httpx - INFO - HTTP Request: POST https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses "HTTP/2 201 Created"
+2026-07-12 14:18:14,720 - app.core.logging - INFO - Analysis saved to db with id: b89facf9-9935-4448-90b2-eac3c3c5e75b
+2026-07-12 14:18:14,721 - app.core.logging - ERROR - Failed to analyze resume: 1 validation error for AnalyzeResponse
+match_score
+  Field required [type=missing, input_value={'cv_analysis': {'skills'...4448-90b2-eac3c3c5e75b'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+2026-07-12 14:18:14,722 - app.core.logging - INFO - Request POST http://localhost:8000/api/analyze completed in 63.4206 secs with status 500
+2026-07-12 14:22:03,934 - app.core.logging - INFO - Incoming request: POST http://localhost:8000/api/analyze
+2026-07-12 14:22:04,433 - app.core.logging - INFO - Starting full analysis for user guest
+2026-07-12 14:22:04,434 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 14:22:07,561 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-12 14:22:07,563 - app.core.logging - INFO - CV analysis completed
+2026-07-12 14:22:07,563 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 14:22:16,976 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-12 14:22:16,995 - app.core.logging - INFO - Job analysis completed
+2026-07-12 14:22:16,997 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 14:22:49,032 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-12 14:22:49,033 - app.core.logging - INFO - Match analysis completed
+2026-07-12 14:22:49,033 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 14:22:58,863 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-12 14:22:58,865 - app.core.logging - INFO - Summary generated
+2026-07-12 14:22:58,865 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 14:23:20,575 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-12 14:23:20,577 - app.core.logging - INFO - Markdown report generated
+2026-07-12 14:23:21,292 - httpx - INFO - HTTP Request: POST https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/profiles "HTTP/2 409 Conflict"
+2026-07-12 14:23:22,209 - httpx - INFO - HTTP Request: POST https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses "HTTP/2 201 Created"
+2026-07-12 14:23:22,221 - app.core.logging - INFO - Analysis saved to db with id: 47b96c11-e88b-468f-b5b8-c70ab3250dc8
+2026-07-12 14:23:22,221 - app.core.logging - ERROR - Failed to analyze resume: 1 validation error for AnalyzeResponse
+match_score
+  Field required [type=missing, input_value={'cv_analysis': {'skills'...468f-b5b8-c70ab3250dc8'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+2026-07-12 14:23:22,225 - app.core.logging - INFO - Request POST http://localhost:8000/api/analyze completed in 78.2900 secs with status 500
+2026-07-12 14:25:25,181 - app.core.logging - INFO - Incoming request: OPTIONS http://localhost:8000/api/analyze
+2026-07-12 14:25:25,181 - app.core.logging - INFO - Request OPTIONS http://localhost:8000/api/analyze completed in 0.0000 secs with status 200
+2026-07-12 14:25:25,195 - app.core.logging - INFO - Incoming request: POST http://localhost:8000/api/analyze
+2026-07-12 14:25:25,617 - app.core.logging - INFO - Starting full analysis for user guest
+2026-07-12 14:25:25,617 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 14:25:33,260 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-12 14:25:33,262 - app.core.logging - INFO - CV analysis completed
+2026-07-12 14:25:33,262 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 14:25:41,933 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-12 14:25:41,934 - app.core.logging - INFO - Job analysis completed
+2026-07-12 14:25:41,934 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 14:26:00,320 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-12 14:26:00,322 - app.core.logging - INFO - Match analysis completed
+2026-07-12 14:26:00,322 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 14:26:11,043 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-12 14:26:11,045 - app.core.logging - INFO - Summary generated
+2026-07-12 14:26:11,047 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 14:26:18,709 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-12 14:26:18,716 - app.core.logging - INFO - Markdown report generated
+2026-07-12 14:26:19,189 - httpx - INFO - HTTP Request: POST https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/profiles "HTTP/2 409 Conflict"
+2026-07-12 14:26:19,535 - httpx - INFO - HTTP Request: POST https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses "HTTP/2 201 Created"
+2026-07-12 14:26:19,568 - app.core.logging - INFO - Analysis saved to db with id: b843775d-77ca-40c2-a33c-88139f55271a
+2026-07-12 14:26:19,568 - app.core.logging - ERROR - Failed to analyze resume: 1 validation error for AnalyzeResponse
+match_score
+  Field required [type=missing, input_value={'cv_analysis': {'skills'...40c2-a33c-88139f55271a'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+2026-07-12 14:26:19,569 - app.core.logging - INFO - Request POST http://localhost:8000/api/analyze completed in 54.3742 secs with status 500
+2026-07-12 14:29:58,339 - app.core.logging - INFO - Incoming request: POST http://localhost:8000/api/analyze
+2026-07-12 14:29:58,780 - app.core.logging - INFO - Starting full analysis for user guest
+2026-07-12 14:29:58,780 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 14:30:04,019 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-12 14:30:04,022 - app.core.logging - INFO - CV analysis completed
+2026-07-12 14:30:04,023 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 14:30:04,162 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-12 14:30:09,164 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 14:30:09,292 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-12 14:30:14,292 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 14:30:14,478 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-12 14:30:14,478 - app.core.logging - ERROR - Failed to analyze resume: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 46.653582836s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '46s'}]}}
+2026-07-12 14:30:14,479 - app.core.logging - INFO - Request POST http://localhost:8000/api/analyze completed in 16.1398 secs with status 500
+2026-07-12 14:30:52,892 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-12 14:30:53,920 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.guest&order=created_at.desc "HTTP/2 200 OK"
+2026-07-12 14:30:53,923 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 1.0311 secs with status 200
+2026-07-12 14:31:04,596 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-12 14:31:04,988 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.guest&order=created_at.desc "HTTP/2 200 OK"
+2026-07-12 14:31:04,991 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.3951 secs with status 200
+2026-07-12 14:31:20,359 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-12 14:31:20,714 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.guest&order=created_at.desc "HTTP/2 200 OK"
+2026-07-12 14:31:20,720 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.3610 secs with status 200
+2026-07-12 14:38:07,311 - app.core.logging - INFO - Incoming request: OPTIONS http://localhost:8000/api/analyze
+2026-07-12 14:38:07,313 - app.core.logging - INFO - Request OPTIONS http://localhost:8000/api/analyze completed in 0.0010 secs with status 200
+2026-07-12 14:38:07,336 - app.core.logging - INFO - Incoming request: POST http://localhost:8000/api/analyze
+2026-07-12 14:38:09,061 - app.core.logging - INFO - Starting full analysis for user guest
+2026-07-12 14:38:09,061 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 14:38:09,631 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-12 14:38:14,635 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 14:38:14,809 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-12 14:38:19,812 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 14:38:19,941 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-12 14:38:19,942 - app.core.logging - ERROR - Failed to analyze resume: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 41.133191324s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '41s'}]}}
+2026-07-12 14:38:19,943 - app.core.logging - INFO - Request POST http://localhost:8000/api/analyze completed in 12.6081 secs with status 500
+2026-07-12 15:28:15,160 - app.core.logging - INFO - Incoming request: OPTIONS http://localhost:8000/api/analyze
+2026-07-12 15:28:15,170 - app.core.logging - INFO - Request OPTIONS http://localhost:8000/api/analyze completed in 0.0091 secs with status 200
+2026-07-12 15:28:15,195 - app.core.logging - INFO - Incoming request: POST http://localhost:8000/api/analyze
+2026-07-12 15:28:16,580 - app.core.logging - INFO - Starting full analysis for user guest
+2026-07-12 15:28:16,581 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 15:28:16,956 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-07-12 15:28:16,959 - app.core.logging - ERROR - Failed to analyze resume: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+2026-07-12 15:28:16,961 - app.core.logging - INFO - Request POST http://localhost:8000/api/analyze completed in 1.7661 secs with status 500
+2026-07-12 15:28:50,760 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-12 15:28:52,157 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.guest&order=created_at.desc "HTTP/2 200 OK"
+2026-07-12 15:28:52,175 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 1.4149 secs with status 200
+2026-07-12 15:38:58,827 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-12 15:38:59,711 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.guest&order=created_at.desc "HTTP/2 200 OK"
+2026-07-12 15:38:59,719 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.8925 secs with status 200
+2026-07-12 15:39:05,762 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-12 15:39:06,250 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.guest&order=created_at.desc "HTTP/2 200 OK"
+2026-07-12 15:39:06,269 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.5069 secs with status 200
+2026-07-12 15:39:54,103 - app.core.logging - INFO - Incoming request: OPTIONS http://localhost:8000/api/analyze
+2026-07-12 15:39:54,104 - app.core.logging - INFO - Request OPTIONS http://localhost:8000/api/analyze completed in 0.0010 secs with status 200
+2026-07-12 15:39:54,116 - app.core.logging - INFO - Incoming request: POST http://localhost:8000/api/analyze
+2026-07-12 15:39:55,074 - app.core.logging - INFO - Starting full analysis for user guest
+2026-07-12 15:39:55,074 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 15:39:55,610 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-12 15:40:00,612 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 15:40:00,736 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-12 15:40:05,738 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 15:40:06,027 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-12 15:40:06,039 - app.core.logging - ERROR - Failed to analyze resume: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\nPlease retry in 55.035279476s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'model': 'gemini-2.0-flash', 'location': 'global'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.0-flash', 'location': 'global'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '55s'}]}}
+2026-07-12 15:40:06,040 - app.core.logging - INFO - Request POST http://localhost:8000/api/analyze completed in 11.9232 secs with status 500
+2026-07-12 15:47:28,890 - app.core.logging - INFO - Incoming request: POST http://localhost:8000/api/analyze
+2026-07-12 15:47:29,834 - app.core.logging - INFO - Starting full analysis for user guest
+2026-07-12 15:47:29,834 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 15:47:30,376 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-12 15:47:35,376 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 15:47:35,593 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-12 15:47:40,595 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 15:47:40,728 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-12 15:47:40,734 - app.core.logging - ERROR - Failed to analyze resume: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\nPlease retry in 20.3086947s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '20s'}]}}
+2026-07-12 15:47:40,735 - app.core.logging - INFO - Request POST http://localhost:8000/api/analyze completed in 11.8453 secs with status 500
+2026-07-12 15:48:26,133 - app.core.logging - INFO - Incoming request: POST http://localhost:8000/api/analyze
+2026-07-12 15:48:26,596 - app.core.logging - INFO - Starting full analysis for user guest
+2026-07-12 15:48:26,596 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 15:48:26,832 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-12 15:48:31,833 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 15:48:32,045 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-12 15:48:37,047 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 15:48:37,238 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-12 15:48:37,240 - app.core.logging - ERROR - Failed to analyze resume: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\nPlease retry in 23.852116577s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '23s'}]}}
+2026-07-12 15:48:37,241 - app.core.logging - INFO - Request POST http://localhost:8000/api/analyze completed in 11.1088 secs with status 500
+2026-07-12 15:50:52,430 - app.core.logging - INFO - Incoming request: OPTIONS http://localhost:8000/api/analyze
+2026-07-12 15:50:52,431 - app.core.logging - INFO - Request OPTIONS http://localhost:8000/api/analyze completed in 0.0010 secs with status 200
+2026-07-12 15:50:52,440 - app.core.logging - INFO - Incoming request: POST http://localhost:8000/api/analyze
+2026-07-12 15:50:53,173 - app.core.logging - INFO - Starting full analysis for user guest
+2026-07-12 15:50:53,173 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 15:50:53,417 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-12 15:50:58,418 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 15:50:58,547 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-12 15:51:03,554 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 15:51:03,776 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-12 15:51:03,776 - app.core.logging - ERROR - Failed to analyze resume: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\nPlease retry in 57.352853028s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'model': 'gemini-2.0-flash', 'location': 'global'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '57s'}]}}
+2026-07-12 15:51:03,778 - app.core.logging - INFO - Request POST http://localhost:8000/api/analyze completed in 11.3382 secs with status 500
+2026-07-12 15:55:45,246 - app.core.logging - INFO - Incoming request: POST http://localhost:8000/api/analyze
+2026-07-12 15:55:46,193 - app.core.logging - INFO - Starting full analysis for user guest
+2026-07-12 15:55:46,193 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 15:55:51,830 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-12 15:55:51,832 - app.core.logging - INFO - CV analysis completed
+2026-07-12 15:55:51,833 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 15:55:52,030 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-12 15:55:57,031 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 15:55:57,254 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-12 15:56:02,256 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 15:56:02,481 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-12 15:56:02,483 - app.core.logging - ERROR - Failed to analyze resume: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 58.653766836s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '58s'}]}}
+2026-07-12 15:56:02,484 - app.core.logging - INFO - Request POST http://localhost:8000/api/analyze completed in 17.2377 secs with status 500
+2026-07-12 16:04:04,737 - app.core.logging - INFO - Incoming request: OPTIONS http://localhost:8000/api/analyze
+2026-07-12 16:04:04,740 - app.core.logging - INFO - Request OPTIONS http://localhost:8000/api/analyze completed in 0.0022 secs with status 200
+2026-07-12 16:04:04,751 - app.core.logging - INFO - Incoming request: POST http://localhost:8000/api/analyze
+2026-07-12 16:04:06,325 - app.core.logging - INFO - Starting full analysis for user guest
+2026-07-12 16:04:06,325 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 16:04:16,739 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-12 16:04:16,746 - app.core.logging - INFO - CV analysis completed
+2026-07-12 16:04:16,746 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 16:04:28,744 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-12 16:04:28,747 - app.core.logging - INFO - Job analysis completed
+2026-07-12 16:04:28,748 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 16:04:47,829 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-12 16:04:47,831 - app.core.logging - INFO - Match analysis completed
+2026-07-12 16:04:47,831 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 16:05:05,178 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-12 16:05:05,179 - app.core.logging - INFO - Summary generated
+2026-07-12 16:05:05,179 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 16:05:24,486 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-12 16:05:24,500 - app.core.logging - INFO - Markdown report generated
+2026-07-12 16:05:25,894 - httpx - INFO - HTTP Request: POST https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/profiles "HTTP/2 409 Conflict"
+2026-07-12 16:05:26,819 - httpx - INFO - HTTP Request: POST https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses "HTTP/2 201 Created"
+2026-07-12 16:05:26,820 - app.core.logging - INFO - Analysis saved to db with id: bf9a0ae5-1ffa-4b46-9677-9a3063a74ed0
+2026-07-12 16:05:26,823 - app.core.logging - INFO - Request POST http://localhost:8000/api/analyze completed in 82.0716 secs with status 200
+2026-07-12 16:05:30,268 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-12 16:05:31,212 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.guest&order=created_at.desc "HTTP/2 200 OK"
+2026-07-12 16:05:31,214 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.9467 secs with status 200
+2026-07-12 16:06:04,858 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-12 16:06:05,274 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.guest&order=created_at.desc "HTTP/2 200 OK"
+2026-07-12 16:06:05,300 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.4426 secs with status 200
+2026-07-12 16:06:18,800 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-12 16:06:19,352 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.guest&order=created_at.desc "HTTP/2 200 OK"
+2026-07-12 16:06:19,376 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.5761 secs with status 200
+2026-07-12 16:06:36,190 - app.core.logging - INFO - Incoming request: POST http://localhost:8000/api/analyze
+2026-07-12 16:06:36,863 - app.core.logging - INFO - Starting full analysis for user guest
+2026-07-12 16:06:36,863 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 16:06:50,121 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-07-12 16:06:50,122 - app.core.logging - ERROR - Failed to analyze resume: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-07-12 16:06:50,123 - app.core.logging - INFO - Request POST http://localhost:8000/api/analyze completed in 13.9325 secs with status 500
+2026-07-12 16:07:13,966 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-12 16:07:14,920 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.guest&order=created_at.desc "HTTP/2 200 OK"
+2026-07-12 16:07:14,939 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.9734 secs with status 200
+2026-07-12 16:07:16,345 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-12 16:07:17,249 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.guest&order=created_at.desc "HTTP/2 200 OK"
+2026-07-12 16:07:17,253 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.9083 secs with status 200
+2026-07-12 16:24:58,821 - app.core.logging - INFO - Incoming request: OPTIONS http://localhost:8000/api/analyze
+2026-07-12 16:24:58,822 - app.core.logging - INFO - Request OPTIONS http://localhost:8000/api/analyze completed in 0.0020 secs with status 200
+2026-07-12 16:24:58,842 - app.core.logging - INFO - Incoming request: POST http://localhost:8000/api/analyze
+2026-07-12 16:25:01,718 - app.core.logging - INFO - Starting full analysis for user guest
+2026-07-12 16:25:01,718 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 16:25:12,061 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-12 16:25:12,065 - app.core.logging - INFO - CV analysis completed
+2026-07-12 16:25:12,065 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 16:25:28,228 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-12 16:25:28,239 - app.core.logging - INFO - Job analysis completed
+2026-07-12 16:25:28,240 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 16:25:46,471 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-12 16:25:46,491 - app.core.logging - INFO - Match analysis completed
+2026-07-12 16:25:46,491 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 16:26:00,352 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-12 16:26:00,381 - app.core.logging - INFO - Summary generated
+2026-07-12 16:26:00,381 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 16:26:20,836 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-12 16:26:20,849 - app.core.logging - INFO - Markdown report generated
+2026-07-12 16:26:22,006 - httpx - INFO - HTTP Request: POST https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/profiles "HTTP/2 409 Conflict"
+2026-07-12 16:26:22,928 - httpx - INFO - HTTP Request: POST https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses "HTTP/2 201 Created"
+2026-07-12 16:26:22,930 - app.core.logging - INFO - Analysis saved to db with id: 3f4a5910-b7db-45ed-8620-16ee7bc55ee0
+2026-07-12 16:26:22,938 - app.core.logging - INFO - Request POST http://localhost:8000/api/analyze completed in 84.0961 secs with status 200
+2026-07-12 16:26:25,409 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-12 16:26:26,278 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.guest&order=created_at.desc "HTTP/2 200 OK"
+2026-07-12 16:26:26,295 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.8866 secs with status 200
+2026-07-12 16:33:58,085 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-12 16:33:58,638 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.guest&order=created_at.desc "HTTP/2 200 OK"
+2026-07-12 16:33:58,642 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.5576 secs with status 200
+2026-07-12 16:34:03,160 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-12 16:34:03,512 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.guest&order=created_at.desc "HTTP/2 200 OK"
+2026-07-12 16:34:03,527 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.3662 secs with status 200
+2026-07-12 16:34:22,846 - app.core.logging - INFO - Incoming request: POST http://localhost:8000/api/analyze
+2026-07-12 16:34:24,025 - app.core.logging - INFO - Starting full analysis for user guest
+2026-07-12 16:34:24,025 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 16:34:33,577 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-12 16:34:33,580 - app.core.logging - INFO - CV analysis completed
+2026-07-12 16:34:33,580 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 16:34:41,835 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-12 16:34:41,849 - app.core.logging - INFO - Job analysis completed
+2026-07-12 16:34:41,849 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 16:34:51,839 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-12 16:34:51,849 - app.core.logging - INFO - Match analysis completed
+2026-07-12 16:34:51,849 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 16:35:02,277 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-12 16:35:02,373 - app.core.logging - INFO - Summary generated
+2026-07-12 16:35:02,374 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 16:35:22,730 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-12 16:35:22,754 - app.core.logging - INFO - Markdown report generated
+2026-07-12 16:35:23,854 - httpx - INFO - HTTP Request: POST https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/profiles "HTTP/2 409 Conflict"
+2026-07-12 16:35:24,710 - httpx - INFO - HTTP Request: POST https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses "HTTP/2 201 Created"
+2026-07-12 16:35:24,730 - app.core.logging - INFO - Analysis saved to db with id: 94e7dcde-f50b-4ef4-b3d2-beb218b2dc59
+2026-07-12 16:35:24,734 - app.core.logging - INFO - Request POST http://localhost:8000/api/analyze completed in 61.8890 secs with status 200
+2026-07-12 16:35:24,879 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-12 16:35:25,185 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.guest&order=created_at.desc "HTTP/2 200 OK"
+2026-07-12 16:35:25,200 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.3208 secs with status 200
+2026-07-12 16:36:21,403 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-12 16:36:22,131 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.guest&order=created_at.desc "HTTP/2 200 OK"
+2026-07-12 16:36:22,134 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.7310 secs with status 200
+2026-07-12 16:36:25,059 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-12 16:36:25,389 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.guest&order=created_at.desc "HTTP/2 200 OK"
+2026-07-12 16:36:25,392 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.3325 secs with status 200
+2026-07-12 16:36:31,854 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-12 16:36:32,344 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.guest&order=created_at.desc "HTTP/2 200 OK"
+2026-07-12 16:36:32,347 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.4925 secs with status 200
+2026-07-12 16:36:41,938 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-12 16:36:42,489 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.guest&order=created_at.desc "HTTP/2 200 OK"
+2026-07-12 16:36:42,493 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.5548 secs with status 200
+2026-07-12 16:37:00,000 - app.core.logging - INFO - Incoming request: OPTIONS http://localhost:8000/api/analyze
+2026-07-12 16:37:00,001 - app.core.logging - INFO - Request OPTIONS http://localhost:8000/api/analyze completed in 0.0010 secs with status 200
+2026-07-12 16:37:00,011 - app.core.logging - INFO - Incoming request: POST http://localhost:8000/api/analyze
+2026-07-12 16:37:01,223 - app.core.logging - INFO - Starting full analysis for user guest
+2026-07-12 16:37:01,223 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 16:37:13,011 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-12 16:37:13,013 - app.core.logging - INFO - CV analysis completed
+2026-07-12 16:37:13,014 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 16:37:22,331 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-12 16:37:22,350 - app.core.logging - INFO - Job analysis completed
+2026-07-12 16:37:22,350 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 16:37:33,617 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-12 16:37:33,625 - app.core.logging - INFO - Match analysis completed
+2026-07-12 16:37:33,625 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 16:37:44,567 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-12 16:37:44,573 - app.core.logging - INFO - Summary generated
+2026-07-12 16:37:44,573 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 16:38:02,310 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-12 16:38:02,318 - app.core.logging - INFO - Markdown report generated
+2026-07-12 16:38:02,833 - httpx - INFO - HTTP Request: POST https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/profiles "HTTP/2 409 Conflict"
+2026-07-12 16:38:03,218 - httpx - INFO - HTTP Request: POST https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses "HTTP/2 201 Created"
+2026-07-12 16:38:03,221 - app.core.logging - INFO - Analysis saved to db with id: 006b21ad-953f-4d04-93b3-1930f8ff4583
+2026-07-12 16:38:03,228 - app.core.logging - INFO - Request POST http://localhost:8000/api/analyze completed in 63.2162 secs with status 200
+2026-07-12 16:38:03,464 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-12 16:38:03,781 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.guest&order=created_at.desc "HTTP/2 200 OK"
+2026-07-12 16:38:03,803 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.3376 secs with status 200
+2026-07-12 16:44:03,959 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-12 16:44:04,539 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.guest&order=created_at.desc "HTTP/2 200 OK"
+2026-07-12 16:44:04,555 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.5954 secs with status 200
+2026-07-12 16:44:18,039 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-12 16:44:18,468 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.guest&order=created_at.desc "HTTP/2 200 OK"
+2026-07-12 16:44:18,471 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.4322 secs with status 200
+2026-07-12 16:44:32,303 - app.core.logging - INFO - Incoming request: POST http://localhost:8000/api/analyze
+2026-07-12 16:44:33,523 - app.core.logging - INFO - Starting full analysis for user guest
+2026-07-12 16:44:33,523 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 16:44:34,010 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-12 16:44:39,012 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 16:44:39,154 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-12 16:44:44,155 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 16:44:44,288 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-12 16:44:44,289 - app.core.logging - ERROR - Failed to analyze resume: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.5-flash\nPlease retry in 16.748242199s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '16s'}]}}
+2026-07-12 16:44:44,290 - app.core.logging - INFO - Request POST http://localhost:8000/api/analyze completed in 11.9881 secs with status 500
+2026-07-12 16:44:56,967 - app.core.logging - INFO - Incoming request: POST http://localhost:8000/api/analyze
+2026-07-12 16:44:57,612 - app.core.logging - INFO - Starting full analysis for user guest
+2026-07-12 16:44:57,612 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 16:44:57,872 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-12 16:45:02,874 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 16:45:03,100 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-12 16:45:08,101 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 16:45:08,239 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-12 16:45:08,239 - app.core.logging - ERROR - Failed to analyze resume: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.5-flash\nPlease retry in 52.794833067s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '52s'}]}}
+2026-07-12 16:45:08,240 - app.core.logging - INFO - Request POST http://localhost:8000/api/analyze completed in 11.2747 secs with status 500
+2026-07-12 16:48:32,714 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-12 16:48:34,420 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.guest&order=created_at.desc "HTTP/2 200 OK"
+2026-07-12 16:48:34,425 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 1.7109 secs with status 200
+2026-07-12 16:48:39,091 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-12 16:48:39,416 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.guest&order=created_at.desc "HTTP/2 200 OK"
+2026-07-12 16:48:39,420 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.3291 secs with status 200
+2026-07-12 16:48:42,115 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/v1/export/pdf?analysis_id=94e7dcde-f50b-4ef4-b3d2-beb218b2dc59
+2026-07-12 16:48:42,116 - app.core.logging - INFO - Request GET http://localhost:8000/api/v1/export/pdf?analysis_id=94e7dcde-f50b-4ef4-b3d2-beb218b2dc59 completed in 0.0011 secs with status 404
+2026-07-12 16:48:42,168 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/favicon.ico
+2026-07-12 16:48:42,168 - app.core.logging - INFO - Request GET http://localhost:8000/favicon.ico completed in 0.0005 secs with status 404
+2026-07-12 16:48:48,482 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-12 16:48:49,411 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.guest&order=created_at.desc "HTTP/2 200 OK"
+2026-07-12 16:48:49,414 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.9320 secs with status 200
+2026-07-12 16:49:07,311 - app.core.logging - INFO - Incoming request: OPTIONS http://localhost:8000/api/interview/questions
+2026-07-12 16:49:07,311 - app.core.logging - INFO - Request OPTIONS http://localhost:8000/api/interview/questions completed in 0.0000 secs with status 200
+2026-07-12 16:49:07,328 - app.core.logging - INFO - Incoming request: POST http://localhost:8000/api/interview/questions
+2026-07-12 16:49:08,564 - app.core.logging - INFO - Generating interview questions for analysis 94e7dcde-f50b-4ef4-b3d2-beb218b2dc59
+2026-07-12 16:49:09,009 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=%2A&id=eq.94e7dcde-f50b-4ef4-b3d2-beb218b2dc59 "HTTP/2 200 OK"
+2026-07-12 16:49:09,011 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 16:49:10,328 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-12 16:49:10,330 - app.core.logging - INFO - Interview questions generated
+2026-07-12 16:49:10,331 - app.core.logging - INFO - Request POST http://localhost:8000/api/interview/questions completed in 3.0033 secs with status 404
+2026-07-12 16:49:23,752 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-12 16:49:24,124 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.guest&order=created_at.desc "HTTP/2 200 OK"
+2026-07-12 16:49:24,128 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.3759 secs with status 200
+2026-07-12 16:51:05,167 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-12 16:51:05,674 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.guest&order=created_at.desc "HTTP/2 200 OK"
+2026-07-12 16:51:05,678 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.5111 secs with status 200
+2026-07-12 16:51:12,593 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-12 16:51:13,031 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.guest&order=created_at.desc "HTTP/2 200 OK"
+2026-07-12 16:51:13,034 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.4415 secs with status 200
+2026-07-12 16:51:29,075 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-12 16:51:30,095 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.guest&order=created_at.desc "HTTP/2 200 OK"
+2026-07-12 16:51:30,098 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 1.0231 secs with status 200
+2026-07-12 16:51:33,936 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-12 16:51:34,262 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.guest&order=created_at.desc "HTTP/2 200 OK"
+2026-07-12 16:51:34,265 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.3288 secs with status 200
+2026-07-12 16:51:35,525 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-12 16:51:35,844 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.guest&order=created_at.desc "HTTP/2 200 OK"
+2026-07-12 16:51:35,848 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.3236 secs with status 200
+2026-07-12 16:51:37,353 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-12 16:51:37,703 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.guest&order=created_at.desc "HTTP/2 200 OK"
+2026-07-12 16:51:37,706 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.3533 secs with status 200
+2026-07-12 16:51:44,503 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-12 16:51:45,108 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.guest&order=created_at.desc "HTTP/2 200 OK"
+2026-07-12 16:51:45,117 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.6150 secs with status 200
+2026-07-12 16:51:52,893 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-12 16:51:53,318 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.guest&order=created_at.desc "HTTP/2 200 OK"
+2026-07-12 16:51:53,322 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.4290 secs with status 200
+2026-07-12 16:52:02,811 - app.core.logging - INFO - Incoming request: OPTIONS http://localhost:8000/api/history/006b21ad-953f-4d04-93b3-1930f8ff4583
+2026-07-12 16:52:02,812 - app.core.logging - INFO - Request OPTIONS http://localhost:8000/api/history/006b21ad-953f-4d04-93b3-1930f8ff4583 completed in 0.0010 secs with status 200
+2026-07-12 16:52:02,824 - app.core.logging - INFO - Incoming request: DELETE http://localhost:8000/api/history/006b21ad-953f-4d04-93b3-1930f8ff4583
+2026-07-12 16:52:03,282 - httpx - INFO - HTTP Request: DELETE https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?id=eq.006b21ad-953f-4d04-93b3-1930f8ff4583 "HTTP/2 200 OK"
+2026-07-12 16:52:03,286 - app.core.logging - INFO - Request DELETE http://localhost:8000/api/history/006b21ad-953f-4d04-93b3-1930f8ff4583 completed in 0.4621 secs with status 200
+2026-07-12 16:52:03,299 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-12 16:52:03,624 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.guest&order=created_at.desc "HTTP/2 200 OK"
+2026-07-12 16:52:03,626 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.3267 secs with status 200
+2026-07-12 16:52:08,324 - app.core.logging - INFO - Incoming request: OPTIONS http://localhost:8000/api/history/94e7dcde-f50b-4ef4-b3d2-beb218b2dc59
+2026-07-12 16:52:08,324 - app.core.logging - INFO - Request OPTIONS http://localhost:8000/api/history/94e7dcde-f50b-4ef4-b3d2-beb218b2dc59 completed in 0.0000 secs with status 200
+2026-07-12 16:52:08,330 - app.core.logging - INFO - Incoming request: DELETE http://localhost:8000/api/history/94e7dcde-f50b-4ef4-b3d2-beb218b2dc59
+2026-07-12 16:52:08,662 - httpx - INFO - HTTP Request: DELETE https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?id=eq.94e7dcde-f50b-4ef4-b3d2-beb218b2dc59 "HTTP/2 200 OK"
+2026-07-12 16:52:08,664 - app.core.logging - INFO - Request DELETE http://localhost:8000/api/history/94e7dcde-f50b-4ef4-b3d2-beb218b2dc59 completed in 0.3340 secs with status 200
+2026-07-12 16:52:08,678 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-12 16:52:08,982 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.guest&order=created_at.desc "HTTP/2 200 OK"
+2026-07-12 16:52:08,997 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.3193 secs with status 200
+2026-07-12 17:01:04,097 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-12 17:01:04,672 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.guest&order=created_at.desc "HTTP/2 200 OK"
+2026-07-12 17:01:04,693 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.5952 secs with status 200
+2026-07-12 17:01:13,482 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-12 17:01:13,866 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.guest&order=created_at.desc "HTTP/2 200 OK"
+2026-07-12 17:01:13,886 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.4037 secs with status 200
+2026-07-12 17:01:20,008 - app.core.logging - INFO - Incoming request: OPTIONS http://localhost:8000/api/interview/questions
+2026-07-12 17:01:20,008 - app.core.logging - INFO - Request OPTIONS http://localhost:8000/api/interview/questions completed in 0.0005 secs with status 200
+2026-07-12 17:01:20,021 - app.core.logging - INFO - Incoming request: POST http://localhost:8000/api/interview/questions
+2026-07-12 17:01:21,090 - app.core.logging - INFO - Generating interview questions for analysis 3f4a5910-b7db-45ed-8620-16ee7bc55ee0
+2026-07-12 17:01:22,550 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=%2A&id=eq.3f4a5910-b7db-45ed-8620-16ee7bc55ee0 "HTTP/2 200 OK"
+2026-07-12 17:01:22,567 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 17:01:22,982 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-12 17:01:22,983 - app.core.logging - INFO - Interview questions generated
+2026-07-12 17:01:22,985 - app.core.logging - INFO - Request POST http://localhost:8000/api/interview/questions completed in 2.9635 secs with status 404
+2026-07-12 17:01:25,838 - app.core.logging - INFO - Incoming request: POST http://localhost:8000/api/interview/questions
+2026-07-12 17:01:27,079 - app.core.logging - INFO - Generating interview questions for analysis 3f4a5910-b7db-45ed-8620-16ee7bc55ee0
+2026-07-12 17:01:27,399 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=%2A&id=eq.3f4a5910-b7db-45ed-8620-16ee7bc55ee0 "HTTP/2 200 OK"
+2026-07-12 17:01:27,401 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-12 17:01:27,635 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-12 17:01:27,642 - app.core.logging - INFO - Interview questions generated
+2026-07-12 17:01:27,643 - app.core.logging - INFO - Request POST http://localhost:8000/api/interview/questions completed in 1.8072 secs with status 404
