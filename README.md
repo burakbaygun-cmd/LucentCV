@@ -339,7 +339,12 @@ Sprint 3 sonunda LucentCV'nin production-ready, sürdürülebilir ve sunuma haz�
 
 ## Kurulum
 ```bash
+# Backend
+cd backend
 pip install -r requirements.txt
-export GEMINI_API_KEY="senin-api-keyin"
-streamlit run app.py
-```
+uvicorn main:app --reload
+
+# Frontend
+cd frontend
+npm install
+npm run dev
