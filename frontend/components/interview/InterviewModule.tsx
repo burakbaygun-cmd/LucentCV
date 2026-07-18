@@ -12,12 +12,14 @@ import { Badge } from "@/components/ui/badge";
 import { CircularScore } from "@/components/ui/circular-score";
 import { toast } from "sonner";
 import { Skeleton } from "@/components/ui/skeleton";
+import { useAuth } from "@/context/AuthContext";
 
 interface InterviewModuleProps {
   analysisId: string;
 }
 
 export function InterviewModule({ analysisId }: InterviewModuleProps) {
+  const { user } = useAuth();
   const [questions, setQuestions] = useState<QuestionItem[]>([]);
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [evaluation, setEvaluation] = useState<any>(null);
@@ -35,7 +37,7 @@ export function InterviewModule({ analysisId }: InterviewModuleProps) {
   const evaluateMutation = useMutation({
     mutationFn: () => api.evaluateInterview({
       analysis_id: analysisId,
-      user_id: "guest",
+      user_id: user?.id || "guest",
       questions,
       answers,
     }),

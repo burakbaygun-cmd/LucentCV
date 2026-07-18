@@ -4,3 +4,7 @@ __pycache__/
 *.pyc
 memory_store.json
 .env
+backend/venv/
+backend/.env
+frontend/node_modules/
+frontend/.env.local

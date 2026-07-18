@@ -9,14 +9,16 @@ import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { api } from "@/services/api";
+import { useAuth } from "@/context/AuthContext";
 
 export default function Dashboard() {
   const router = useRouter();
+  const { user } = useAuth();
   const [cvText, setCvText] = useState("");
   const [jobText, setJobText] = useState("");
 
   const analyzeMutation = useMutation({
-    mutationFn: () => api.analyze({ cv_text: cvText, job_text: jobText, user_id: "guest" }),
+    mutationFn: () => api.analyze({ cv_text: cvText, job_text: jobText, user_id: user?.id || "guest" }),
     onSuccess: (data) => {
       toast.success("Analysis complete!");
       router.push(`/analysis/${data.analysis_id}`);

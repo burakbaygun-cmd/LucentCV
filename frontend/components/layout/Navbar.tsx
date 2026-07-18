@@ -2,13 +2,15 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { LayoutDashboard, History, Sparkles, Menu } from "lucide-react";
+import { LayoutDashboard, History, Sparkles, Menu, LogOut, LogIn } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useAuth } from "@/context/AuthContext";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import {
   Sheet,
   SheetContent,
   SheetTrigger,
-} from "@/components/ui/sheet"; // Need to install sheet
+} from "@/components/ui/sheet";
 
 const routes = [
   {
@@ -23,8 +25,23 @@ const routes = [
   },
 ];
 
+function getInitials(name: string | null | undefined, email: string | null | undefined) {
+  if (name) {
+    const parts = name.trim().split(" ");
+    if (parts.length >= 2) {
+      return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
+    }
+    return parts[0].substring(0, 2).toUpperCase();
+  }
+  if (email) {
+    return email.substring(0, 2).toUpperCase();
+  }
+  return "U";
+}
+
 export function Navbar() {
   const pathname = usePathname();
+  const { user, signOut } = useAuth();
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -88,10 +105,40 @@ export function Navbar() {
         </div>
 
         {/* Right side actions */}
-        <div className="flex flex-1 items-center justify-end space-x-2">
-          <Button variant="outline" size="sm" className="hidden md:flex">
-            Guest Mode
-          </Button>
+        <div className="flex flex-1 items-center justify-end space-x-4">
+          {user ? (
+            <div className="flex items-center space-x-4">
+              <div className="flex items-center gap-2">
+                <Avatar size="default" className="h-8 w-8">
+                  <AvatarImage src={user.user_metadata?.avatar_url} alt={user.user_metadata?.full_name || user.email || ""} />
+                  <AvatarFallback className="bg-primary/10 text-primary font-bold">
+                    {getInitials(user.user_metadata?.full_name, user.email)}
+                  </AvatarFallback>
+                </Avatar>
+                <span className="text-sm font-semibold hidden md:inline-block max-w-[150px] truncate">
+                  {user.user_metadata?.full_name || user.email?.split("@")[0]}
+                </span>
+              </div>
+              <Button 
+                variant="ghost" 
+                size="sm" 
+                onClick={signOut}
+                className="text-muted-foreground hover:text-foreground flex items-center gap-1.5"
+              >
+                <LogOut className="h-4 w-4" />
+                <span className="hidden md:inline">Log out</span>
+              </Button>
+            </div>
+          ) : (
+            pathname !== "/login" && pathname !== "/register" && (
+              <Link href="/login">
+                <Button size="sm" className="flex items-center gap-1.5">
+                  <LogIn className="h-4 w-4" />
+                  Sign In
+                </Button>
+              </Link>
+            )
+          )}
         </div>
       </div>
     </header>

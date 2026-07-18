@@ -12,15 +12,17 @@ import { ErrorState } from "@/components/ui/error-state";
 import { CircularScore } from "@/components/ui/circular-score";
 import { MarkdownViewer } from "@/components/ui/markdown-viewer";
 import { InterviewModule } from "@/components/interview/InterviewModule";
+import { useAuth } from "@/context/AuthContext";
 
 export default function AnalysisDetailsPage() {
   const params = useParams();
   const router = useRouter();
+  const { user } = useAuth();
   const analysisId = params.id as string;
 
   const { data: historyItems, isLoading, isError, refetch } = useQuery({
-    queryKey: ["history", "guest"],
-    queryFn: () => api.getHistory("guest"),
+    queryKey: ["history", user?.id || "guest"],
+    queryFn: () => api.getHistory(user?.id || "guest"),
   });
 
   const analysis = historyItems?.find(item => item.id === analysisId);

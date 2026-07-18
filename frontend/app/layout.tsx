@@ -22,6 +22,8 @@ import { Toaster } from "@/components/ui/sonner";
 import { Navbar } from "@/components/layout/Navbar";
 import { Sidebar } from "@/components/layout/Sidebar";
 import { Footer } from "@/components/layout/Footer";
+import { AuthProvider } from "@/context/AuthContext";
+import { AuthGuard } from "@/components/auth/AuthGuard";
 
 export default function RootLayout({
   children,
@@ -36,20 +38,24 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-background text-foreground" suppressHydrationWarning>
         <Providers attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
-          <div className="relative flex min-h-screen flex-col">
-            <Navbar />
-            <div className="flex-1 items-start md:grid md:grid-cols-[220px_minmax(0,1fr)] lg:grid-cols-[240px_minmax(0,1fr)]">
-              <aside className="fixed top-14 z-30 -ml-2 hidden h-[calc(100vh-3.5rem)] w-full shrink-0 md:sticky md:block">
-                <Sidebar />
-              </aside>
-              <main className="relative py-6 lg:gap-10 lg:py-8 xl:grid xl:grid-cols-[1fr]">
-                <div className="mx-auto w-full min-w-0 max-w-6xl px-4 md:px-6">
-                  {children}
+          <AuthProvider>
+            <AuthGuard>
+              <div className="relative flex min-h-screen flex-col">
+                <Navbar />
+                <div className="flex-1 items-start md:grid md:grid-cols-[220px_minmax(0,1fr)] lg:grid-cols-[240px_minmax(0,1fr)]">
+                  <aside className="fixed top-14 z-30 -ml-2 hidden h-[calc(100vh-3.5rem)] w-full shrink-0 md:sticky md:block">
+                    <Sidebar />
+                  </aside>
+                  <main className="relative py-6 lg:gap-10 lg:py-8 xl:grid xl:grid-cols-[1fr]">
+                    <div className="mx-auto w-full min-w-0 max-w-6xl px-4 md:px-6">
+                      {children}
+                    </div>
+                  </main>
                 </div>
-              </main>
-            </div>
-            <Footer />
-          </div>
+                <Footer />
+              </div>
+            </AuthGuard>
+          </AuthProvider>
           <Toaster position="top-right" theme="dark" />
         </Providers>
       </body>
