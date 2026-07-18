@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { LayoutDashboard, History, Sparkles, Menu, LogOut, LogIn } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/context/AuthContext";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import {
   Sheet,
   SheetContent,
@@ -23,6 +24,20 @@ const routes = [
     icon: History,
   },
 ];
+
+function getInitials(name: string | null | undefined, email: string | null | undefined) {
+  if (name) {
+    const parts = name.trim().split(" ");
+    if (parts.length >= 2) {
+      return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
+    }
+    return parts[0].substring(0, 2).toUpperCase();
+  }
+  if (email) {
+    return email.substring(0, 2).toUpperCase();
+  }
+  return "U";
+}
 
 export function Navbar() {
   const pathname = usePathname();
@@ -92,10 +107,18 @@ export function Navbar() {
         {/* Right side actions */}
         <div className="flex flex-1 items-center justify-end space-x-4">
           {user ? (
-            <div className="flex items-center space-x-3">
-              <span className="text-xs text-muted-foreground hidden lg:inline-block max-w-[150px] truncate">
-                {user.email}
-              </span>
+            <div className="flex items-center space-x-4">
+              <div className="flex items-center gap-2">
+                <Avatar size="default" className="h-8 w-8">
+                  <AvatarImage src={user.user_metadata?.avatar_url} alt={user.user_metadata?.full_name || user.email || ""} />
+                  <AvatarFallback className="bg-primary/10 text-primary font-bold">
+                    {getInitials(user.user_metadata?.full_name, user.email)}
+                  </AvatarFallback>
+                </Avatar>
+                <span className="text-sm font-semibold hidden md:inline-block max-w-[150px] truncate">
+                  {user.user_metadata?.full_name || user.email?.split("@")[0]}
+                </span>
+              </div>
               <Button 
                 variant="ghost" 
                 size="sm" 
