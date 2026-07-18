@@ -17,7 +17,7 @@ LucentCV
 ## Ürün Açıklaması
 LucentCV, bir kullanıcının CV metnini ve başvurmak istediği iş ilanının metnini analiz ederek,
 ikisi arasındaki uyumu değerlendiren bir yapay zeka uygulamasıdır. Tek bir prompt'a değil,
-**birbirini besleyen 5 ayrı AI agent'ına** dayanır:
+**birbirini besleyen 7 ayrı AI agent'ına** dayanır:
 
 1. **CV Analyzer Agent** — CV'deki beceri, deneyim ve eğitim bilgilerini yapılandırılmış
    şekilde çıkarır.
