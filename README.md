@@ -5,9 +5,9 @@ Takım 126
 
 ## Takım Elemanları
 
-- **Burak Baygün** – Product Owner & Developer
+- **Burak Baygün** – Developer
 - **Büşra Demir** – Scrum Master & Developer
-- **Asil Doğukan Samay** – Developer
+- **Asil Doğukan Samay** –  Product Owner & Developer
 - **Ece Toygun** – Developer
 - **Nuri Duldar** – Developer
 
@@ -280,9 +280,9 @@ Sprint sonunda LucentCV; modern kullanıcı arayüzüne sahip, kullanıcı kimli
 
 ### Sprint Review Katılımcıları
 
-- Burak Baygün — Product Owner
+- Burak Baygün — Developer
 - Büşra Demir — Scrum Master
-- Asil Doğukan Samay — Developer
+- Asil Doğukan Samay — Product Owner
 - Ece Toygun — Developer
 - Nuri Duldar — Developer
 
