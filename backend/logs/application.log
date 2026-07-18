@@ -491,3 +491,399 @@ match_score
 2026-07-12 17:01:27,635 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
 2026-07-12 17:01:27,642 - app.core.logging - INFO - Interview questions generated
 2026-07-12 17:01:27,643 - app.core.logging - INFO - Request POST http://localhost:8000/api/interview/questions completed in 1.8072 secs with status 404
+2026-07-18 03:35:43,568 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/docs
+2026-07-18 03:35:43,571 - app.core.logging - INFO - Request GET http://localhost:8000/docs completed in 0.0056 secs with status 200
+2026-07-18 03:35:44,022 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/openapi.json
+2026-07-18 03:35:44,052 - app.core.logging - INFO - Request GET http://localhost:8000/openapi.json completed in 0.0305 secs with status 200
+2026-07-18 03:35:47,478 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/docs
+2026-07-18 03:35:47,479 - app.core.logging - INFO - Request GET http://localhost:8000/docs completed in 0.0008 secs with status 200
+2026-07-18 03:35:47,540 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/openapi.json
+2026-07-18 03:35:47,541 - app.core.logging - INFO - Request GET http://localhost:8000/openapi.json completed in 0.0009 secs with status 200
+2026-07-18 03:35:48,110 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/docs
+2026-07-18 03:35:48,111 - app.core.logging - INFO - Request GET http://localhost:8000/docs completed in 0.0008 secs with status 200
+2026-07-18 03:35:48,153 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/openapi.json
+2026-07-18 03:35:48,154 - app.core.logging - INFO - Request GET http://localhost:8000/openapi.json completed in 0.0010 secs with status 200
+2026-07-18 03:35:48,811 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/docs
+2026-07-18 03:35:48,812 - app.core.logging - INFO - Request GET http://localhost:8000/docs completed in 0.0008 secs with status 200
+2026-07-18 03:35:48,856 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/openapi.json
+2026-07-18 03:35:48,857 - app.core.logging - INFO - Request GET http://localhost:8000/openapi.json completed in 0.0009 secs with status 200
+2026-07-18 03:38:37,762 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-18 03:38:37,843 - app.repositories.analysis_repository - ERROR - Error getting history for user guest: [Errno 8] nodename nor servname provided, or not known
+2026-07-18 03:38:37,843 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.0817 secs with status 500
+2026-07-18 03:38:38,853 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-18 03:38:38,856 - app.repositories.analysis_repository - ERROR - Error getting history for user guest: [Errno 8] nodename nor servname provided, or not known
+2026-07-18 03:38:38,856 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.0033 secs with status 500
+2026-07-18 03:38:40,862 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-18 03:38:40,867 - app.repositories.analysis_repository - ERROR - Error getting history for user guest: [Errno 8] nodename nor servname provided, or not known
+2026-07-18 03:38:40,868 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.0057 secs with status 500
+2026-07-18 03:38:45,662 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-18 03:38:45,667 - app.repositories.analysis_repository - ERROR - Error getting history for user guest: [Errno 8] nodename nor servname provided, or not known
+2026-07-18 03:38:45,667 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.0046 secs with status 500
+2026-07-18 03:38:47,069 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-18 03:38:47,076 - app.repositories.analysis_repository - ERROR - Error getting history for user guest: [Errno 8] nodename nor servname provided, or not known
+2026-07-18 03:38:47,077 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.0079 secs with status 500
+2026-07-18 03:38:48,084 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-18 03:38:48,090 - app.repositories.analysis_repository - ERROR - Error getting history for user guest: [Errno 8] nodename nor servname provided, or not known
+2026-07-18 03:38:48,091 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.0066 secs with status 500
+2026-07-18 03:40:03,855 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-18 03:40:03,926 - app.repositories.analysis_repository - ERROR - Error getting history for user guest: [Errno 8] nodename nor servname provided, or not known
+2026-07-18 03:40:03,928 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.0740 secs with status 500
+2026-07-18 03:40:28,661 - app.core.logging - INFO - Incoming request: OPTIONS http://localhost:8000/api/analyze
+2026-07-18 03:40:28,665 - app.core.logging - INFO - Request OPTIONS http://localhost:8000/api/analyze completed in 0.0042 secs with status 200
+2026-07-18 03:40:28,667 - app.core.logging - INFO - Incoming request: POST http://localhost:8000/api/analyze
+2026-07-18 03:40:28,696 - app.core.logging - INFO - Starting full analysis for user guest
+2026-07-18 03:40:28,696 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-18 03:40:31,955 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-18 03:40:31,961 - google_genai.types - WARNING - Warning: there are non-text parts in the response: ['thought_signature'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+2026-07-18 03:40:31,961 - app.core.logging - INFO - CV analysis completed
+2026-07-18 03:40:31,961 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-18 03:40:36,992 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-18 03:40:36,994 - google_genai.types - WARNING - Warning: there are non-text parts in the response: ['thought_signature'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+2026-07-18 03:40:36,994 - app.core.logging - INFO - Job analysis completed
+2026-07-18 03:40:36,995 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-18 03:40:43,544 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-18 03:40:43,547 - google_genai.types - WARNING - Warning: there are non-text parts in the response: ['thought_signature'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+2026-07-18 03:40:43,548 - app.core.logging - INFO - Match analysis completed
+2026-07-18 03:40:43,548 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-18 03:40:49,280 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-18 03:40:49,282 - google_genai.types - WARNING - Warning: there are non-text parts in the response: ['thought_signature'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+2026-07-18 03:40:49,283 - app.core.logging - INFO - Summary generated
+2026-07-18 03:40:49,283 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-18 03:41:00,956 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-18 03:41:00,961 - google_genai.types - WARNING - Warning: there are non-text parts in the response: ['thought_signature'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+2026-07-18 03:41:00,961 - app.core.logging - INFO - Markdown report generated
+2026-07-18 03:41:00,968 - app.repositories.analysis_repository - ERROR - Error creating analysis: [Errno 8] nodename nor servname provided, or not known
+2026-07-18 03:41:00,968 - app.core.logging - ERROR - Failed to analyze resume: [Errno 8] nodename nor servname provided, or not known
+2026-07-18 03:41:00,969 - app.core.logging - INFO - Request POST http://localhost:8000/api/analyze completed in 32.3013 secs with status 500
+2026-07-18 03:41:09,602 - app.core.logging - INFO - Incoming request: POST http://localhost:8000/api/analyze
+2026-07-18 03:41:09,626 - app.core.logging - INFO - Starting full analysis for user guest
+2026-07-18 03:41:09,626 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-18 03:41:13,963 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-18 03:41:13,968 - google_genai.types - WARNING - Warning: there are non-text parts in the response: ['thought_signature'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+2026-07-18 03:41:13,969 - app.core.logging - INFO - CV analysis completed
+2026-07-18 03:41:13,969 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-18 03:41:14,074 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-18 03:41:14,077 - app.core.logging - INFO - Job analysis completed
+2026-07-18 03:41:14,078 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-18 03:41:14,242 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-18 03:41:14,245 - app.core.logging - INFO - Match analysis completed
+2026-07-18 03:41:14,245 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-18 03:41:14,402 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-18 03:41:19,410 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-18 03:41:19,644 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-18 03:41:19,645 - app.core.logging - INFO - Summary generated
+2026-07-18 03:41:19,646 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-18 03:41:19,805 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-18 03:41:19,806 - app.core.logging - INFO - Markdown report generated
+2026-07-18 03:41:19,812 - app.repositories.analysis_repository - ERROR - Error creating analysis: [Errno 8] nodename nor servname provided, or not known
+2026-07-18 03:41:19,813 - app.core.logging - ERROR - Failed to analyze resume: [Errno 8] nodename nor servname provided, or not known
+2026-07-18 03:41:19,814 - app.core.logging - INFO - Request POST http://localhost:8000/api/analyze completed in 10.2124 secs with status 500
+2026-07-18 03:46:42,927 - app.core.logging - INFO - Incoming request: POST http://localhost:8000/api/analyze
+2026-07-18 03:46:42,958 - app.core.logging - INFO - Starting full analysis for user guest
+2026-07-18 03:46:42,959 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-18 03:46:46,609 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-18 03:46:46,615 - google_genai.types - WARNING - Warning: there are non-text parts in the response: ['thought_signature'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+2026-07-18 03:46:46,616 - app.core.logging - INFO - CV analysis completed
+2026-07-18 03:46:46,616 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-18 03:46:50,491 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-18 03:46:50,494 - google_genai.types - WARNING - Warning: there are non-text parts in the response: ['thought_signature'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+2026-07-18 03:46:50,495 - app.core.logging - INFO - Job analysis completed
+2026-07-18 03:46:50,495 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-18 03:46:56,851 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-18 03:46:56,855 - google_genai.types - WARNING - Warning: there are non-text parts in the response: ['thought_signature'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+2026-07-18 03:46:56,856 - app.core.logging - INFO - Match analysis completed
+2026-07-18 03:46:56,856 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-18 03:47:02,433 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-18 03:47:02,437 - google_genai.types - WARNING - Warning: there are non-text parts in the response: ['thought_signature'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+2026-07-18 03:47:02,437 - app.core.logging - INFO - Summary generated
+2026-07-18 03:47:02,438 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-18 03:47:15,653 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-18 03:47:15,659 - google_genai.types - WARNING - Warning: there are non-text parts in the response: ['thought_signature'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+2026-07-18 03:47:15,659 - app.core.logging - INFO - Markdown report generated
+2026-07-18 03:47:15,723 - app.repositories.analysis_repository - ERROR - Error creating analysis: [Errno 8] nodename nor servname provided, or not known
+2026-07-18 03:47:15,723 - app.core.logging - ERROR - Failed to analyze resume: [Errno 8] nodename nor servname provided, or not known
+2026-07-18 03:47:15,727 - app.core.logging - INFO - Request POST http://localhost:8000/api/analyze completed in 32.7986 secs with status 500
+2026-07-18 03:49:32,635 - app.core.logging - INFO - Incoming request: POST http://localhost:8000/api/analyze
+2026-07-18 03:49:32,669 - app.core.logging - INFO - Starting full analysis for user guest
+2026-07-18 03:49:32,669 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-18 03:49:35,933 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-18 03:49:35,939 - google_genai.types - WARNING - Warning: there are non-text parts in the response: ['thought_signature'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+2026-07-18 03:49:35,940 - app.core.logging - INFO - CV analysis completed
+2026-07-18 03:49:35,940 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-18 03:49:43,207 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-18 03:49:43,216 - google_genai.types - WARNING - Warning: there are non-text parts in the response: ['thought_signature'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+2026-07-18 03:49:43,217 - app.core.logging - INFO - Job analysis completed
+2026-07-18 03:49:43,217 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-18 03:49:49,855 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-18 03:49:49,859 - google_genai.types - WARNING - Warning: there are non-text parts in the response: ['thought_signature'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+2026-07-18 03:49:49,859 - app.core.logging - INFO - Match analysis completed
+2026-07-18 03:49:49,859 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-18 03:49:56,305 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-18 03:49:56,309 - google_genai.types - WARNING - Warning: there are non-text parts in the response: ['thought_signature'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+2026-07-18 03:49:56,309 - app.core.logging - INFO - Summary generated
+2026-07-18 03:49:56,310 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-18 03:50:08,182 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-18 03:50:08,188 - google_genai.types - WARNING - Warning: there are non-text parts in the response: ['thought_signature'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+2026-07-18 03:50:08,188 - app.core.logging - INFO - Markdown report generated
+2026-07-18 03:50:08,243 - app.repositories.analysis_repository - ERROR - Error creating analysis: [Errno 8] nodename nor servname provided, or not known
+2026-07-18 03:50:08,244 - app.core.logging - ERROR - Failed to analyze resume: [Errno 8] nodename nor servname provided, or not known
+2026-07-18 03:50:08,247 - app.core.logging - INFO - Request POST http://localhost:8000/api/analyze completed in 35.6105 secs with status 500
+2026-07-18 04:01:31,732 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-18 04:01:31,879 - app.repositories.analysis_repository - ERROR - Error getting history for user guest: [Errno 8] nodename nor servname provided, or not known
+2026-07-18 04:01:31,881 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.1486 secs with status 500
+2026-07-18 04:01:32,888 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-18 04:01:32,893 - app.repositories.analysis_repository - ERROR - Error getting history for user guest: [Errno 8] nodename nor servname provided, or not known
+2026-07-18 04:01:32,894 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.0053 secs with status 500
+2026-07-18 04:01:40,659 - app.core.logging - INFO - Incoming request: OPTIONS http://localhost:8000/api/analyze
+2026-07-18 04:01:40,660 - app.core.logging - INFO - Request OPTIONS http://localhost:8000/api/analyze completed in 0.0014 secs with status 200
+2026-07-18 04:01:40,663 - app.core.logging - INFO - Incoming request: POST http://localhost:8000/api/analyze
+2026-07-18 04:01:40,689 - app.core.logging - INFO - Starting full analysis for user guest
+2026-07-18 04:01:40,689 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-18 04:01:43,792 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-18 04:01:43,800 - google_genai.types - WARNING - Warning: there are non-text parts in the response: ['thought_signature'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+2026-07-18 04:01:43,801 - app.core.logging - INFO - CV analysis completed
+2026-07-18 04:01:43,801 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-18 04:01:46,360 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-18 04:01:46,364 - google_genai.types - WARNING - Warning: there are non-text parts in the response: ['thought_signature'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+2026-07-18 04:01:46,365 - app.core.logging - INFO - Job analysis completed
+2026-07-18 04:01:46,365 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-18 04:01:51,573 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-18 04:01:51,578 - google_genai.types - WARNING - Warning: there are non-text parts in the response: ['thought_signature'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+2026-07-18 04:01:51,579 - app.core.logging - INFO - Match analysis completed
+2026-07-18 04:01:51,579 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-18 04:01:56,985 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-18 04:01:57,007 - google_genai.types - WARNING - Warning: there are non-text parts in the response: ['thought_signature'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+2026-07-18 04:01:57,007 - app.core.logging - INFO - Summary generated
+2026-07-18 04:01:57,007 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-18 04:02:07,154 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-18 04:02:07,248 - google_genai.types - WARNING - Warning: there are non-text parts in the response: ['thought_signature'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+2026-07-18 04:02:07,249 - app.core.logging - INFO - Markdown report generated
+2026-07-18 04:02:07,249 - app.repositories.analysis_repository - INFO - !!! VERİTABANI KAYDI ATLANDI (TEST MODU) !!!
+2026-07-18 04:02:07,249 - app.core.logging - INFO - Analysis saved to db with id: test-id-12345
+2026-07-18 04:02:07,257 - app.core.logging - INFO - Request POST http://localhost:8000/api/analyze completed in 26.5939 secs with status 200
+2026-07-18 04:02:09,638 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-18 04:02:09,646 - app.repositories.analysis_repository - ERROR - Error getting history for user guest: [Errno 8] nodename nor servname provided, or not known
+2026-07-18 04:02:09,647 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.0095 secs with status 500
+2026-07-18 04:02:10,661 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-18 04:02:10,665 - app.repositories.analysis_repository - ERROR - Error getting history for user guest: [Errno 8] nodename nor servname provided, or not known
+2026-07-18 04:02:10,666 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.0058 secs with status 500
+2026-07-18 04:02:13,169 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-18 04:02:13,174 - app.repositories.analysis_repository - ERROR - Error getting history for user guest: [Errno 8] nodename nor servname provided, or not known
+2026-07-18 04:02:13,174 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.0051 secs with status 500
+2026-07-18 04:02:14,179 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-18 04:02:14,185 - app.repositories.analysis_repository - ERROR - Error getting history for user guest: [Errno 8] nodename nor servname provided, or not known
+2026-07-18 04:02:14,186 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.0071 secs with status 500
+2026-07-18 04:02:16,195 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-18 04:02:16,201 - app.repositories.analysis_repository - ERROR - Error getting history for user guest: [Errno 8] nodename nor servname provided, or not known
+2026-07-18 04:02:16,202 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.0069 secs with status 500
+2026-07-18 04:02:41,021 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-18 04:02:41,050 - app.repositories.analysis_repository - ERROR - Error getting history for user guest: [Errno 8] nodename nor servname provided, or not known
+2026-07-18 04:02:41,052 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.0310 secs with status 500
+2026-07-18 04:02:43,542 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-18 04:02:43,546 - app.repositories.analysis_repository - ERROR - Error getting history for user guest: [Errno 8] nodename nor servname provided, or not known
+2026-07-18 04:02:43,547 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.0051 secs with status 500
+2026-07-18 04:02:43,958 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-18 04:02:43,964 - app.repositories.analysis_repository - ERROR - Error getting history for user guest: [Errno 8] nodename nor servname provided, or not known
+2026-07-18 04:02:43,965 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.0068 secs with status 500
+2026-07-18 04:02:44,971 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-18 04:02:44,977 - app.repositories.analysis_repository - ERROR - Error getting history for user guest: [Errno 8] nodename nor servname provided, or not known
+2026-07-18 04:02:44,978 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.0071 secs with status 500
+2026-07-18 04:02:46,994 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-18 04:02:47,000 - app.repositories.analysis_repository - ERROR - Error getting history for user guest: [Errno 8] nodename nor servname provided, or not known
+2026-07-18 04:02:47,000 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.0069 secs with status 500
+2026-07-18 04:02:51,012 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-18 04:02:51,017 - app.repositories.analysis_repository - ERROR - Error getting history for user guest: [Errno 8] nodename nor servname provided, or not known
+2026-07-18 04:02:51,018 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.0062 secs with status 500
+2026-07-18 04:05:01,823 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-18 04:05:01,829 - app.repositories.analysis_repository - INFO - !!! GEÇMİŞ VERİSİ SİMÜLE EDİLİYOR (TEST MODU) !!!
+2026-07-18 04:05:01,830 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.0068 secs with status 200
+2026-07-18 04:05:04,013 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-18 04:05:04,015 - app.repositories.analysis_repository - INFO - !!! GEÇMİŞ VERİSİ SİMÜLE EDİLİYOR (TEST MODU) !!!
+2026-07-18 04:05:04,016 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.0027 secs with status 200
+2026-07-18 04:05:05,686 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-18 04:05:05,687 - app.repositories.analysis_repository - INFO - !!! GEÇMİŞ VERİSİ SİMÜLE EDİLİYOR (TEST MODU) !!!
+2026-07-18 04:05:05,687 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.0016 secs with status 200
+2026-07-18 04:05:21,138 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-18 04:05:21,140 - app.repositories.analysis_repository - INFO - !!! GEÇMİŞ VERİSİ SİMÜLE EDİLİYOR (TEST MODU) !!!
+2026-07-18 04:05:21,141 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.0038 secs with status 200
+2026-07-18 04:05:24,362 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-18 04:05:24,364 - app.repositories.analysis_repository - INFO - !!! GEÇMİŞ VERİSİ SİMÜLE EDİLİYOR (TEST MODU) !!!
+2026-07-18 04:05:24,365 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.0031 secs with status 200
+2026-07-18 04:05:29,880 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-18 04:05:29,881 - app.repositories.analysis_repository - INFO - !!! GEÇMİŞ VERİSİ SİMÜLE EDİLİYOR (TEST MODU) !!!
+2026-07-18 04:05:29,882 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.0029 secs with status 200
+2026-07-18 04:05:31,105 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-18 04:05:31,110 - app.repositories.analysis_repository - INFO - !!! GEÇMİŞ VERİSİ SİMÜLE EDİLİYOR (TEST MODU) !!!
+2026-07-18 04:05:31,112 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.0070 secs with status 200
+2026-07-18 04:05:42,276 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-18 04:05:42,283 - app.repositories.analysis_repository - INFO - !!! GEÇMİŞ VERİSİ SİMÜLE EDİLİYOR (TEST MODU) !!!
+2026-07-18 04:05:42,284 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.0090 secs with status 200
+2026-07-18 04:05:43,121 - app.core.logging - INFO - Incoming request: OPTIONS http://localhost:8000/api/export/pdf
+2026-07-18 04:05:43,121 - app.core.logging - INFO - Request OPTIONS http://localhost:8000/api/export/pdf completed in 0.0006 secs with status 200
+2026-07-18 04:05:43,123 - app.core.logging - INFO - Incoming request: POST http://localhost:8000/api/export/pdf
+2026-07-18 04:05:43,128 - app.core.logging - INFO - Generating PDF export for analysis test-id-12345
+2026-07-18 04:05:43,166 - app.repositories.analysis_repository - ERROR - Error getting analysis test-id-12345: [Errno 8] nodename nor servname provided, or not known
+2026-07-18 04:05:43,166 - app.core.logging - INFO - Request POST http://localhost:8000/api/export/pdf completed in 0.0429 secs with status 500
+2026-07-18 04:05:44,305 - app.core.logging - INFO - Incoming request: POST http://localhost:8000/api/export/pdf
+2026-07-18 04:05:44,308 - app.core.logging - INFO - Generating PDF export for analysis test-id-12345
+2026-07-18 04:05:44,312 - app.repositories.analysis_repository - ERROR - Error getting analysis test-id-12345: [Errno 8] nodename nor servname provided, or not known
+2026-07-18 04:05:44,313 - app.core.logging - INFO - Request POST http://localhost:8000/api/export/pdf completed in 0.0080 secs with status 500
+2026-07-18 04:05:44,518 - app.core.logging - INFO - Incoming request: POST http://localhost:8000/api/export/pdf
+2026-07-18 04:05:44,520 - app.core.logging - INFO - Generating PDF export for analysis test-id-12345
+2026-07-18 04:05:44,524 - app.repositories.analysis_repository - ERROR - Error getting analysis test-id-12345: [Errno 8] nodename nor servname provided, or not known
+2026-07-18 04:05:44,525 - app.core.logging - INFO - Request POST http://localhost:8000/api/export/pdf completed in 0.0068 secs with status 500
+2026-07-18 04:05:44,870 - app.core.logging - INFO - Incoming request: POST http://localhost:8000/api/export/pdf
+2026-07-18 04:05:44,872 - app.core.logging - INFO - Generating PDF export for analysis test-id-12345
+2026-07-18 04:05:44,875 - app.repositories.analysis_repository - ERROR - Error getting analysis test-id-12345: [Errno 8] nodename nor servname provided, or not known
+2026-07-18 04:05:44,876 - app.core.logging - INFO - Request POST http://localhost:8000/api/export/pdf completed in 0.0062 secs with status 500
+2026-07-18 04:05:45,102 - app.core.logging - INFO - Incoming request: POST http://localhost:8000/api/export/pdf
+2026-07-18 04:05:45,104 - app.core.logging - INFO - Generating PDF export for analysis test-id-12345
+2026-07-18 04:05:45,107 - app.repositories.analysis_repository - ERROR - Error getting analysis test-id-12345: [Errno 8] nodename nor servname provided, or not known
+2026-07-18 04:05:45,108 - app.core.logging - INFO - Request POST http://localhost:8000/api/export/pdf completed in 0.0056 secs with status 500
+2026-07-18 04:05:45,269 - app.core.logging - INFO - Incoming request: POST http://localhost:8000/api/export/pdf
+2026-07-18 04:05:45,271 - app.core.logging - INFO - Generating PDF export for analysis test-id-12345
+2026-07-18 04:05:45,274 - app.repositories.analysis_repository - ERROR - Error getting analysis test-id-12345: [Errno 8] nodename nor servname provided, or not known
+2026-07-18 04:05:45,275 - app.core.logging - INFO - Request POST http://localhost:8000/api/export/pdf completed in 0.0064 secs with status 500
+2026-07-18 04:05:45,419 - app.core.logging - INFO - Incoming request: POST http://localhost:8000/api/export/pdf
+2026-07-18 04:05:45,421 - app.core.logging - INFO - Generating PDF export for analysis test-id-12345
+2026-07-18 04:05:45,424 - app.repositories.analysis_repository - ERROR - Error getting analysis test-id-12345: [Errno 8] nodename nor servname provided, or not known
+2026-07-18 04:05:45,425 - app.core.logging - INFO - Request POST http://localhost:8000/api/export/pdf completed in 0.0058 secs with status 500
+2026-07-18 04:05:45,569 - app.core.logging - INFO - Incoming request: POST http://localhost:8000/api/export/pdf
+2026-07-18 04:05:45,571 - app.core.logging - INFO - Generating PDF export for analysis test-id-12345
+2026-07-18 04:05:45,574 - app.repositories.analysis_repository - ERROR - Error getting analysis test-id-12345: [Errno 8] nodename nor servname provided, or not known
+2026-07-18 04:05:45,575 - app.core.logging - INFO - Request POST http://localhost:8000/api/export/pdf completed in 0.0064 secs with status 500
+2026-07-18 04:05:45,736 - app.core.logging - INFO - Incoming request: POST http://localhost:8000/api/export/pdf
+2026-07-18 04:05:45,738 - app.core.logging - INFO - Generating PDF export for analysis test-id-12345
+2026-07-18 04:05:45,742 - app.repositories.analysis_repository - ERROR - Error getting analysis test-id-12345: [Errno 8] nodename nor servname provided, or not known
+2026-07-18 04:05:45,743 - app.core.logging - INFO - Request POST http://localhost:8000/api/export/pdf completed in 0.0068 secs with status 500
+2026-07-18 04:05:45,919 - app.core.logging - INFO - Incoming request: POST http://localhost:8000/api/export/pdf
+2026-07-18 04:05:45,921 - app.core.logging - INFO - Generating PDF export for analysis test-id-12345
+2026-07-18 04:05:45,924 - app.repositories.analysis_repository - ERROR - Error getting analysis test-id-12345: [Errno 8] nodename nor servname provided, or not known
+2026-07-18 04:05:45,924 - app.core.logging - INFO - Request POST http://localhost:8000/api/export/pdf completed in 0.0054 secs with status 500
+2026-07-18 04:05:46,069 - app.core.logging - INFO - Incoming request: POST http://localhost:8000/api/export/pdf
+2026-07-18 04:05:46,071 - app.core.logging - INFO - Generating PDF export for analysis test-id-12345
+2026-07-18 04:05:46,074 - app.repositories.analysis_repository - ERROR - Error getting analysis test-id-12345: [Errno 8] nodename nor servname provided, or not known
+2026-07-18 04:05:46,075 - app.core.logging - INFO - Request POST http://localhost:8000/api/export/pdf completed in 0.0056 secs with status 500
+2026-07-18 04:05:46,236 - app.core.logging - INFO - Incoming request: POST http://localhost:8000/api/export/pdf
+2026-07-18 04:05:46,238 - app.core.logging - INFO - Generating PDF export for analysis test-id-12345
+2026-07-18 04:05:46,241 - app.repositories.analysis_repository - ERROR - Error getting analysis test-id-12345: [Errno 8] nodename nor servname provided, or not known
+2026-07-18 04:05:46,242 - app.core.logging - INFO - Request POST http://localhost:8000/api/export/pdf completed in 0.0056 secs with status 500
+2026-07-18 04:05:46,402 - app.core.logging - INFO - Incoming request: POST http://localhost:8000/api/export/pdf
+2026-07-18 04:05:46,404 - app.core.logging - INFO - Generating PDF export for analysis test-id-12345
+2026-07-18 04:05:46,407 - app.repositories.analysis_repository - ERROR - Error getting analysis test-id-12345: [Errno 8] nodename nor servname provided, or not known
+2026-07-18 04:05:46,408 - app.core.logging - INFO - Request POST http://localhost:8000/api/export/pdf completed in 0.0061 secs with status 500
+2026-07-18 04:05:46,536 - app.core.logging - INFO - Incoming request: POST http://localhost:8000/api/export/pdf
+2026-07-18 04:05:46,538 - app.core.logging - INFO - Generating PDF export for analysis test-id-12345
+2026-07-18 04:05:46,541 - app.repositories.analysis_repository - ERROR - Error getting analysis test-id-12345: [Errno 8] nodename nor servname provided, or not known
+2026-07-18 04:05:46,542 - app.core.logging - INFO - Request POST http://localhost:8000/api/export/pdf completed in 0.0058 secs with status 500
+2026-07-18 04:05:46,686 - app.core.logging - INFO - Incoming request: POST http://localhost:8000/api/export/pdf
+2026-07-18 04:05:46,687 - app.core.logging - INFO - Generating PDF export for analysis test-id-12345
+2026-07-18 04:05:46,691 - app.repositories.analysis_repository - ERROR - Error getting analysis test-id-12345: [Errno 8] nodename nor servname provided, or not known
+2026-07-18 04:05:46,691 - app.core.logging - INFO - Request POST http://localhost:8000/api/export/pdf completed in 0.0056 secs with status 500
+2026-07-18 04:05:46,836 - app.core.logging - INFO - Incoming request: POST http://localhost:8000/api/export/pdf
+2026-07-18 04:05:46,838 - app.core.logging - INFO - Generating PDF export for analysis test-id-12345
+2026-07-18 04:05:46,841 - app.repositories.analysis_repository - ERROR - Error getting analysis test-id-12345: [Errno 8] nodename nor servname provided, or not known
+2026-07-18 04:05:46,841 - app.core.logging - INFO - Request POST http://localhost:8000/api/export/pdf completed in 0.0057 secs with status 500
+2026-07-18 04:05:46,985 - app.core.logging - INFO - Incoming request: POST http://localhost:8000/api/export/pdf
+2026-07-18 04:05:46,987 - app.core.logging - INFO - Generating PDF export for analysis test-id-12345
+2026-07-18 04:05:46,990 - app.repositories.analysis_repository - ERROR - Error getting analysis test-id-12345: [Errno 8] nodename nor servname provided, or not known
+2026-07-18 04:05:46,990 - app.core.logging - INFO - Request POST http://localhost:8000/api/export/pdf completed in 0.0055 secs with status 500
+2026-07-18 04:05:47,452 - app.core.logging - INFO - Incoming request: POST http://localhost:8000/api/export/pdf
+2026-07-18 04:05:47,453 - app.core.logging - INFO - Generating PDF export for analysis test-id-12345
+2026-07-18 04:05:47,457 - app.repositories.analysis_repository - ERROR - Error getting analysis test-id-12345: [Errno 8] nodename nor servname provided, or not known
+2026-07-18 04:05:47,458 - app.core.logging - INFO - Request POST http://localhost:8000/api/export/pdf completed in 0.0062 secs with status 500
+2026-07-18 04:05:54,288 - app.core.logging - INFO - Incoming request: POST http://localhost:8000/api/export/pdf
+2026-07-18 04:05:54,291 - app.core.logging - INFO - Generating PDF export for analysis test-id-12345
+2026-07-18 04:05:54,296 - app.repositories.analysis_repository - ERROR - Error getting analysis test-id-12345: [Errno 8] nodename nor servname provided, or not known
+2026-07-18 04:05:54,297 - app.core.logging - INFO - Request POST http://localhost:8000/api/export/pdf completed in 0.0093 secs with status 500
+2026-07-18 04:05:54,453 - app.core.logging - INFO - Incoming request: POST http://localhost:8000/api/export/pdf
+2026-07-18 04:05:54,455 - app.core.logging - INFO - Generating PDF export for analysis test-id-12345
+2026-07-18 04:05:54,458 - app.repositories.analysis_repository - ERROR - Error getting analysis test-id-12345: [Errno 8] nodename nor servname provided, or not known
+2026-07-18 04:05:54,459 - app.core.logging - INFO - Request POST http://localhost:8000/api/export/pdf completed in 0.0065 secs with status 500
+2026-07-18 04:05:54,620 - app.core.logging - INFO - Incoming request: POST http://localhost:8000/api/export/pdf
+2026-07-18 04:05:54,622 - app.core.logging - INFO - Generating PDF export for analysis test-id-12345
+2026-07-18 04:05:54,625 - app.repositories.analysis_repository - ERROR - Error getting analysis test-id-12345: [Errno 8] nodename nor servname provided, or not known
+2026-07-18 04:05:54,626 - app.core.logging - INFO - Request POST http://localhost:8000/api/export/pdf completed in 0.0069 secs with status 500
+2026-07-18 04:06:16,529 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-18 04:06:16,532 - app.repositories.analysis_repository - INFO - !!! GEÇMİŞ VERİSİ SİMÜLE EDİLİYOR (TEST MODU) !!!
+2026-07-18 04:06:16,534 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.0041 secs with status 200
+2026-07-18 04:06:19,371 - app.core.logging - INFO - Incoming request: POST http://localhost:8000/api/export/pdf
+2026-07-18 04:06:19,373 - app.core.logging - INFO - Generating PDF export for analysis test-id-12345
+2026-07-18 04:06:19,379 - app.repositories.analysis_repository - ERROR - Error getting analysis test-id-12345: [Errno 8] nodename nor servname provided, or not known
+2026-07-18 04:06:19,379 - app.core.logging - INFO - Request POST http://localhost:8000/api/export/pdf completed in 0.0086 secs with status 500
+2026-07-18 04:06:19,669 - app.core.logging - INFO - Incoming request: POST http://localhost:8000/api/export/pdf
+2026-07-18 04:06:19,671 - app.core.logging - INFO - Generating PDF export for analysis test-id-12345
+2026-07-18 04:06:19,674 - app.repositories.analysis_repository - ERROR - Error getting analysis test-id-12345: [Errno 8] nodename nor servname provided, or not known
+2026-07-18 04:06:19,675 - app.core.logging - INFO - Request POST http://localhost:8000/api/export/pdf completed in 0.0058 secs with status 500
+2026-07-18 04:06:19,819 - app.core.logging - INFO - Incoming request: POST http://localhost:8000/api/export/pdf
+2026-07-18 04:06:19,821 - app.core.logging - INFO - Generating PDF export for analysis test-id-12345
+2026-07-18 04:06:19,824 - app.repositories.analysis_repository - ERROR - Error getting analysis test-id-12345: [Errno 8] nodename nor servname provided, or not known
+2026-07-18 04:06:19,825 - app.core.logging - INFO - Request POST http://localhost:8000/api/export/pdf completed in 0.0059 secs with status 500
+2026-07-18 04:06:19,986 - app.core.logging - INFO - Incoming request: POST http://localhost:8000/api/export/pdf
+2026-07-18 04:06:19,988 - app.core.logging - INFO - Generating PDF export for analysis test-id-12345
+2026-07-18 04:06:19,991 - app.repositories.analysis_repository - ERROR - Error getting analysis test-id-12345: [Errno 8] nodename nor servname provided, or not known
+2026-07-18 04:06:19,992 - app.core.logging - INFO - Request POST http://localhost:8000/api/export/pdf completed in 0.0059 secs with status 500
+2026-07-18 04:06:20,136 - app.core.logging - INFO - Incoming request: POST http://localhost:8000/api/export/pdf
+2026-07-18 04:06:20,138 - app.core.logging - INFO - Generating PDF export for analysis test-id-12345
+2026-07-18 04:06:20,141 - app.repositories.analysis_repository - ERROR - Error getting analysis test-id-12345: [Errno 8] nodename nor servname provided, or not known
+2026-07-18 04:06:20,141 - app.core.logging - INFO - Request POST http://localhost:8000/api/export/pdf completed in 0.0055 secs with status 500
+2026-07-18 04:06:33,791 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-18 04:06:33,795 - app.repositories.analysis_repository - INFO - !!! GEÇMİŞ VERİSİ SİMÜLE EDİLİYOR (TEST MODU) !!!
+2026-07-18 04:06:33,796 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.0052 secs with status 200
+2026-07-18 04:07:19,752 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-18 04:07:19,764 - app.repositories.analysis_repository - INFO - !!! GEÇMİŞ VERİSİ SİMÜLE EDİLİYOR (TEST MODU) !!!
+2026-07-18 04:07:19,766 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.0144 secs with status 200
+2026-07-18 04:07:21,425 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-18 04:07:21,427 - app.repositories.analysis_repository - INFO - !!! GEÇMİŞ VERİSİ SİMÜLE EDİLİYOR (TEST MODU) !!!
+2026-07-18 04:07:21,428 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.0027 secs with status 200
+2026-07-18 04:07:23,973 - app.core.logging - INFO - Incoming request: POST http://localhost:8000/api/export/pdf
+2026-07-18 04:07:23,977 - app.core.logging - INFO - Generating PDF export for analysis test-id-12345
+2026-07-18 04:07:23,978 - app.repositories.analysis_repository - INFO - !!! ANALİZ GETİRME SİMÜLE EDİLİYOR: test-id-12345 !!!
+2026-07-18 04:07:23,987 - app.core.logging - INFO - Request POST http://localhost:8000/api/export/pdf completed in 0.0133 secs with status 200
+2026-07-18 04:07:30,787 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-18 04:07:30,790 - app.repositories.analysis_repository - INFO - !!! GEÇMİŞ VERİSİ SİMÜLE EDİLİYOR (TEST MODU) !!!
+2026-07-18 04:07:30,792 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.0042 secs with status 200
+2026-07-18 04:07:32,155 - app.core.logging - INFO - Incoming request: POST http://localhost:8000/api/export/pdf
+2026-07-18 04:07:32,157 - app.core.logging - INFO - Generating PDF export for analysis test-id-12345
+2026-07-18 04:07:32,157 - app.repositories.analysis_repository - INFO - !!! ANALİZ GETİRME SİMÜLE EDİLİYOR: test-id-12345 !!!
+2026-07-18 04:07:32,163 - app.core.logging - INFO - Request POST http://localhost:8000/api/export/pdf completed in 0.0075 secs with status 200
+2026-07-18 04:07:34,854 - app.core.logging - INFO - Incoming request: POST http://localhost:8000/api/export/pdf
+2026-07-18 04:07:34,856 - app.core.logging - INFO - Generating PDF export for analysis test-id-12345
+2026-07-18 04:07:34,856 - app.repositories.analysis_repository - INFO - !!! ANALİZ GETİRME SİMÜLE EDİLİYOR: test-id-12345 !!!
+2026-07-18 04:07:34,860 - app.core.logging - INFO - Request POST http://localhost:8000/api/export/pdf completed in 0.0066 secs with status 200
+2026-07-18 04:07:45,161 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-18 04:07:45,170 - app.repositories.analysis_repository - INFO - !!! GEÇMİŞ VERİSİ SİMÜLE EDİLİYOR (TEST MODU) !!!
+2026-07-18 04:07:45,171 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.0109 secs with status 200
+2026-07-18 04:07:52,063 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-18 04:07:52,065 - app.repositories.analysis_repository - INFO - !!! GEÇMİŞ VERİSİ SİMÜLE EDİLİYOR (TEST MODU) !!!
+2026-07-18 04:07:52,066 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.0033 secs with status 200
+2026-07-18 04:15:55,751 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-18 04:15:55,865 - app.repositories.analysis_repository - ERROR - Error getting history for user guest: [Errno 8] nodename nor servname provided, or not known
+2026-07-18 04:15:55,866 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.1150 secs with status 500
+2026-07-18 04:15:56,874 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-18 04:15:56,878 - app.repositories.analysis_repository - ERROR - Error getting history for user guest: [Errno 8] nodename nor servname provided, or not known
+2026-07-18 04:15:56,878 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.0046 secs with status 500
+2026-07-18 04:15:58,886 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-18 04:15:58,894 - app.repositories.analysis_repository - ERROR - Error getting history for user guest: [Errno 8] nodename nor servname provided, or not known
+2026-07-18 04:15:58,895 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.0090 secs with status 500
+2026-07-18 04:16:02,901 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-18 04:16:02,905 - app.repositories.analysis_repository - ERROR - Error getting history for user guest: [Errno 8] nodename nor servname provided, or not known
+2026-07-18 04:16:02,906 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.0046 secs with status 500
+2026-07-18 04:16:05,991 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-18 04:16:05,996 - app.repositories.analysis_repository - ERROR - Error getting history for user guest: [Errno 8] nodename nor servname provided, or not known
+2026-07-18 04:16:05,997 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.0069 secs with status 500
+2026-07-18 04:16:06,945 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-18 04:16:06,948 - app.repositories.analysis_repository - ERROR - Error getting history for user guest: [Errno 8] nodename nor servname provided, or not known
+2026-07-18 04:16:06,948 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.0033 secs with status 500
+2026-07-18 04:16:07,689 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-18 04:16:07,691 - app.repositories.analysis_repository - ERROR - Error getting history for user guest: [Errno 8] nodename nor servname provided, or not known
+2026-07-18 04:16:07,692 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.0029 secs with status 500
+2026-07-18 04:16:08,699 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-18 04:16:08,704 - app.repositories.analysis_repository - ERROR - Error getting history for user guest: [Errno 8] nodename nor servname provided, or not known
+2026-07-18 04:16:08,706 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.0072 secs with status 500
+2026-07-18 04:16:10,715 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-18 04:16:10,720 - app.repositories.analysis_repository - ERROR - Error getting history for user guest: [Errno 8] nodename nor servname provided, or not known
+2026-07-18 04:16:10,720 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.0051 secs with status 500
+2026-07-18 04:16:14,729 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-18 04:16:14,735 - app.repositories.analysis_repository - ERROR - Error getting history for user guest: [Errno 8] nodename nor servname provided, or not known
+2026-07-18 04:16:14,736 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.0072 secs with status 500

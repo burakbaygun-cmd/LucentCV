@@ -1,8 +1,10 @@
 "use client";
 
+import { useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 import { useQuery } from "@tanstack/react-query";
-import { ArrowLeft, Download, FileText, LayoutDashboard, Target } from "lucide-react";
+import { ArrowLeft, Download, FileText, LayoutDashboard, Loader2, Target } from "lucide-react";
+import { toast } from "sonner";
 import { api } from "@/services/api";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -17,6 +19,9 @@ export default function AnalysisDetailsPage() {
   const params = useParams();
   const router = useRouter();
   const analysisId = params.id as string;
+
+  // Guards the export button against duplicate clicks while a download is in flight.
+  const [isExporting, setIsExporting] = useState(false);
 
   const { data: historyItems, isLoading, isError, refetch } = useQuery({
     queryKey: ["history", "guest"],
@@ -52,9 +57,27 @@ export default function AnalysisDetailsPage() {
     );
   }
 
-  const handleDownloadPDF = () => {
-    // Basic redirect to the PDF endpoint
-    window.open(`http://localhost:8000/api/v1/export/pdf?analysis_id=${analysisId}`, "_blank");
+  /**
+   * Triggers a PDF export via the backend and downloads the resulting file.
+   * Manages in-flight state to prevent duplicate requests and provides
+   * toast feedback for both success and failure outcomes.
+   */
+  const handleDownloadPDF = async () => {
+    // Prevent concurrent export requests from the same session.
+    if (isExporting) return;
+
+    setIsExporting(true);
+    try {
+      // Delegate blob fetching, anchor injection, and URL cleanup to the API layer.
+      await api.exportPdf(analysisId);
+      toast.success("Report downloaded!");
+    } catch {
+      // Surface the failure without crashing the page — user can retry.
+      toast.error("Failed to export PDF. Please try again.");
+    } finally {
+      // Always restore the button, regardless of outcome.
+      setIsExporting(false);
+    }
   };
 
   return (
@@ -63,8 +86,25 @@ export default function AnalysisDetailsPage() {
         <Button variant="ghost" onClick={() => router.push("/history")} className="-ml-4 text-muted-foreground">
           <ArrowLeft className="w-4 h-4 mr-2" /> Back to History
         </Button>
-        <Button onClick={handleDownloadPDF} variant="outline" className="border-primary/50 hover:bg-primary/10">
-          <Download className="w-4 h-4 mr-2" /> Download PDF
+        {/* Disable the button while export is in progress to prevent duplicate requests. */}
+        <Button
+          onClick={handleDownloadPDF}
+          variant="outline"
+          className="border-primary/50 hover:bg-primary/10"
+          disabled={isExporting}
+        >
+          {isExporting ? (
+            // Provide inline feedback while the PDF is being generated server-side.
+            <>
+              <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+              Exporting…
+            </>
+          ) : (
+            <>
+              <Download className="w-4 h-4 mr-2" />
+              Download PDF
+            </>
+          )}
         </Button>
       </div>
 
