@@ -101,10 +101,9 @@ ekteki bağlantıda sunulmuştur: [iletişim sürecinden kesitler](https://imgur
 ### Toplantı Özeti
  
 #### Genel Durum ve Proje Birleştirme
-- Ekip içi iletişim kopukluğu nedeniyle başlangıçta Burak ve Büşra, diğer üyeler tarafından katılım sağlanmayacağını varsayarak projelerine bağımsız olarak başlamıştır.
-- İletişim problemlerinin çözülmesi sonucu mevcut projelerden biri üzerinden
-  ortak ilerleme kararı alınarak ekip içi görev dağılımları tekrardan
-  oluşturulmuş ve tüm ekip üyelerinin görev dağılımları yapılarak aktif katılımları sağlanmıştır.
+
+- Sprint başlangıcında proje kapsamı ve teknik gereksinimler değerlendirilerek ortak geliştirme planı oluşturuldu.
+- Geliştirme süreci boyunca ekip içi koordinasyon sağlanarak tüm üyeler aktif şekilde projeye katkı sundu.
   
 #### Görev Dağılımı (Sprint 1)
 - **Asil Doğukan Samay:** Backlog Dağıtma Mantığı (Sprint Planning, User
@@ -215,6 +214,46 @@ Sprint sonunda geliştirilen ürün ve teknik süreç ekip tarafından değerlen
 
 
 # Sprint 2
+
+## Daily Scrum
+
+Sprint 2 süresince ekip üyelerinin farklı çalışma saatlerine sahip olması nedeniyle Daily Scrum toplantıları senkron olarak gerçekleştirilememiştir. Bunun yerine proje yönetimi, görev takibi ve teknik iletişim Slack üzerinden asenkron olarak yürütülmüştür.
+
+Sprint boyunca mimari dönüşüm, görev dağılımları, teknik problemler, kod incelemeleri, test süreçleri ve ilerleme durumları Slack üzerinden düzenli olarak paylaşılmıştır. GitHub üzerinde branch tabanlı geliştirme modeli benimsenmiş; her ekip üyesi geliştirmelerini kendi branch'i üzerinde tamamlayarak Pull Request (PR) oluşturmuş ve kodlar ekip tarafından incelendikten sonra ana dala birleştirilmiştir.
+
+İlgili iletişim süreci ve Daily Scrum paylaşımlarına aşağıdaki bağlantı üzerinden ulaşılabilir:
+
+**İletişim Sürecinden Kesitler:**  
+https://imgur.com/a/LcQ2C2o
+
+### Toplantı Özeti
+
+#### Genel Durum
+
+- Sprint 1 sonunda alınan mimari dönüşüm kararı doğrultusunda proje tamamen yeniden yapılandırıldı.
+- Streamlit tabanlı yapı kaldırılarak **Next.js + FastAPI** tabanlı modern mimariye geçildi.
+- Supabase altyapısı yeniden oluşturuldu ve ekip üyeleri projeye davet edilerek ortak veritabanı kullanılmaya başlandı.
+- Görev dağılımları Slack üzerinden planlandı ve geliştirme süreci GitHub üzerinde branch, Pull Request ve Merge süreçleri ile yönetildi.
+- Ekip üyeleri geliştirdikleri modülleri birbirlerinin geri bildirimleri doğrultusunda test ederek eksik görülen noktaları birlikte tamamladı.
+- Sprint sonunda README, Sprint dokümantasyonu ve son düzenlemelerin birlikte tamamlanmasına karar verildi.
+
+#### Görev Dağılımı (Sprint 2)
+
+- **Büşra Demir:** Mimari dönüşümün gerçekleştirilmesi, Streamlit'ten Next.js + FastAPI mimarisine geçiş, Supabase entegrasyonu, temel UI altyapısının hazırlanması, ekip koordinasyonu ve kod birleştirme süreçlerinin yönetilmesi.
+- **Asil Doğukan Samay:** Authentication sistemi (Login, Register, Session Management, Protected Routes, Logout ve Google Authentication).
+- **Burak Baygün:** AI destekli Mülakat Simülasyonu modülünün geliştirilmesi ve çalışır hale getirilmesi.
+- **Nuri Duldar:** PDF Export özelliğinin tamamlanması, modern popup ve bildirim sistemlerinin (AlertDialog & Sonner Toast) uygulanması ve kullanıcı deneyiminin iyileştirilmesi.
+- **Ece Toygun:** Sprint 3 kapsamında uygulamanın **Vercel** üzerinde canlı ortama alınması (deployment) ve yayınlama sürecinin planlanması.
+
+### Sprint 3 Vizyonu
+
+- Uygulamanın Vercel (Frontend) ve Render/Railway (Backend) üzerinde production ortamına alınması.
+- Performans ve güvenlik optimizasyonlarının tamamlanması.
+- AI analizlerinin doğruluğunu artıracak iyileştirmelerin yapılması.
+- Son UI/UX düzenlemeleri ve kullanıcı deneyimi geliştirmelerinin tamamlanması.
+- Test kapsamının genişletilmesi ve son hata düzeltmelerinin yapılması.
+- README, proje dokümantasyonu ve kurulum rehberinin güncellenmesi.
+- Bootcamp final sunumu ve demo senaryosunun hazırlanması.
 
 ## Sprint Review
 
