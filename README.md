@@ -216,7 +216,80 @@ Sprint sonunda geliştirilen ürün ve teknik süreç ekip tarafından değerlen
 
 # Sprint 2
 
-> Sprint 2 dokümantasyonu sprint sonunda eklenecektir.
+## Sprint Review
+
+Sprint 2 boyunca **LucentCV**, MVP seviyesinden modern ve ölçeklenebilir bir **SaaS** mimarisine dönüştürülmüştür. Sprint 1'de geliştirilen temel AI iş mantığı korunurken, uygulamanın teknik altyapısı tamamen yeniden yapılandırılmış ve profesyonel web geliştirme standartlarına uygun hale getirilmiştir.
+
+### Sprint Boyunca Tamamlanan Geliştirmeler
+
+- Streamlit tabanlı monolitik yapı kaldırılarak **Next.js + FastAPI** tabanlı ayrık (Frontend/Backend) mimariye geçildi.
+- Backend tarafında **Clean Architecture** uygulanarak API, Services, Controllers, Repositories, Schemas ve AI Agent katmanları oluşturuldu.
+- Mevcut AI iş akışı korunarak **Controller Agent** yapısıyla modüler çoklu AI Agent mimarisi geliştirildi.
+- **Supabase PostgreSQL** entegrasyonu tamamlandı ve analiz geçmişinin kalıcı olarak saklanması sağlandı.
+- Yeni **Dashboard** ve **History** sayfaları geliştirildi.
+- Geçmiş analizlerini görüntüleme ve silme işlemleri sisteme eklendi.
+- **Authentication** sistemi geliştirilerek Email/Password, Google Authentication, Session Management, Protected Routes ve Logout işlemleri uygulamaya entegre edildi.
+- Guest Mode kaldırılarak kullanıcı bazlı analiz yönetimine geçildi.
+- **PDF Export** özelliği çalışır hale getirildi.
+- Eski `window.alert()` ve `window.confirm()` yapıları yerine **shadcn/ui AlertDialog** ve **Sonner Toast** kullanılarak modern bildirim sistemi oluşturuldu.
+- **Dark / Light Mode** desteği uygulamaya eklendi.
+- AI destekli **Mülakat Simülasyonu** modülü çalışır hale getirildi.
+- Kod yapısı yeniden düzenlenerek modülerlik, okunabilirlik ve sürdürülebilirlik artırıldı.
+- GitHub üzerinde **branch**, **Pull Request** ve **Merge** süreçleri kullanılarak ekip çalışması yürütüldü.
+
+Sprint sonunda LucentCV; modern kullanıcı arayüzüne sahip, kullanıcı kimlik doğrulaması bulunan, analiz geçmişini saklayabilen, PDF rapor oluşturabilen ve AI destekli analiz ile mülakat süreçlerini yöneten çalışır durumda bir SaaS platformuna dönüştürülmüştür.
+
+### Sprint Review Katılımcıları
+
+- Burak Baygün — Product Owner
+- Büşra Demir — Scrum Master
+- Asil Doğukan Samay — Developer
+- Ece Toygun — Developer
+- Nuri Duldar — Developer
+
+---
+
+## Sprint Retrospective
+
+Sprint 2 sonunda ekip olarak uygulamanın teknik altyapısını tamamen yenileyerek LucentCV'yi modern web teknolojilerine uygun hale getirdik. Sprint hedeflerinin büyük bölümü başarıyla tamamlandı ve uygulama, yalnızca çalışan bir MVP olmaktan çıkarılarak daha profesyonel, sürdürülebilir ve ölçeklenebilir bir yapıya dönüştürüldü.
+
+### Güçlü Yönler
+
+- Streamlit mimarisi tamamen kaldırılarak modern **Next.js + FastAPI** mimarisine geçildi.
+- Clean Architecture prensipleri uygulanarak backend katmanları yeniden tasarlandı.
+- AI Agent yapısı modüler hale getirildi ve mevcut analiz akışı korundu.
+- Supabase PostgreSQL entegrasyonu başarıyla tamamlandı.
+- Authentication sistemi (Email/Password, Google Login, Session Management ve Protected Routes) uygulamaya eklendi.
+- Dashboard ve History ekranları geliştirildi.
+- PDF Export özelliği aktif hale getirildi.
+- Dark / Light Mode desteği eklendi.
+- Modern popup ve bildirim sistemi (AlertDialog ve Sonner Toast) ile kullanıcı deneyimi iyileştirildi.
+- GitHub üzerinde Branch, Pull Request ve Merge süreçleri kullanılarak ekip çalışması düzenli şekilde yürütüldü.
+
+### İyileştirilmesi Gereken Noktalar
+
+- AI analiz sonuçlarının doğruluğu ve öneri kalitesi geliştirilebilir.
+- Kullanıcı deneyimini artıracak ek animasyonlar ve mikro etkileşimler eklenebilir.
+- Unit test ve entegrasyon testlerinin kapsamı genişletilebilir.
+- API performansı ve hata yönetimi optimize edilebilir.
+- Responsive tasarım farklı cihazlarda daha kapsamlı test edilmelidir.
+- Code Review süreçleri daha sistematik hale getirilebilir.
+
+### Sprint 3 Kararları
+
+Sprint 3'te uygulamanın production seviyesine taşınması ve son kullanıcı deneyiminin iyileştirilmesi hedeflenmektedir.
+
+Bu kapsamda alınan kararlar:
+
+- Kullanıcı arayüzünde son tasarım iyileştirmelerinin yapılması.
+- AI analizlerinin doğruluğunu artıracak prompt ve model optimizasyonlarının gerçekleştirilmesi.
+- Performans ve güvenlik optimizasyonlarının tamamlanması.
+- Test kapsamının genişletilmesi ve eksik senaryoların tamamlanması.
+- Uygulamanın **Vercel (Frontend)** ve **Render/Railway (Backend)** ortamlarında canlıya alınması.
+- README ve proje dokümantasyonunun güncellenmesi.
+- Bootcamp final sunumu için demo senaryosu ve proje çıktılarının hazırlanması.
+
+Sprint 3 sonunda LucentCV'nin production-ready, sürdürülebilir ve sunuma hazır bir AI kariyer platformu haline getirilmesi hedeflenmektedir.
 
 ---
 
