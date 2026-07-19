@@ -12,14 +12,12 @@ import { Badge } from "@/components/ui/badge";
 import { CircularScore } from "@/components/ui/circular-score";
 import { toast } from "sonner";
 import { Skeleton } from "@/components/ui/skeleton";
-import { useAuth } from "@/context/AuthContext";
 
 interface InterviewModuleProps {
   analysisId: string;
 }
 
 export function InterviewModule({ analysisId }: InterviewModuleProps) {
-  const { user } = useAuth();
   const [questions, setQuestions] = useState<QuestionItem[]>([]);
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [evaluation, setEvaluation] = useState<any>(null);
@@ -37,7 +35,7 @@ export function InterviewModule({ analysisId }: InterviewModuleProps) {
   const evaluateMutation = useMutation({
     mutationFn: () => api.evaluateInterview({
       analysis_id: analysisId,
-      user_id: user?.id || "guest",
+      user_id: "guest",
       questions,
       answers,
     }),
@@ -135,7 +133,7 @@ export function InterviewModule({ analysisId }: InterviewModuleProps) {
                     <span className="font-semibold block mb-1">Your Answer:</span>
                     {answers[fb.question_id.toString()] || "No answer provided"}
                   </div>
-                  <div className="p-4 rounded-lg bg-primary/10 border border-primary/20 text-primary-foreground">
+                  <div className="p-4 rounded-lg bg-primary/10 border border-primary/20 text-foreground">
                     <span className="font-semibold block mb-1 text-primary">Feedback:</span>
                     {fb.feedback}
                   </div>
@@ -160,7 +158,13 @@ export function InterviewModule({ analysisId }: InterviewModuleProps) {
             <CardHeader>
               <div className="flex justify-between">
                 <Badge variant="secondary" className="mb-2">Question {index + 1}</Badge>
-                <Badge variant="outline">{q.question_type}</Badge>
+                {['guclu_nokta', 'gucli_nokta'].includes(q.question_type) ? (
+                  <Badge variant="default" className="bg-emerald-500/10 text-emerald-500 hover:bg-emerald-500/20 border-emerald-500/20">Güçlü Nokta</Badge>
+                ) : q.question_type === 'eksik_beceri' ? (
+                  <Badge variant="destructive" className="bg-destructive/10 text-destructive hover:bg-destructive/20 border-destructive/20">Eksik Beceri</Badge>
+                ) : (
+                  <Badge variant="outline" className="capitalize">{q.question_type?.replace('_', ' ')}</Badge>
+                )}
               </div>
               <CardTitle className="text-lg leading-relaxed">{q.question}</CardTitle>
             </CardHeader>
