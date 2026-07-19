@@ -255,6 +255,41 @@ https://imgur.com/a/LcQ2C2o
 - README, proje dokümantasyonu ve kurulum rehberinin güncellenmesi.
 - Bootcamp final sunumu ve demo senaryosunun hazırlanması.
 
+## Ürün Durumu (Sprint 2)
+
+### 1. Giriş ve Kayıt Ekranı
+<p align="center">
+  <img src="sprints/sprint2/images/[login.png]" width="900">
+</p>
+
+<p align="center">
+  <img src="sprints/sprint2/images/[register.png]" width="900">
+</p>
+
+### 2. Ana Sayfa (Dashboard)
+<p align="center">
+  <img src="sprints/sprint2/images/[mainpage-dark.png]" width="900">
+</p>
+
+<p align="center">
+  <img src="sprints/sprint2/images/[mainpage-light.png]" width="900">
+</p>
+
+
+### 3. CV - İş İlanı Analizi 
+<p align="center">
+  <img src="sprints/sprint2/images/[cv-analysis.png]" width="900">
+</p>
+
+### 3. Mülakat Simülasyonu
+<p align="center">
+  <img src="sprints/sprint2/images/[simulation-1]" width="900">
+</p>
+
+<p align="center">
+  <img src="sprints/sprint2/images/[simulation-3]" width="900">
+</p>
+
 ## Sprint Review
 
 Sprint 2 boyunca **LucentCV**, MVP seviyesinden modern ve ölçeklenebilir bir **SaaS** mimarisine dönüştürülmüştür. Sprint 1'de geliştirilen temel AI iş mantığı korunurken, uygulamanın teknik altyapısı tamamen yeniden yapılandırılmış ve profesyonel web geliştirme standartlarına uygun hale getirilmiştir.
