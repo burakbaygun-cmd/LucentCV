@@ -330,17 +330,17 @@ https://imgur.com/a/LcQ2C2o
 
 ### 2. Ana Sayfa (Dashboard)
 <p align="center">
-  <img src="sprints/sprint2/images/mainpage-dark.png" width="440">
+  <img src="sprints/sprint2/images/mainpage-dark.png" width="900">
 </p>
 
 <p align="center">
-  <img src="sprints/sprint2/images/mainpage-light.png" width="440">
+  <img src="sprints/sprint2/images/mainpage-light.png" width="900">
 </p>
 
 
 ### 3. CV - İş İlanı Analizi 
 <p align="center">
-  <img src="sprints/sprint2/images/cv-analysis.png" width="440">
+  <img src="sprints/sprint2/images/cv-analysis.png" width="900">
 </p>
 
 ### 3. Akıllı Mülakat Simülasyonu
