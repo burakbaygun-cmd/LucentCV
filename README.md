@@ -62,6 +62,8 @@ LucentCV, modern **Next.js + FastAPI** mimarisi üzerine kurulmuş olup **Supaba
 ## Product Backlog
 Sprint bazlı backlog için `sprints/` klasörüne bakınız.
 
+[Miro Board: Product Backlog](https://miro.com/app/board/uXjVH9pRtGM=/?share_link_id=600317486350)
+
 
 # Sprint 1
 
