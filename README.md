@@ -141,7 +141,13 @@ ekteki bağlantıda sunulmuştur: [iletişim sürecinden kesitler](https://imgur
 
 ## Sprint Board Update
 
-![Sprint Board](Sprint%20Board%20(Sprint%201).png)
+### Sprint 1
+
+![Sprint 1 Board](sprints/Sprint%20Board%20(Sprint%201).png)
+
+### Sprint 2
+
+![Sprint 2 Board](Sprint%202%20Board.png)
 
 ## Ürün Durumu
 
