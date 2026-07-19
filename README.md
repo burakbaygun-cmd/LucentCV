@@ -15,34 +15,44 @@ Takım 126
 LucentCV
 
 ## Ürün Açıklaması
-LucentCV, bir kullanıcının CV metnini ve başvurmak istediği iş ilanının metnini analiz ederek,
-ikisi arasındaki uyumu değerlendiren bir yapay zeka uygulamasıdır. Tek bir prompt'a değil,
-**birbirini besleyen 7 ayrı AI agent'ına** dayanır:
 
-1. **CV Analyzer Agent** — CV'deki beceri, deneyim ve eğitim bilgilerini yapılandırılmış
-   şekilde çıkarır.
-2. **Job Analyzer Agent** — İlan metnindeki gereksinimleri, aranan anahtar kelimeleri ve
-   sorumlulukları çıkarır.
-3. **Matcher Agent** — İlk iki agent'ın çıktısını karşılaştırarak bir uyum skoru, eksik
-   kalan noktaları ve CV'yi güçlendirmek için somut öneriler üretir.
-4. **Interview Generator Agent** — CV analizi, ilan analizi ve uyum değerlendirmesine göre
-   adaya özel 5 mülakat sorusu üretir (güçlü noktalar, eksik beceriler, senaryo ve
-   deneyim soruları karışık şekilde).
-5. **Interview Evaluator Agent** — Kullanıcının mülakat sorularına verdiği cevapları
-   değerlendirir; soru bazlı puan, genel skor, güçlü yönler ve geliştirilmesi gereken
-   alanlar üretir.
+LucentCV, kullanıcıların CV'lerini ve başvurmak istedikleri iş ilanlarını yapay zekâ destekli çoklu ajan (Multi-Agent) mimarisi ile analiz ederek uyum skorunu, eksik yetkinlikleri, geliştirme önerilerini ve kişiselleştirilmiş mülakat deneyimini sunan modern bir AI kariyer platformudur.
 
-Uygulama ayrıca basit bir **hafıza (memory) katmanı** içerir: kullanıcının geçmişte yaptığı
-analizler yerel bir JSON dosyasında saklanır ve tekrar görüntülenebilir, böylece zaman
-içindeki gelişim takip edilebilir.
+Uygulama, tek bir istem (prompt) yerine birbirini besleyen **7 bağımsız AI Agent** kullanarak analiz sürecini adım adım yürütmektedir:
+
+1. **CV Analyzer Agent** — CV'deki beceri, deneyim ve eğitim bilgilerini yapılandırılmış şekilde analiz eder.
+2. **Job Analyzer Agent** — İş ilanındaki gereksinimleri, anahtar yetkinlikleri ve sorumlulukları çıkarır.
+3. **Matcher Agent** — CV ve iş ilanını karşılaştırarak uyum skorunu, eksik becerileri ve geliştirme önerilerini oluşturur.
+4. **Interview Generator Agent** — Analiz sonuçlarına göre kullanıcıya özel teknik ve davranışsal mülakat soruları üretir.
+5. **Interview Evaluator Agent** — Kullanıcının verdiği cevapları değerlendirerek detaylı geri bildirim ve puanlama sunar.
+6. **Summary Agent** — Analiz sürecinin tamamını özetleyerek kullanıcı için anlaşılır bir genel değerlendirme oluşturur.
+7. **Report Agent** — Analiz sonuçlarını düzenleyerek PDF raporlarının oluşturulmasını sağlar.
+
+LucentCV, modern **Next.js + FastAPI** mimarisi üzerine kurulmuş olup **Supabase PostgreSQL** ile analiz geçmişini güvenli şekilde saklamakta ve kullanıcı kimlik doğrulama işlemlerini Supabase Authentication üzerinden gerçekleştirmektedir.
+
+---
 
 ## Ürün Özellikleri
-- CV ve ilan metni girişi
-- 7 agent'lı orkestrasyon (CV Analyzer → Job Analyzer → Matcher → Interview Generator → Interview Evaluator)
-- Uyum skoru (0-100), eksik beceri/anahtar kelime listesi, somut iyileştirme önerileri
-- **Akıllı Mülakat Simülasyonu**: CV ve ilana özel üretilen 5 mülakat sorusu, kullanıcının cevaplarının AI tarafından değerlendirilmesi (soru bazlı puan + genel geri bildirim)
-- Geçmiş analizleri saklayan Supabase tabanlı bulut veritabanı
-- Premium SaaS standartlarında, modern arayüz ve kullanıcı deneyimi
+
+- AI destekli CV ve iş ilanı analizi
+- **7 Agent'lı orkestrasyon**
+  - CV Analyzer
+  - Job Analyzer
+  - Matcher
+  - Interview Generator
+  - Interview Evaluator
+  - Summary Agent
+  - Report Agent
+- CV ve iş ilanı arasında detaylı uyum skoru (0–100)
+- Eksik beceri analizi ve kişiselleştirilmiş geliştirme önerileri
+- AI destekli Akıllı Mülakat Simülasyonu
+- Mülakat cevaplarının otomatik değerlendirilmesi ve geri bildirimi
+- Analiz geçmişinin **Supabase PostgreSQL** üzerinde güvenli şekilde saklanması
+- Kullanıcı hesabı yönetimi (Email/Password ve Google Authentication)
+- PDF formatında rapor oluşturma
+- Dark / Light Mode desteği
+- Responsive, modern ve Premium SaaS kullanıcı arayüzü
+- Next.js + FastAPI tabanlı ölçeklenebilir mimari
 
 ## Hedef Kitle
 - Aktif iş başvurusu yapan üniversite mezunları ve yeni başlayanlar
