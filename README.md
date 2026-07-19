@@ -138,25 +138,25 @@ ekteki bağlantıda sunulmuştur: [iletişim sürecinden kesitler](https://imgur
 ### Ana Sayfa
 
 <p align="center">
-  <img src="images/home.png" width="900">
+  <img src="legacy/images/home.png" width="900">
 </p>
 
 ### CV - İş İlanı Analizi
 
 <p align="center">
-  <img src="images/analysis.png" width="900">
+  <img src="legacy/images/analysis.png" width="900">
 </p>
 
 ### Akıllı Mülakat Simülasyonu
 
 <p align="center">
-  <img src="images/interview.png" width="900">
+  <img src="legacy/images/interview.png" width="900">
 </p>
 
 ### Geçmiş Analizler
 
 <p align="center">
-  <img src="images/history.png" width="900">
+  <img src="legacy/images/history.png" width="900">
 </p>
 
 ---
