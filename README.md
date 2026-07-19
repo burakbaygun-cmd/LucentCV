@@ -182,9 +182,9 @@ Sprint sonunda yapılan değerlendirmelerde mevcut MVP'nin proje hedeflerini kar
 
 ### Sprint Review Katılımcıları
 
-- Burak Baygün — Product Owner
+- Burak Baygün — Developer
 - Büşra Demir — Scrum Master
-- Asil Doğukan Samay — Developer
+- Asil Doğukan Samay —Product Owner
 - Ece Toygun — Developer
 - Nuri Duldar — Developer
 
