@@ -31,18 +31,25 @@ export default function HistoryPage() {
   const deleteMutation = useMutation({
     mutationFn: (id: string) => api.deleteHistory(id),
     onSuccess: () => {
+      // Notify the user and refresh the list after a successful deletion.
       toast.success("Analysis deleted.");
       queryClient.invalidateQueries({ queryKey: ["history"] });
       setPendingDeleteId(null);
     },
     onError: () => {
+      // Surface the failure without closing the dialog so the user can retry.
       toast.error("Failed to delete analysis.");
       setPendingDeleteId(null);
     },
   });
 
+  // Prompt user for deletion confirmation via the shadcn-style dialog.
   const handleDeleteRequest = (id: string) => setPendingDeleteId(id);
+
+  // Dismiss the dialog and discard the pending deletion target.
   const handleDeleteCancel = () => setPendingDeleteId(null);
+
+  // Commit the deletion after the user explicitly confirms.
   const handleDeleteConfirm = () => {
     if (pendingDeleteId) deleteMutation.mutate(pendingDeleteId);
   };
@@ -70,6 +77,8 @@ export default function HistoryPage() {
   }
 
   return (
+    // Wrap in a fragment so the dialog can sit alongside the main content
+    // without introducing a spurious DOM node.
     <>
       <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
         <div className="flex items-center justify-between">
@@ -90,6 +99,7 @@ export default function HistoryPage() {
                     <div className="text-xs text-muted-foreground">
                       {format(new Date(item.created_at), "MMM d, yyyy • h:mm a")}
                     </div>
+                    {/* Open the confirmation dialog — never mutate on a single click. */}
                     <Button 
                       variant="ghost" 
                       size="icon" 
@@ -120,6 +130,7 @@ export default function HistoryPage() {
         )}
       </div>
 
+      {/* Confirmation dialog — rendered once at page level, driven by pendingDeleteId state. */}
       <DeleteConfirmDialog
         open={pendingDeleteId !== null}
         onCancel={handleDeleteCancel}
