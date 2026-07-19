@@ -5,9 +5,9 @@ Takım 126
 
 ## Takım Elemanları
 
-- **Burak Baygün** – Developer
+- **Burak Baygün** – Product Owner & Developer
 - **Büşra Demir** – Scrum Master & Developer
-- **Asil Doğukan Samay** –  Product Owner & Developer
+- **Asil Doğukan Samay** – Developer
 - **Ece Toygun** – Developer
 - **Nuri Duldar** – Developer
 
