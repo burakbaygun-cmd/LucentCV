@@ -38,7 +38,7 @@ içindeki gelişim takip edilebilir.
 
 ## Ürün Özellikleri
 - CV ve ilan metni girişi
-- 5 agent'lı orkestrasyon (CV Analyzer → Job Analyzer → Matcher → Interview Generator → Interview Evaluator)
+- 7 agent'lı orkestrasyon (CV Analyzer → Job Analyzer → Matcher → Interview Generator → Interview Evaluator)
 - Uyum skoru (0-100), eksik beceri/anahtar kelime listesi, somut iyileştirme önerileri
 - **Akıllı Mülakat Simülasyonu**: CV ve ilana özel üretilen 5 mülakat sorusu, kullanıcının cevaplarının AI tarafından değerlendirilmesi (soru bazlı puan + genel geri bildirim)
 - Geçmiş analizleri saklayan Supabase tabanlı bulut veritabanı
