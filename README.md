@@ -355,10 +355,10 @@ https://imgur.com/a/LcQ2C2o
 
 ### 3. Akıllı Mülakat Simülasyonu
 <p align="center">
-  <img src="sprints/sprint2/images/simulation-1.png" width="900">
+  <img src="sprints/sprint2/images/simulation-1.png" width="440">
 </p>
 <p align="center">
-  <img src="sprints/sprint2/images/simulation-3.png" width="900">
+  <img src="sprints/sprint2/images/simulation-3.png" width="440">
 </p>
 
 ## Sprint Review
