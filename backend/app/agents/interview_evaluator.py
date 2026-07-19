@@ -19,7 +19,7 @@ SADECE asagidaki JSON formatinda cevap ver, baska hicbir metin ekleme:
   "per_question_feedback": [
     {
       "question_id": <soru id, sayi>,
-      "score": <0 ile 10 arasinda tam sayi>,
+      "score": <0 ile 100 arasinda tam sayi>,
       "feedback": "<kisa, yapici geri bildirim>"
     }
   ],

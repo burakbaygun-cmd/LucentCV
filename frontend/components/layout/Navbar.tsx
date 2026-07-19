@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { LayoutDashboard, History, Sparkles, Menu, LogOut, LogIn } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/context/AuthContext";
+import { ThemeToggle } from "@/components/theme-toggle";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import {
   Sheet,
@@ -106,6 +107,7 @@ export function Navbar() {
 
         {/* Right side actions */}
         <div className="flex flex-1 items-center justify-end space-x-4">
+          <ThemeToggle />
           {user ? (
             <div className="flex items-center space-x-4">
               <div className="flex items-center gap-2">

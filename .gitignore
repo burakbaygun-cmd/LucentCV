@@ -6,5 +6,9 @@ memory_store.json
 .env
 backend/venv/
 backend/.env
+backend/logs/
+*.log
+*.swp
+.Rhistory
 frontend/node_modules/
 frontend/.env.local
