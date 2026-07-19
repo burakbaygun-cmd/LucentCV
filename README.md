@@ -76,7 +76,7 @@ Sprint bazlı backlog için `sprints/` klasörüne bakınız.
 | 5 | Kullanıcı olarak CV ve ilana özel AI mülakat soruları oluşturabilmeliyim. | Yüksek | ✅ Tamamlandı |
 | 6 | Kullanıcı olarak mülakat cevaplarımın AI tarafından değerlendirilmesini alabilmeliyim. | Yüksek | ✅ Tamamlandı |
 | 7 | Kullanıcı olarak analiz geçmişimi görüntüleyebilmeliyim. | Orta | ✅ Tamamlandı |
-| 8 | Kullanıcı olarak CV dosyamı PDF/DOCX formatında yükleyebilmeliyim. | Orta | ✅ Tamamlandı |
+| 8 | Kullanıcı olarak CV dosyamı PDF formatında yükleyebilmeliyim. | Orta | ✅ Tamamlandı |
 | 9 | Kullanıcı olarak analiz geçmişimin Supabase üzerinde saklanmasını istiyorum. | Orta | ✅ Tamamlandı |
 | 10 | Kullanıcı olarak analiz sonuçlarını PDF veya Markdown olarak dışa aktarabilmeliyim. | Düşük | ⏳ Sprint 2 |
 | 11 | Kullanıcı olarak Google hesabımla giriş yapabilmeliyim. | Orta | ⏳ Sprint 2 |
@@ -209,7 +209,7 @@ Sprint sonunda geliştirilen ürün ve teknik süreç ekip tarafından değerlen
 - Çoklu AI Agent mimarisi başarıyla geliştirildi.
 - Google Gemini API entegrasyonu tamamlandı.
 - Supabase ile kalıcı veri yönetimine geçildi.
-- PDF/DOCX yükleme desteği eklendi.
+- PDF yükleme desteği eklendi.
 - AI destekli mülakat oluşturma ve değerlendirme sistemi geliştirildi.
 - Services, Components ve Database katmanları oluşturularak proje daha modüler hale getirildi.
 - MVP sürümü başarıyla tamamlandı.
