@@ -3,7 +3,7 @@
 ## 1. Sprint Planlama (Sprint Planning)
 Sprint 2 planlama toplantısı yapılmıştır. Bu sprintte projenin Streamlit monolit yapısından modern Next.js frontend + FastAPI backend mimarisine taşınması, Supabase entegrasyonu, kimlik doğrulama/oturum yönetimi katmanlarının yazılması, mülakat simülasyonunun ve PDF çıktısının aktif edilmesi hedeflenmiştir. 
 
-Toplam sprint kapasitesi ekip üyelerinin genişlemesiyle birlikte **37 Story Point (SP)** olarak belirlenmiştir.
+Toplam sprint kapasitesi ekip üyelerinin genişlemesiyle birlikte **40 Story Point (SP)** olarak belirlenmiştir.
 
 ## 2. User Story'ler (Kullanıcı Hikayeleri) & Story Point'ler
 
@@ -16,13 +16,14 @@ Toplam sprint kapasitesi ekip üyelerinin genişlemesiyle birlikte **37 Story Po
   * Supabase DB bağlantısının gerçekleştirilmesi.
   * *Sorumlu:* Büşra
 
-### US-07: Kimlik Doğrulama, Oturum Yönetimi ve Google Auth (9 SP)
+### US-07: Kimlik Doğrulama, Oturum Yönetimi ve Google Auth (12 SP)
 * **Açıklama:** Bir aday olarak, uygulamaya e-posta/şifre veya Google hesabımla giriş yapabilmek, oturumumu açık tutabilmek ve çıkış yapabilmek istiyorum; böylece kişisel analiz geçmişimi güvenle saklayabilirim.
 * **Kabul Kriterleri (Acceptance Criteria):**
   * Supabase Auth kullanılarak Kayıt ve Giriş ekranlarının kodlanması.
   * Korumalı rotalar (`AuthGuard`) aracılığıyla yetkisiz kullanıcıların engellenmesi.
   * Google OAuth ile tek tıkla giriş desteğinin aktif edilmesi.
   * Çıkış (Logout) fonksiyonunun Navbar'a entegre edilmesi.
+  * Kullanıcının e-posta ile şifre sıfırlama linki alabilmesi ve yeni şifre belirleyip güncelleyebilmesi.
   * *Sorumlu:* Asil
 
 ### US-08: Mülakat Simülasyonu ve Arayüz Temaları (7 SP)

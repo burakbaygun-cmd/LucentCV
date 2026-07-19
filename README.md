@@ -228,9 +228,10 @@ Sprint sonunda geliştirilen ürün ve teknik süreç ekip tarafından değerlen
 | 7 | Dark / Light Mode geçişlerinin eklenmesi | 2 | Burak | ✅ Done |
 | 8 | PDF Export (Sonuçları PDF olarak dışa aktarma) özelliğinin eklenmesi | 5 | Nuri | ✅ Done |
 | 9 | Yerel tarayıcı popup'larının (window.alert/confirm) Shadcn/Sonner ile değiştirilmesi | 3 | Nuri | ✅ Done |
+| 10 | Şifremi Unuttum (Forgot Password) ve Şifre Yenileme akışlarının Supabase ile entegrasyonu | 3 | Asil | ✅ Done |
 
-**Toplam Tahmini Puan:** 37 SP
-**Tamamlanan Puan:** 37 SP
+**Toplam Tahmini Puan:** 40 SP
+**Tamamlanan Puan:** 40 SP
 **Devam Eden Puan:** 0 SP
 
 ---
@@ -239,7 +240,7 @@ Sprint sonunda geliştirilen ürün ve teknik süreç ekip tarafından değerlen
 
 Sprint 2 planlama toplantısı yapılmıştır. Bu sprintte projenin Streamlit monolit yapısından modern Next.js frontend + FastAPI backend mimarisine taşınması, Supabase entegrasyonu, kimlik doğrulama/oturum yönetimi katmanlarının yazılması, mülakat simülasyonunun ve PDF çıktısının aktif edilmesi hedeflenmiştir. 
 
-Toplam sprint kapasitesi ekip üyelerinin genişlemesiyle birlikte **37 Story Point (SP)** olarak belirlenmiştir.
+Toplam sprint kapasitesi ekip üyelerinin genişlemesiyle birlikte **40 Story Point (SP)** olarak belirlenmiştir.
 
 ### US-06: Modern Mimari Dönüşümü ve Temel UI Altyapısı (13 SP)
 * **Açıklama:** Bir yazılımcı/geliştirici olarak, uygulamanın Streamlit tabanlı monolitik yapısını Next.js ve FastAPI olarak iki katmana bölmek istiyorum; böylece uygulamanın ölçeklenebilirliğini, hızını ve UI esnekliğini artırabilirim.
@@ -250,13 +251,14 @@ Toplam sprint kapasitesi ekip üyelerinin genişlemesiyle birlikte **37 Story Po
   * Supabase DB bağlantısının gerçekleştirilmesi.
   * *Sorumlu:* Büşra
 
-### US-07: Kimlik Doğrulama, Oturum Yönetimi ve Google Auth (9 SP)
+### US-07: Kimlik Doğrulama, Oturum Yönetimi ve Google Auth (12 SP)
 * **Açıklama:** Bir aday olarak, uygulamaya e-posta/şifre veya Google hesabımla giriş yapabilmek, oturumumu açık tutabilmek ve çıkış yapabilmek istiyorum; böylece kişisel analiz geçmişimi güvenle saklayabilirim.
 * **Kabul Kriterleri (Acceptance Criteria):**
   * Supabase Auth kullanılarak Kayıt ve Giriş ekranlarının kodlanması.
   * Korumalı rotalar (`AuthGuard`) aracılığıyla yetkisiz kullanıcıların engellenmesi.
   * Google OAuth ile tek tıkla giriş desteğinin aktif edilmesi.
   * Çıkış (Logout) fonksiyonunun Navbar'a entegre edilmesi.
+  * Kullanıcının e-posta ile şifre sıfırlama linki alabilmesi ve yeni şifre belirleyip güncelleyebilmesi.
   * *Sorumlu:* Asil
 
 ### US-08: Mülakat Simülasyonu ve Arayüz Temaları (7 SP)

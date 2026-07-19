@@ -22,7 +22,8 @@ Uygulamanın Streamlit tabanlı monolitik yapısını modern Next.js frontend + 
 | 7 | Dark / Light Mode geçişlerinin eklenmesi | 2 | Burak | ✅ Done |
 | 8 | PDF Export (Sonuçları PDF olarak dışa aktarma) özelliğinin eklenmesi | 5 | Nuri | ✅ Done |
 | 9 | Yerel tarayıcı popup'larının (window.alert/confirm) Shadcn/Sonner ile değiştirilmesi | 3 | Nuri | ✅ Done |
+| 10 | Şifremi Unuttum (Forgot Password) ve Şifre Yenileme akışlarının Supabase ile entegrasyonu | 3 | Asil | ✅ Done |
 
-**Toplam Tahmini Puan:** 37 SP
-**Tamamlanan Puan:** 37 SP
+**Toplam Tahmini Puan:** 40 SP
+**Tamamlanan Puan:** 40 SP
 **Devam Eden Puan:** 0 SP
