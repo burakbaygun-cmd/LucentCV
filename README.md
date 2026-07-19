@@ -330,25 +330,25 @@ https://imgur.com/a/LcQ2C2o
 
 ### 2. Ana Sayfa (Dashboard)
 <p align="center">
-  <img src="sprints/sprint2/images/mainpage-dark.png" width="900">
+  <img src="sprints/sprint2/images/mainpage-dark.png" width="440">
 </p>
 
 <p align="center">
-  <img src="sprints/sprint2/images/mainpage-light.png" width="900">
+  <img src="sprints/sprint2/images/mainpage-light.png" width="440">
 </p>
 
 
 ### 3. CV - İş İlanı Analizi 
 <p align="center">
-  <img src="sprints/sprint2/images/cv-analysis.png" width="900">
+  <img src="sprints/sprint2/images/cv-analysis.png" width="440">
 </p>
 
 ### 3. Akıllı Mülakat Simülasyonu
 <p align="center">
-  <img src="sprints/sprint2/images/simulation-1.png" width="900">
+  <img src="sprints/sprint2/images/simulation-1.png" width="440">
 </p>
 <p align="center">
-  <img src="sprints/sprint2/images/simulation-3.png" width="900">
+  <img src="sprints/sprint2/images/simulation-3.png" width="440">
 </p>
 
 ## Sprint Review
