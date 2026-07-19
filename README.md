@@ -141,11 +141,11 @@ ekteki bağlantıda sunulmuştur: [iletişim sürecinden kesitler](https://imgur
 
 ## Sprint Board Update
 
-### Sprint 1
+### Sprint 1 Board
 
-![Sprint 1 Board](sprints/Sprint%20Board%20(Sprint%201).png)
+![Sprint 1 Board](https://raw.githubusercontent.com/burakbaygun-cmd/LucentCV/87ffeee3253200013e263fe1a2b36145ba223fc0/Sprint%20Board%20(Sprint%201).png)
 
-### Sprint 2
+### Sprint 2 Board
 
 ![Sprint 2 Board](Sprint%202%20Board.png)
 
