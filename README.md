@@ -5,9 +5,9 @@ Takım 126
 
 ## Takım Elemanları
 
-- **Burak Baygün** – Product Owner & Developer
+- **Burak Baygün** – Developer
 - **Büşra Demir** – Scrum Master & Developer
-- **Asil Doğukan Samay** – Developer
+- **Asil Doğukan Samay** –  Product Owner & Developer
 - **Ece Toygun** – Developer
 - **Nuri Duldar** – Developer
 
@@ -138,25 +138,25 @@ ekteki bağlantıda sunulmuştur: [iletişim sürecinden kesitler](https://imgur
 ### Ana Sayfa
 
 <p align="center">
-  <img src="images/home.png" width="900">
+  <img src="legacy/images/home.png" width="900">
 </p>
 
 ### CV - İş İlanı Analizi
 
 <p align="center">
-  <img src="images/analysis.png" width="900">
+  <img src="legacy/images/analysis.png" width="900">
 </p>
 
 ### Akıllı Mülakat Simülasyonu
 
 <p align="center">
-  <img src="images/interview.png" width="900">
+  <img src="legacy/images/interview.png" width="900">
 </p>
 
 ### Geçmiş Analizler
 
 <p align="center">
-  <img src="images/history.png" width="900">
+  <img src="legacy/images/history.png" width="900">
 </p>
 
 ---
@@ -182,9 +182,9 @@ Sprint sonunda yapılan değerlendirmelerde mevcut MVP'nin proje hedeflerini kar
 
 ### Sprint Review Katılımcıları
 
-- Burak Baygün — Product Owner
+- Burak Baygün — Developer
 - Büşra Demir — Scrum Master
-- Asil Doğukan Samay — Developer
+- Asil Doğukan Samay — Product Owner
 - Ece Toygun — Developer
 - Nuri Duldar — Developer
 
@@ -214,6 +214,68 @@ Sprint sonunda geliştirilen ürün ve teknik süreç ekip tarafından değerlen
 
 
 # Sprint 2
+
+## Sprint 2 Product Backlog
+
+| # | Task | SP (Story Point) | Sorumlu | Durum |
+|---|---|---|---|---|
+| 1 | Streamlit'ten Next.js (frontend) ve FastAPI (backend) mimarisine geçiş | 8 | Büşra | ✅ Done |
+| 2 | Supabase DB entegrasyonu ve temel UI altyapısının kurulması | 5 | Büşra | ✅ Done |
+| 3 | E-posta/Şifre ile Giriş ve Kayıt (Login/Register) sayfaları ve API entegrasyonu | 3 | Asil | ✅ Done |
+| 4 | Oturum Yönetimi (Session Management) ve Korumalı Rotalar (Protected Routes) | 3 | Asil | ✅ Done |
+| 5 | Google Authentication (OAuth) entegrasyonunun tamamlanması | 3 | Asil | ✅ Done |
+| 6 | Mülakat Simülasyonu (Interview Simulation) kısmının çalışır hale getirilmesi | 5 | Burak | ✅ Done |
+| 7 | Dark / Light Mode geçişlerinin eklenmesi | 2 | Burak | ✅ Done |
+| 8 | PDF Export (Sonuçları PDF olarak dışa aktarma) özelliğinin eklenmesi | 5 | Nuri | ✅ Done |
+| 9 | Yerel tarayıcı popup'larının (window.alert/confirm) Shadcn/Sonner ile değiştirilmesi | 3 | Nuri | ✅ Done |
+| 10 | Şifremi Unuttum (Forgot Password) ve Şifre Yenileme akışlarının Supabase ile entegrasyonu | 3 | Asil | ✅ Done |
+
+**Toplam Tahmini Puan:** 40 SP
+**Tamamlanan Puan:** 40 SP
+**Devam Eden Puan:** 0 SP
+
+---
+
+## Backlog Düzeni ve Story Seçimleri
+
+Sprint 2 planlama toplantısı yapılmıştır. Bu sprintte projenin Streamlit monolit yapısından modern Next.js frontend + FastAPI backend mimarisine taşınması, Supabase entegrasyonu, kimlik doğrulama/oturum yönetimi katmanlarının yazılması, mülakat simülasyonunun ve PDF çıktısının aktif edilmesi hedeflenmiştir. 
+
+Toplam sprint kapasitesi ekip üyelerinin genişlemesiyle birlikte **40 Story Point (SP)** olarak belirlenmiştir.
+
+### US-06: Modern Mimari Dönüşümü ve Temel UI Altyapısı (13 SP)
+* **Açıklama:** Bir yazılımcı/geliştirici olarak, uygulamanın Streamlit tabanlı monolitik yapısını Next.js ve FastAPI olarak iki katmana bölmek istiyorum; böylece uygulamanın ölçeklenebilirliğini, hızını ve UI esnekliğini artırabilirim.
+* **Kabul Kriterleri (Acceptance Criteria):**
+  * Next.js (frontend) ve FastAPI (backend) iskelet yapısının kurulması.
+  * API haberleşme altyapısının kurulması.
+  * Tasarım sistemine (Tailwind CSS, Shadcn) uygun temel dashboard şablonlarının çıkarılması.
+  * Supabase DB bağlantısının gerçekleştirilmesi.
+  * *Sorumlu:* Büşra
+
+### US-07: Kimlik Doğrulama, Oturum Yönetimi ve Google Auth (12 SP)
+* **Açıklama:** Bir aday olarak, uygulamaya e-posta/şifre veya Google hesabımla giriş yapabilmek, oturumumu açık tutabilmek ve çıkış yapabilmek istiyorum; böylece kişisel analiz geçmişimi güvenle saklayabilirim.
+* **Kabul Kriterleri (Acceptance Criteria):**
+  * Supabase Auth kullanılarak Kayıt ve Giriş ekranlarının kodlanması.
+  * Korumalı rotalar (`AuthGuard`) aracılığıyla yetkisiz kullanıcıların engellenmesi.
+  * Google OAuth ile tek tıkla giriş desteğinin aktif edilmesi.
+  * Çıkış (Logout) fonksiyonunun Navbar'a entegre edilmesi.
+  * Kullanıcının e-posta ile şifre sıfırlama linki alabilmesi ve yeni şifre belirleyip güncelleyebilmesi.
+  * *Sorumlu:* Asil
+
+### US-08: Mülakat Simülasyonu ve Arayüz Temaları (7 SP)
+* **Açıklama:** Bir aday olarak, CV ve ilan analiz sonuçlarıma göre oluşturulan mülakat sorularını interaktif olarak cevaplayabilmek ve arayüzü göz yormayacak şekilde karanlık/aydınlık temalarda görebilmek istiyorum.
+* **Kabul Kriterleri (Acceptance Criteria):**
+  * Mülakat soruları ve cevap değerlendirme modülünün frontend'de çalışır hale getirilmesi.
+  * Dark / Light mode geçişinin (Next Themes) tüm bileşenlerle uyumlu şekilde eklenmesi.
+  * *Sorumlu:* Burak
+
+### US-09: Modern Bildirimler, Popup'lar ve PDF Çıktı Entegrasyonu (8 SP)
+* **Açıklama:** Bir aday olarak, analiz sonuçlarımı ve mülakat raporlarımı PDF olarak dışa aktarabilmek, verilerimi silerken veya işlem yaparken modern uyarı pencereleriyle karşılaşmak istiyorum.
+* **Kabul Kriterleri (Acceptance Criteria):**
+  * Ham tarayıcı diyaloglarının (`window.alert`, `window.confirm`) Shadcn AlertDialog ve Sonner/Toast bildirimleri ile değiştirilmesi.
+  * Analiz raporlarının PDF formatında başarıyla dışa aktarılması.
+  * *Sorumlu:* Nuri
+
+---
 
 ## Daily Scrum
 
@@ -255,6 +317,40 @@ https://imgur.com/a/LcQ2C2o
 - README, proje dokümantasyonu ve kurulum rehberinin güncellenmesi.
 - Bootcamp final sunumu ve demo senaryosunun hazırlanması.
 
+## Ürün Durumu (Sprint 2)
+
+### 1. Giriş ve Kayıt Ekranı
+<p align="center">
+  <img src="sprints/sprint2/images/login.png" width="440">
+</p>
+
+<p align="center">
+  <img src="sprints/sprint2/images/register.png" width="440">
+</p>
+
+### 2. Ana Sayfa (Dashboard)
+<p align="center">
+  <img src="sprints/sprint2/images/mainpage-dark.png" width="900">
+</p>
+
+<p align="center">
+  <img src="sprints/sprint2/images/mainpage-light.png" width="900">
+</p>
+
+
+### 3. CV - İş İlanı Analizi 
+<p align="center">
+  <img src="sprints/sprint2/images/cv-analysis.png" width="900">
+</p>
+
+### 3. Akıllı Mülakat Simülasyonu
+<p align="center">
+  <img src="sprints/sprint2/images/simulation-1.png" width="900">
+</p>
+<p align="center">
+  <img src="sprints/sprint2/images/simulation-3.png" width="900">
+</p>
+
 ## Sprint Review
 
 Sprint 2 boyunca **LucentCV**, MVP seviyesinden modern ve ölçeklenebilir bir **SaaS** mimarisine dönüştürülmüştür. Sprint 1'de geliştirilen temel AI iş mantığı korunurken, uygulamanın teknik altyapısı tamamen yeniden yapılandırılmış ve profesyonel web geliştirme standartlarına uygun hale getirilmiştir.
@@ -280,9 +376,9 @@ Sprint sonunda LucentCV; modern kullanıcı arayüzüne sahip, kullanıcı kimli
 
 ### Sprint Review Katılımcıları
 
-- Burak Baygün — Product Owner
+- Burak Baygün — Developer
 - Büşra Demir — Scrum Master
-- Asil Doğukan Samay — Developer
+- Asil Doğukan Samay — Product Owner
 - Ece Toygun — Developer
 - Nuri Duldar — Developer
 
