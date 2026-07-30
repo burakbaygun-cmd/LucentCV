@@ -12,3 +12,5 @@ backend/logs/
 .Rhistory
 frontend/node_modules/
 frontend/.env.local
+*.log
+backend/logs/
