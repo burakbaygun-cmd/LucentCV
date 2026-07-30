@@ -448,7 +448,12 @@ Sprint 3 sonunda LucentCV'nin production-ready, sürdürülebilir ve sunuma haz�
 
 # Sprint 3
 
-> Sprint 3 dokümantasyonu sprint sonunda eklenecektir.
+## 🚀 Canlı Demo (Live Deployment)
+- **Frontend (Vercel):** [https://frontend-rho-five-82.vercel.app](https://frontend-rho-five-82.vercel.app)
+- **Sprint 3 Deployment Rehberi:** [`sprints/sprint3/deployment_guide.md`](file:///C:/Users/doguk/.gemini/antigravity/scratch/LucentCV-git/sprints/sprint3/deployment_guide.md)
+- **Sprint 3 Backlog & Detaylar:** [`sprints/sprint3/backlog.md`](file:///C:/Users/doguk/.gemini/antigravity/scratch/LucentCV-git/sprints/sprint3/backlog.md)
+
+> Sprint 3 genel dokümantasyonu ve ekran görüntüleri tamamlanmıştır.
 
 
 ## Kurulum
