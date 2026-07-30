@@ -491,3 +491,214 @@ match_score
 2026-07-12 17:01:27,635 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
 2026-07-12 17:01:27,642 - app.core.logging - INFO - Interview questions generated
 2026-07-12 17:01:27,643 - app.core.logging - INFO - Request POST http://localhost:8000/api/interview/questions completed in 1.8072 secs with status 404
+2026-07-19 02:24:51,850 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-19 02:24:52,965 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.guest&order=created_at.desc "HTTP/2 200 OK"
+2026-07-19 02:24:52,970 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 1.1199 secs with status 200
+2026-07-19 02:25:04,182 - app.core.logging - INFO - Incoming request: OPTIONS http://localhost:8000/api/analyze
+2026-07-19 02:25:04,182 - app.core.logging - INFO - Request OPTIONS http://localhost:8000/api/analyze completed in 0.0000 secs with status 200
+2026-07-19 02:25:04,182 - app.core.logging - INFO - Incoming request: POST http://localhost:8000/api/analyze
+2026-07-19 02:25:04,613 - app.core.logging - INFO - Starting full analysis for user cad6f30a-0c3b-494e-8407-c41200e6e3f0
+2026-07-19 02:25:04,613 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-19 02:25:06,866 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-19 02:25:06,868 - app.core.logging - INFO - CV analysis completed
+2026-07-19 02:25:06,868 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-19 02:25:09,039 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-19 02:25:09,040 - app.core.logging - INFO - Job analysis completed
+2026-07-19 02:25:09,041 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-19 02:25:13,686 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-19 02:25:13,692 - app.core.logging - INFO - Match analysis completed
+2026-07-19 02:25:13,693 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-19 02:25:18,420 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-19 02:25:18,422 - app.core.logging - INFO - Summary generated
+2026-07-19 02:25:18,422 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-19 02:25:29,996 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-19 02:25:30,003 - app.core.logging - INFO - Markdown report generated
+2026-07-19 02:25:30,980 - httpx - INFO - HTTP Request: POST https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/profiles "HTTP/2 201 Created"
+2026-07-19 02:25:31,309 - httpx - INFO - HTTP Request: POST https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses "HTTP/2 201 Created"
+2026-07-19 02:25:31,309 - app.core.logging - INFO - Analysis saved to db with id: a1fdd4ce-05e7-4f90-b4f1-6e69d6a01b4f
+2026-07-19 02:25:31,311 - app.core.logging - INFO - Request POST http://localhost:8000/api/analyze completed in 27.1288 secs with status 200
+2026-07-19 02:25:33,785 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=cad6f30a-0c3b-494e-8407-c41200e6e3f0
+2026-07-19 02:25:34,092 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.cad6f30a-0c3b-494e-8407-c41200e6e3f0&order=created_at.desc "HTTP/2 200 OK"
+2026-07-19 02:25:34,094 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=cad6f30a-0c3b-494e-8407-c41200e6e3f0 completed in 0.3093 secs with status 200
+2026-07-19 02:25:39,425 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=cad6f30a-0c3b-494e-8407-c41200e6e3f0
+2026-07-19 02:25:39,795 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.cad6f30a-0c3b-494e-8407-c41200e6e3f0&order=created_at.desc "HTTP/2 200 OK"
+2026-07-19 02:25:39,796 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=cad6f30a-0c3b-494e-8407-c41200e6e3f0 completed in 0.3709 secs with status 200
+2026-07-19 02:25:43,830 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/v1/export/pdf?analysis_id=a1fdd4ce-05e7-4f90-b4f1-6e69d6a01b4f
+2026-07-19 02:25:43,831 - app.core.logging - INFO - Request GET http://localhost:8000/api/v1/export/pdf?analysis_id=a1fdd4ce-05e7-4f90-b4f1-6e69d6a01b4f completed in 0.0010 secs with status 404
+2026-07-19 02:25:43,855 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/favicon.ico
+2026-07-19 02:25:43,855 - app.core.logging - INFO - Request GET http://localhost:8000/favicon.ico completed in 0.0000 secs with status 404
+2026-07-19 02:26:14,616 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=cad6f30a-0c3b-494e-8407-c41200e6e3f0
+2026-07-19 02:26:15,094 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.cad6f30a-0c3b-494e-8407-c41200e6e3f0&order=created_at.desc "HTTP/2 200 OK"
+2026-07-19 02:26:15,096 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=cad6f30a-0c3b-494e-8407-c41200e6e3f0 completed in 0.4795 secs with status 200
+2026-07-19 02:26:19,752 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=cad6f30a-0c3b-494e-8407-c41200e6e3f0
+2026-07-19 02:26:20,062 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.cad6f30a-0c3b-494e-8407-c41200e6e3f0&order=created_at.desc "HTTP/2 200 OK"
+2026-07-19 02:26:20,063 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=cad6f30a-0c3b-494e-8407-c41200e6e3f0 completed in 0.3112 secs with status 200
+2026-07-19 02:26:21,117 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=cad6f30a-0c3b-494e-8407-c41200e6e3f0
+2026-07-19 02:26:21,428 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.cad6f30a-0c3b-494e-8407-c41200e6e3f0&order=created_at.desc "HTTP/2 200 OK"
+2026-07-19 02:26:21,429 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=cad6f30a-0c3b-494e-8407-c41200e6e3f0 completed in 0.3124 secs with status 200
+2026-07-19 02:26:43,820 - app.core.logging - INFO - Incoming request: POST http://localhost:8000/api/analyze
+2026-07-19 02:26:44,220 - app.core.logging - INFO - Starting full analysis for user cad6f30a-0c3b-494e-8407-c41200e6e3f0
+2026-07-19 02:26:44,220 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-19 02:26:48,068 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-19 02:26:48,068 - app.core.logging - INFO - CV analysis completed
+2026-07-19 02:26:48,068 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-19 02:26:52,353 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-19 02:26:52,353 - app.core.logging - INFO - Job analysis completed
+2026-07-19 02:26:52,353 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-19 02:26:59,486 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-19 02:26:59,486 - app.core.logging - INFO - Match analysis completed
+2026-07-19 02:26:59,486 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-19 02:27:05,423 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-19 02:27:05,430 - app.core.logging - INFO - Summary generated
+2026-07-19 02:27:05,431 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-19 02:27:17,761 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-19 02:27:17,765 - app.core.logging - INFO - Markdown report generated
+2026-07-19 02:27:18,249 - httpx - INFO - HTTP Request: POST https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/profiles "HTTP/2 409 Conflict"
+2026-07-19 02:27:18,582 - httpx - INFO - HTTP Request: POST https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses "HTTP/2 201 Created"
+2026-07-19 02:27:18,583 - app.core.logging - INFO - Analysis saved to db with id: a64fdbfc-a553-4d74-8040-96d541d1368c
+2026-07-19 02:27:18,584 - app.core.logging - INFO - Request POST http://localhost:8000/api/analyze completed in 34.7634 secs with status 200
+2026-07-19 02:27:18,669 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=cad6f30a-0c3b-494e-8407-c41200e6e3f0
+2026-07-19 02:27:18,980 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.cad6f30a-0c3b-494e-8407-c41200e6e3f0&order=created_at.desc "HTTP/2 200 OK"
+2026-07-19 02:27:18,982 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=cad6f30a-0c3b-494e-8407-c41200e6e3f0 completed in 0.3126 secs with status 200
+2026-07-19 02:27:22,192 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=cad6f30a-0c3b-494e-8407-c41200e6e3f0
+2026-07-19 02:27:22,503 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.cad6f30a-0c3b-494e-8407-c41200e6e3f0&order=created_at.desc "HTTP/2 200 OK"
+2026-07-19 02:27:22,506 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=cad6f30a-0c3b-494e-8407-c41200e6e3f0 completed in 0.3144 secs with status 200
+2026-07-19 02:27:27,000 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/v1/export/pdf?analysis_id=a64fdbfc-a553-4d74-8040-96d541d1368c
+2026-07-19 02:27:27,001 - app.core.logging - INFO - Request GET http://localhost:8000/api/v1/export/pdf?analysis_id=a64fdbfc-a553-4d74-8040-96d541d1368c completed in 0.0010 secs with status 404
+2026-07-19 02:27:32,133 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=cad6f30a-0c3b-494e-8407-c41200e6e3f0
+2026-07-19 02:27:32,536 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.cad6f30a-0c3b-494e-8407-c41200e6e3f0&order=created_at.desc "HTTP/2 200 OK"
+2026-07-19 02:27:32,537 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=cad6f30a-0c3b-494e-8407-c41200e6e3f0 completed in 0.4042 secs with status 200
+2026-07-19 02:27:35,875 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=cad6f30a-0c3b-494e-8407-c41200e6e3f0
+2026-07-19 02:27:36,180 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.cad6f30a-0c3b-494e-8407-c41200e6e3f0&order=created_at.desc "HTTP/2 200 OK"
+2026-07-19 02:27:36,182 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=cad6f30a-0c3b-494e-8407-c41200e6e3f0 completed in 0.3067 secs with status 200
+2026-07-19 02:29:12,290 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=cad6f30a-0c3b-494e-8407-c41200e6e3f0
+2026-07-19 02:29:12,742 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.cad6f30a-0c3b-494e-8407-c41200e6e3f0&order=created_at.desc "HTTP/2 200 OK"
+2026-07-19 02:29:12,743 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=cad6f30a-0c3b-494e-8407-c41200e6e3f0 completed in 0.4539 secs with status 200
+2026-07-19 02:30:41,947 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=cad6f30a-0c3b-494e-8407-c41200e6e3f0
+2026-07-19 02:30:42,392 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.cad6f30a-0c3b-494e-8407-c41200e6e3f0&order=created_at.desc "HTTP/2 200 OK"
+2026-07-19 02:30:42,394 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=cad6f30a-0c3b-494e-8407-c41200e6e3f0 completed in 0.4475 secs with status 200
+2026-07-19 02:30:43,382 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=cad6f30a-0c3b-494e-8407-c41200e6e3f0
+2026-07-19 02:30:43,692 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.cad6f30a-0c3b-494e-8407-c41200e6e3f0&order=created_at.desc "HTTP/2 200 OK"
+2026-07-19 02:30:43,694 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=cad6f30a-0c3b-494e-8407-c41200e6e3f0 completed in 0.3121 secs with status 200
+2026-07-19 02:30:45,111 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/v1/export/pdf?analysis_id=a64fdbfc-a553-4d74-8040-96d541d1368c
+2026-07-19 02:30:45,116 - app.core.logging - INFO - Request GET http://localhost:8000/api/v1/export/pdf?analysis_id=a64fdbfc-a553-4d74-8040-96d541d1368c completed in 0.0010 secs with status 404
+2026-07-19 02:30:47,500 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=cad6f30a-0c3b-494e-8407-c41200e6e3f0
+2026-07-19 02:30:47,818 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.cad6f30a-0c3b-494e-8407-c41200e6e3f0&order=created_at.desc "HTTP/2 200 OK"
+2026-07-19 02:30:47,820 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=cad6f30a-0c3b-494e-8407-c41200e6e3f0 completed in 0.3196 secs with status 200
+2026-07-19 02:31:01,367 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=cad6f30a-0c3b-494e-8407-c41200e6e3f0
+2026-07-19 02:31:01,741 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.cad6f30a-0c3b-494e-8407-c41200e6e3f0&order=created_at.desc "HTTP/2 200 OK"
+2026-07-19 02:31:01,742 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=cad6f30a-0c3b-494e-8407-c41200e6e3f0 completed in 0.3750 secs with status 200
+2026-07-19 02:31:02,740 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=cad6f30a-0c3b-494e-8407-c41200e6e3f0
+2026-07-19 02:31:03,055 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.cad6f30a-0c3b-494e-8407-c41200e6e3f0&order=created_at.desc "HTTP/2 200 OK"
+2026-07-19 02:31:03,055 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=cad6f30a-0c3b-494e-8407-c41200e6e3f0 completed in 0.3148 secs with status 200
+2026-07-19 02:31:04,245 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/v1/export/pdf?analysis_id=a64fdbfc-a553-4d74-8040-96d541d1368c
+2026-07-19 02:31:04,246 - app.core.logging - INFO - Request GET http://localhost:8000/api/v1/export/pdf?analysis_id=a64fdbfc-a553-4d74-8040-96d541d1368c completed in 0.0011 secs with status 404
+2026-07-19 02:31:06,763 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=cad6f30a-0c3b-494e-8407-c41200e6e3f0
+2026-07-19 02:31:07,080 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.cad6f30a-0c3b-494e-8407-c41200e6e3f0&order=created_at.desc "HTTP/2 200 OK"
+2026-07-19 02:31:07,083 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=cad6f30a-0c3b-494e-8407-c41200e6e3f0 completed in 0.3197 secs with status 200
+2026-07-19 02:31:12,500 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=cad6f30a-0c3b-494e-8407-c41200e6e3f0
+2026-07-19 02:31:12,876 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.cad6f30a-0c3b-494e-8407-c41200e6e3f0&order=created_at.desc "HTTP/2 200 OK"
+2026-07-19 02:31:12,884 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=cad6f30a-0c3b-494e-8407-c41200e6e3f0 completed in 0.3829 secs with status 200
+2026-07-19 02:31:13,632 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=cad6f30a-0c3b-494e-8407-c41200e6e3f0
+2026-07-19 02:31:13,938 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.cad6f30a-0c3b-494e-8407-c41200e6e3f0&order=created_at.desc "HTTP/2 200 OK"
+2026-07-19 02:31:13,939 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=cad6f30a-0c3b-494e-8407-c41200e6e3f0 completed in 0.3086 secs with status 200
+2026-07-19 02:31:14,451 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/v1/export/pdf?analysis_id=a64fdbfc-a553-4d74-8040-96d541d1368c
+2026-07-19 02:31:14,452 - app.core.logging - INFO - Request GET http://localhost:8000/api/v1/export/pdf?analysis_id=a64fdbfc-a553-4d74-8040-96d541d1368c completed in 0.0010 secs with status 404
+2026-07-19 02:31:15,660 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=cad6f30a-0c3b-494e-8407-c41200e6e3f0
+2026-07-19 02:31:15,962 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.cad6f30a-0c3b-494e-8407-c41200e6e3f0&order=created_at.desc "HTTP/2 200 OK"
+2026-07-19 02:31:15,965 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=cad6f30a-0c3b-494e-8407-c41200e6e3f0 completed in 0.3051 secs with status 200
+2026-07-19 02:32:02,201 - app.core.logging - INFO - Incoming request: HEAD http://localhost:8000/openapi.json
+2026-07-19 02:32:02,227 - app.core.logging - INFO - Request HEAD http://localhost:8000/openapi.json completed in 0.0259 secs with status 200
+2026-07-19 02:32:02,230 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/openapi.json
+2026-07-19 02:32:02,231 - app.core.logging - INFO - Request GET http://localhost:8000/openapi.json completed in 0.0015 secs with status 200
+2026-07-19 02:32:11,357 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=cad6f30a-0c3b-494e-8407-c41200e6e3f0
+2026-07-19 02:32:11,772 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.cad6f30a-0c3b-494e-8407-c41200e6e3f0&order=created_at.desc "HTTP/2 200 OK"
+2026-07-19 02:32:11,773 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=cad6f30a-0c3b-494e-8407-c41200e6e3f0 completed in 0.4158 secs with status 200
+2026-07-19 02:32:12,079 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=cad6f30a-0c3b-494e-8407-c41200e6e3f0
+2026-07-19 02:32:12,383 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.cad6f30a-0c3b-494e-8407-c41200e6e3f0&order=created_at.desc "HTTP/2 200 OK"
+2026-07-19 02:32:12,386 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=cad6f30a-0c3b-494e-8407-c41200e6e3f0 completed in 0.3065 secs with status 200
+2026-07-19 02:32:43,468 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=cad6f30a-0c3b-494e-8407-c41200e6e3f0
+2026-07-19 02:32:43,871 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.cad6f30a-0c3b-494e-8407-c41200e6e3f0&order=created_at.desc "HTTP/2 200 OK"
+2026-07-19 02:32:43,871 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=cad6f30a-0c3b-494e-8407-c41200e6e3f0 completed in 0.4031 secs with status 200
+2026-07-19 02:32:44,776 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/export/pdf?analysis_id=a64fdbfc-a553-4d74-8040-96d541d1368c
+2026-07-19 02:32:44,779 - app.core.logging - INFO - Generating PDF export for analysis a64fdbfc-a553-4d74-8040-96d541d1368c
+2026-07-19 02:32:45,096 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=%2A&id=eq.a64fdbfc-a553-4d74-8040-96d541d1368c "HTTP/2 200 OK"
+2026-07-19 02:32:45,114 - app.core.logging - INFO - Request GET http://localhost:8000/api/export/pdf?analysis_id=a64fdbfc-a553-4d74-8040-96d541d1368c completed in 0.3378 secs with status 200
+2026-07-19 02:32:45,141 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=cad6f30a-0c3b-494e-8407-c41200e6e3f0
+2026-07-19 02:32:45,445 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.cad6f30a-0c3b-494e-8407-c41200e6e3f0&order=created_at.desc "HTTP/2 200 OK"
+2026-07-19 02:32:45,445 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=cad6f30a-0c3b-494e-8407-c41200e6e3f0 completed in 0.3033 secs with status 200
+2026-07-19 02:36:09,373 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=cad6f30a-0c3b-494e-8407-c41200e6e3f0
+2026-07-19 02:36:10,001 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.cad6f30a-0c3b-494e-8407-c41200e6e3f0&order=created_at.desc "HTTP/2 200 OK"
+2026-07-19 02:36:10,001 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=cad6f30a-0c3b-494e-8407-c41200e6e3f0 completed in 0.6283 secs with status 200
+2026-07-19 02:36:10,633 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=cad6f30a-0c3b-494e-8407-c41200e6e3f0
+2026-07-19 02:36:10,935 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.cad6f30a-0c3b-494e-8407-c41200e6e3f0&order=created_at.desc "HTTP/2 200 OK"
+2026-07-19 02:36:10,935 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=cad6f30a-0c3b-494e-8407-c41200e6e3f0 completed in 0.3020 secs with status 200
+2026-07-19 02:36:12,232 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/export/pdf?analysis_id=a64fdbfc-a553-4d74-8040-96d541d1368c
+2026-07-19 02:36:12,234 - app.core.logging - INFO - Generating PDF export for analysis a64fdbfc-a553-4d74-8040-96d541d1368c
+2026-07-19 02:36:12,543 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=%2A&id=eq.a64fdbfc-a553-4d74-8040-96d541d1368c "HTTP/2 200 OK"
+2026-07-19 02:36:12,629 - app.core.logging - INFO - Request GET http://localhost:8000/api/export/pdf?analysis_id=a64fdbfc-a553-4d74-8040-96d541d1368c completed in 0.3964 secs with status 200
+2026-07-19 02:36:12,655 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=cad6f30a-0c3b-494e-8407-c41200e6e3f0
+2026-07-19 02:36:12,964 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.cad6f30a-0c3b-494e-8407-c41200e6e3f0&order=created_at.desc "HTTP/2 200 OK"
+2026-07-19 02:36:12,966 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=cad6f30a-0c3b-494e-8407-c41200e6e3f0 completed in 0.3107 secs with status 200
+2026-07-19 02:38:11,528 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=cad6f30a-0c3b-494e-8407-c41200e6e3f0
+2026-07-19 02:38:11,986 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.cad6f30a-0c3b-494e-8407-c41200e6e3f0&order=created_at.desc "HTTP/2 200 OK"
+2026-07-19 02:38:11,996 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=cad6f30a-0c3b-494e-8407-c41200e6e3f0 completed in 0.4677 secs with status 200
+2026-07-19 03:41:24,739 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=cad6f30a-0c3b-494e-8407-c41200e6e3f0
+2026-07-19 03:41:25,970 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.cad6f30a-0c3b-494e-8407-c41200e6e3f0&order=created_at.desc "HTTP/2 200 OK"
+2026-07-19 03:41:25,973 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=cad6f30a-0c3b-494e-8407-c41200e6e3f0 completed in 1.2350 secs with status 200
+2026-07-19 03:41:31,376 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=cad6f30a-0c3b-494e-8407-c41200e6e3f0
+2026-07-19 03:41:31,783 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.cad6f30a-0c3b-494e-8407-c41200e6e3f0&order=created_at.desc "HTTP/2 200 OK"
+2026-07-19 03:41:31,785 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=cad6f30a-0c3b-494e-8407-c41200e6e3f0 completed in 0.4098 secs with status 200
+2026-07-19 03:41:34,766 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=cad6f30a-0c3b-494e-8407-c41200e6e3f0
+2026-07-19 03:41:35,085 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.cad6f30a-0c3b-494e-8407-c41200e6e3f0&order=created_at.desc "HTTP/2 200 OK"
+2026-07-19 03:41:35,086 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=cad6f30a-0c3b-494e-8407-c41200e6e3f0 completed in 0.3195 secs with status 200
+2026-07-19 13:47:43,316 - app.core.logging - INFO - Incoming request: OPTIONS http://localhost:8000/api/analyze
+2026-07-19 13:47:43,316 - app.core.logging - INFO - Request OPTIONS http://localhost:8000/api/analyze completed in 0.0000 secs with status 200
+2026-07-19 13:47:43,324 - app.core.logging - INFO - Incoming request: POST http://localhost:8000/api/analyze
+2026-07-19 13:47:45,129 - app.core.logging - INFO - Starting full analysis for user cad6f30a-0c3b-494e-8407-c41200e6e3f0
+2026-07-19 13:47:45,129 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-19 13:47:50,190 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-19 13:47:50,210 - app.core.logging - INFO - CV analysis completed
+2026-07-19 13:47:50,210 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-19 13:47:54,160 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-19 13:47:54,160 - app.core.logging - INFO - Job analysis completed
+2026-07-19 13:47:54,160 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-19 13:48:00,323 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-19 13:48:00,323 - app.core.logging - INFO - Match analysis completed
+2026-07-19 13:48:00,323 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-19 13:48:05,646 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-19 13:48:05,654 - app.core.logging - INFO - Summary generated
+2026-07-19 13:48:05,654 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-19 13:48:18,719 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-19 13:48:18,726 - app.core.logging - INFO - Markdown report generated
+2026-07-19 13:48:19,368 - httpx - INFO - HTTP Request: POST https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/profiles "HTTP/2 409 Conflict"
+2026-07-19 13:48:19,746 - httpx - INFO - HTTP Request: POST https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses "HTTP/2 201 Created"
+2026-07-19 13:48:19,800 - app.core.logging - INFO - Analysis saved to db with id: 0dc42248-5366-4e2e-b675-407003c3ce14
+2026-07-19 13:48:19,800 - app.core.logging - INFO - Request POST http://localhost:8000/api/analyze completed in 36.4754 secs with status 200
+2026-07-19 13:48:20,841 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=cad6f30a-0c3b-494e-8407-c41200e6e3f0
+2026-07-19 13:48:21,148 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.cad6f30a-0c3b-494e-8407-c41200e6e3f0&order=created_at.desc "HTTP/2 200 OK"
+2026-07-19 13:48:21,207 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=cad6f30a-0c3b-494e-8407-c41200e6e3f0 completed in 0.3642 secs with status 200
+2026-07-19 13:48:25,078 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=cad6f30a-0c3b-494e-8407-c41200e6e3f0
+2026-07-19 13:48:25,417 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.cad6f30a-0c3b-494e-8407-c41200e6e3f0&order=created_at.desc "HTTP/2 200 OK"
+2026-07-19 13:48:25,421 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=cad6f30a-0c3b-494e-8407-c41200e6e3f0 completed in 0.3426 secs with status 200
+2026-07-19 13:48:30,608 - app.core.logging - INFO - Incoming request: OPTIONS http://localhost:8000/api/interview/questions
+2026-07-19 13:48:30,608 - app.core.logging - INFO - Request OPTIONS http://localhost:8000/api/interview/questions completed in 0.0000 secs with status 200
+2026-07-19 13:48:30,625 - app.core.logging - INFO - Incoming request: POST http://localhost:8000/api/interview/questions
+2026-07-19 13:48:32,572 - app.core.logging - INFO - Generating interview questions for analysis 0dc42248-5366-4e2e-b675-407003c3ce14
+2026-07-19 13:48:32,976 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=%2A&id=eq.0dc42248-5366-4e2e-b675-407003c3ce14 "HTTP/2 200 OK"
+2026-07-19 13:48:32,978 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-07-19 13:48:44,151 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-19 13:48:44,158 - app.core.logging - INFO - Interview questions generated
+2026-07-19 13:48:44,163 - app.core.logging - INFO - Request POST http://localhost:8000/api/interview/questions completed in 13.5381 secs with status 200
+2026-07-19 13:48:47,950 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=cad6f30a-0c3b-494e-8407-c41200e6e3f0
+2026-07-19 13:48:48,354 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.cad6f30a-0c3b-494e-8407-c41200e6e3f0&order=created_at.desc "HTTP/2 200 OK"
+2026-07-19 13:48:48,358 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=cad6f30a-0c3b-494e-8407-c41200e6e3f0 completed in 0.4073 secs with status 200
+2026-07-19 13:49:04,108 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=cad6f30a-0c3b-494e-8407-c41200e6e3f0
+2026-07-19 13:49:04,532 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.cad6f30a-0c3b-494e-8407-c41200e6e3f0&order=created_at.desc "HTTP/2 200 OK"
+2026-07-19 13:49:04,536 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=cad6f30a-0c3b-494e-8407-c41200e6e3f0 completed in 0.4274 secs with status 200
+2026-07-19 13:49:23,414 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=cad6f30a-0c3b-494e-8407-c41200e6e3f0
+2026-07-19 13:49:23,888 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.cad6f30a-0c3b-494e-8407-c41200e6e3f0&order=created_at.desc "HTTP/2 200 OK"
+2026-07-19 13:49:23,892 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=cad6f30a-0c3b-494e-8407-c41200e6e3f0 completed in 0.4782 secs with status 200
+2026-07-19 14:17:11,304 - app.core.logging - INFO - Incoming request: GET http://localhost:8000/api/history?user_id=guest
+2026-07-19 14:17:11,754 - httpx - INFO - HTTP Request: GET https://runvrifzcsjptzluyvqq.supabase.co/rest/v1/analyses?select=id%2Cmatch_score%2Csummary%2Ccreated_at&user_id=eq.guest&order=created_at.desc "HTTP/2 200 OK"
+2026-07-19 14:17:11,762 - app.core.logging - INFO - Request GET http://localhost:8000/api/history?user_id=guest completed in 0.4583 secs with status 200

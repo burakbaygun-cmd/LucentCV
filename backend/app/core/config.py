@@ -12,6 +12,9 @@ class Settings(BaseSettings):
     SUPABASE_ANON_KEY: str = ""
     SUPABASE_SERVICE_ROLE_KEY: str = ""
 
+    # CORS & Production
+    ALLOWED_ORIGINS: str = "*"
+
     class Config:
         env_file = ".env"
         extra = "allow"
