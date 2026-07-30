@@ -7,7 +7,7 @@ Takım 126
 
 - **Burak Baygün** – Product Owner & Developer
 - **Büşra Demir** – Scrum Master & Developer
-- **Asil Doğukan Samay** – Developer
+- **Asil Doğukan Samay** – Product Owner & Developer
 - **Ece Toygun** – Developer
 - **Nuri Duldar** – Developer
 
@@ -202,7 +202,7 @@ Sprint sonunda yapılan değerlendirmelerde mevcut MVP'nin proje hedeflerini kar
 
 - Burak Baygün — Developer
 - Büşra Demir — Scrum Master
-- Asil Doğukan Samay — Product Owner
+- Asil Doğukan Samay — Product Owner & Developer
 - Ece Toygun — Developer
 - Nuri Duldar — Developer
 
@@ -396,7 +396,7 @@ Sprint sonunda LucentCV; modern kullanıcı arayüzüne sahip, kullanıcı kimli
 
 - Burak Baygün — Developer
 - Büşra Demir — Scrum Master
-- Asil Doğukan Samay — Product Owner
+- Asil Doğukan Samay — Product Owner & Developer
 - Ece Toygun — Developer
 - Nuri Duldar — Developer
 
