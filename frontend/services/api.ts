@@ -9,7 +9,7 @@ import {
 } from "../types/api";
 
 const apiClient = axios.create({
-  baseURL: process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000/api",
+  baseURL: process.env.NEXT_PUBLIC_API_URL || "https://lucentcv.onrender.com/api",
   headers: {
     "Content-Type": "application/json",
   },

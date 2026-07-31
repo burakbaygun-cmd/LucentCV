@@ -55,8 +55,8 @@ export default function AnalysisDetailsPage() {
   }
 
   const handleDownloadPDF = () => {
-    // Basic redirect to the PDF endpoint
-    window.open(`http://localhost:8000/api/v1/export/pdf?analysis_id=${analysisId}`, "_blank");
+    const baseUrl = process.env.NEXT_PUBLIC_API_URL || "https://lucentcv.onrender.com/api";
+    window.open(`${baseUrl}/export/pdf?analysis_id=${analysisId}`, "_blank");
   };
 
   return (
