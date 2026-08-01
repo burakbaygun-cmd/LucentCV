@@ -14,32 +14,20 @@ import { ErrorState } from "@/components/ui/error-state";
 import { CircularScore } from "@/components/ui/circular-score";
 import { MarkdownViewer } from "@/components/ui/markdown-viewer";
 import { InterviewModule } from "@/components/interview/InterviewModule";
-import { useAuth } from "@/context/AuthContext";
 
 export default function AnalysisDetailsPage() {
   const params = useParams();
   const router = useRouter();
-  const { user } = useAuth();
   const analysisId = params.id as string;
 
   // Guards the export button against duplicate clicks while a download is in flight.
   const [isExporting, setIsExporting] = useState(false);
 
-  const { data: historyItems, isLoading, isError, refetch } = useQuery({
-    queryKey: ["history", user?.id || "guest"],
-    queryFn: () => api.getHistory(user?.id || "guest"),
+  const { data: analysis, isLoading, isError, refetch } = useQuery({
+    queryKey: ["analysis", analysisId],
+    queryFn: () => api.getAnalysisById(analysisId),
+    enabled: !!analysisId,
   });
-
-  const analysis = historyItems?.find(item => item.id === analysisId);
-
-  // We actually need the full report. The history endpoint only returns summaries.
-  // Wait, I should probably add an endpoint to get a single analysis by ID.
-  // In Phase 2, we didn't add GET /api/analysis/{id}, only history.
-  // Wait! The POST /api/analyze returned the full report. But we navigated away.
-  // We can just rely on the history if the history contains the report, but `HistoryItemResponse` doesn't have `report`.
-  // Wait, looking at the backend, `history_service.py` returns `report` if we query it?
-  // Let me just assume we can fetch the full history item, or I can use the same history query but in this case I need to be careful.
-  // Actually, I'll just use the history endpoint for now and if `report` is missing, I'll display the summary as the report.
 
   if (isLoading) {
     return (
@@ -140,8 +128,7 @@ export default function AnalysisDetailsPage() {
         <TabsContent value="report" className="mt-6">
           <Card className="glass-card">
             <CardContent className="p-6 md:p-8">
-              {/* Note: In a real app we'd fetch the full report here. For now we use summary if report is missing */}
-              <MarkdownViewer content={(analysis as any).report || analysis.summary} />
+              <MarkdownViewer content={analysis.report} />
             </CardContent>
           </Card>
         </TabsContent>
