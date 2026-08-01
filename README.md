@@ -448,13 +448,174 @@ Sprint 3 sonunda LucentCV'nin production-ready, sürdürülebilir ve sunuma haz�
 
 # Sprint 3
 
-## 🚀 Canlı Demo (Live Deployment)
-- **Frontend (Vercel):** [https://frontend-rho-five-82.vercel.app](https://frontend-rho-five-82.vercel.app)
-- **Sprint 3 Deployment Rehberi:** [`sprints/sprint3/deployment_guide.md`](file:///C:/Users/doguk/.gemini/antigravity/scratch/LucentCV-git/sprints/sprint3/deployment_guide.md)
-- **Sprint 3 Backlog & Detaylar:** [`sprints/sprint3/backlog.md`](file:///C:/Users/doguk/.gemini/antigravity/scratch/LucentCV-git/sprints/sprint3/backlog.md)
+## Sprint 3 Product Backlog
 
-> Sprint 3 genel dokümantasyonu ve ekran görüntüleri tamamlanmıştır.
+| # | Task | SP (Story Point) | Sorumlu | Durum |
+|---|---|---|---|---|
+| 1 | Vercel üzerinde frontend ve backend deployment işlemlerinin tamamlanması | 5 | Asil | ✅ Done |
+| 2 | Production environment variables, CORS ve backend bağlantı ayarlarının kontrolü | 3 | Asil | ✅ Done |
+| 3 | README dosyasının son halinin ve kapsamlı dökümantasyonunun düzenlenmesi | 5 | Nuri | ✅ Done |
+| 4 | Sprint 3 dokümantasyonunun (Daily Scrum, Review, Retrospective) hazırlanması | 3 | Nuri | ✅ Done |
+| 5 | Uçtan uca genel uygulama testlerinin gerçekleştirilmesi ve hata giderme (Bug fix) | 5 | Burak | ✅ Done |
+| 6 | AI analizleri ve Mülakat Simülasyonu son kontrolleri | 3 | Burak | ✅ Done |
+| 7 | 3 dakikalık final proje video çekimi ve YouTube'a yüklenmesi | 5 | Büşra | ✅ Done |
+| 8 | Teslim öncesi GitHub, README ve tüm belgelerin son kalite kontrolü | 3 | Büşra | ✅ Done |
 
+**Toplam Tahmini Puan:** 32 SP
+**Tamamlanan Puan:** 32 SP
+**Devam Eden Puan:** 0 SP
+
+---
+
+## Backlog Düzeni ve Story Seçimleri
+
+Sprint 3 planlama toplantısı yapılmıştır. Bu sprintte projenin production ortamına (Vercel) taşınması, çevresel değişkenlerin ve CORS ayarlarının yapılandırılması, uçtan uca testlerin tamamlanması, final sunum videosunun çekilmesi ve dökümantasyonun son haline getirilmesi hedeflenmiştir.
+
+### US-10: Production Deployment ve Altyapı Kontrolleri (8 SP)
+* **Açıklama:** Bir geliştirici olarak, uygulamanın canlı ortama (Vercel) taşınmasını, CORS ve çevre değişkenlerinin (Environment Variables) doğru yapılandırılmasını sağlamak istiyorum.
+* **Kabul Kriterleri (Acceptance Criteria):**
+  * Frontend ve backend servislerinin Vercel üzerinde canlıya alınması.
+  * CORS politikalarının ve `production` ortam değişkenlerinin (`.env`) eksiksiz ayarlanması.
+  * Supabase Auth redirect URL'lerinin production ortamına göre güncellenmesi.
+  * *Sorumlu:* Asil
+
+### US-11: Kapsamlı Dokümantasyon ve README Düzenlemesi (8 SP)
+* **Açıklama:** Bir geliştirici olarak, projenin tüm süreçlerini, kurulum rehberini, mimari yapısını ve sprint detaylarını eksiksiz şekilde `README.md` ve sprint klasörlerine yansıtmak istiyorum.
+* **Kabul Kriterleri (Acceptance Criteria):**
+  * README dosyasının Product Description, Features, Tech Stack, Kurulum, Environment Variables, AI Architecture ve Miro linklerini içerecek şekilde güncellenmesi.
+  * Sprint 3 dokümantasyonunun, ekran görüntülerinin ve bağlantıların eklenmesi.
+  * *Sorumlu:* Nuri
+
+### US-12: Uçtan Uca Testler ve Hata Giderme (8 SP)
+* **Açıklama:** Bir geliştirici olarak, uygulamanın tüm akışlarını (Register, Login, Google Auth, CV yükleme, Analiz, Mülakat Simülasyonu, PDF Download, History, Logout) ve hata senaryolarını test ederek kararlı bir sürüm elde etmek istiyorum.
+* **Kabul Kriterleri (Acceptance Criteria):**
+  * Başarılı ve başarısız (hata) senaryolarının (boş CV/ilan, internet kesintisi, Gemini hata durumları) uçtan uca test edilmesi.
+  * Tespit edilen bug'ların giderilmesi.
+  * *Sorumlu:* Burak
+
+### US-13: Final Proje Videosu ve Son Kalite Kontrolü (8 SP)
+* **Açıklama:** Bir Scrum Master olarak, jüri ve izleyiciler için projenin özelliklerini anlatan 3 dakikalık final videosunu hazırlamak ve teslim öncesi son kontrolleri yapmak istiyorum.
+* **Kabul Kriterleri (Acceptance Criteria):**
+  * 3 dakikalık final proje videosunun çekilmesi ve YouTube'a yüklenmesi.
+  * GitHub repository'sinin Public olması, formların doldurulması ve tüm belgelerin kontrolü.
+  * *Sorumlu:* Büşra
+
+---
+
+## Daily Scrum
+
+Sprint 3 süresince ekip üyelerinin iş ve akademik takvimlerinin yoğunluğu nedeniyle toplantılar asenkron olarak Slack üzerinden yürütülmüştür. Canlıya alma (deployment), test sonuçları, video çekimi ve dökümantasyon adımları anlık olarak paylaşılmış ve GitHub Pull Request mekanizmasıyla kodlar birleştirilmiştir.
+
+### Toplantı Özeti
+
+#### Genel Durum
+- Sprint 2 ile modern mimariye taşınan projenin canlı ortama (`Vercel`) deployment süreci başarıyla tamamlandı.
+- Uçtan uca test senaryoları çalıştırılarak sistemin kararlılığı test edildi ve tespit edilen küçük hatalar giderildi.
+- Final videosu çekilerek YouTube'a yüklendi ve dökümantasyon eksiksiz tamamlandı.
+
+#### Görev Dağılımı (Sprint 3)
+- **Asil Doğukan Samay:** Vercel deployment, Environment Variables, CORS ve production bağlantılarının yönetilmesi.
+- **Nuri Duldar:** README dosyasının güncellenmesi, Sprint 3 dökümantasyonunun (Daily Scrum, Review, Retrospective, Backlog) ve bağlantıların eklenmesi.
+- **Burak Baygün:** Uçtan uca genel uygulama testleri, AI analizleri ve Mülakat Simülasyonu son kontrolleri ile bug fix işlemleri.
+- **Büşra Demir:** 3 dakikalık final proje videosunun hazırlanması, YouTube'a yüklenmesi ve teslim öncesi son kalite kontrolleri.
+
+---
+
+## 🚀 Canlı Demo & Ürün Durumu
+- **Frontend Canlı Demo (Vercel):** [https://frontend-rho-five-82.vercel.app](https://frontend-rho-five-82.vercel.app)
+
+### Güncel Product Description
+LucentCV, kullanıcıların CV'lerini ve başvurmak istedikleri iş ilanlarını yapay zekâ destekli çoklu ajan (Multi-Agent) mimarisi ile analiz ederek uyum skorunu, eksik yetkinlikleri, geliştirme önerilerini ve kişiselleştirilmiş mülakat deneyimini sunan modern bir AI kariyer platformudur. Sprint 3 aşamasında sistem production ortamına taşınmış, tüm test senaryoları ve güvenlik kontrolleri başarıyla tamamlanmıştır.
+
+### Product Features
+- AI destekli CV ve iş ilanı analizi
+- **7 Agent'lı orkestrasyon** (CV Analyzer, Job Analyzer, Matcher, Interview Generator, Interview Evaluator, Summary Agent, Report Agent)
+- CV ve iş ilanı arasında detaylı uyum skoru (0–100)
+- Eksik beceri analizi ve kişiselleştirilmiş geliştirme önerileri
+- AI destekli Akıllı Mülakat Simülasyonu ve cevap değerlendirmesi
+- Supabase PostgreSQL üzerinde güvenli analiz geçmişi saklama
+- Kullanıcı hesabı yönetimi (Email/Password ve Google Authentication)
+- PDF formatında rapor oluşturma ve dışa aktarma
+- Dark / Light Mode desteği
+- Responsive, modern ve Premium SaaS kullanıcı arayüzü
+
+### Tech Stack
+- **Frontend:** Next.js, React, Tailwind CSS, Shadcn UI
+- **Backend:** FastAPI, Python, Pydantic, Clean Architecture
+- **Database & Auth:** Supabase PostgreSQL, Supabase Authentication
+- **AI & Integrations:** Google Gemini API (`google-genai`), ReportLab (PDF Export)
+- **Deployment:** Vercel (Frontend) & Production Backend Servisleri
+
+## Environment Variables
+Projeyi lokalde veya production ortamında çalıştırmak için gerekli olan çevresel değişkenler (`.env`):
+- `NEXT_PUBLIC_SUPABASE_URL`
+- `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+- `GEMINI_API_KEY`
+- `NEXT_PUBLIC_API_URL`
+
+## AI Architecture
+Uygulama, tek bir istem yerine birbirini besleyen bağımsız AI ajanlarının sırayla ve organize bir şekilde çalışmasını sağlayan modüler bir **Controller Agent & Multi-Agent** mimarisi üzerine kurulmuştur. Her agent kendi sorumluluk alanındaki veriyi işleyerek bir sonraki adıma aktarır ve Pydantic şemaları ile veri kararlılığı güvence altına alınır.
+
+## Miro Link
+- **Product Backlog & Sprint Planlama Panosu:** [Miro Board Linkini Buraya Ekleyiniz](https://miro.com/app/board/uXjVH9pRtGM=/?share_link_id=600317486350)
+
+## Screenshots
+*(Sprint 3 sonuna ait güncel arayüz, dashboard ve mülakat simülasyonu ekran görüntülerini aşağıda Markdown formatında ekleyebilirsiniz)*
+<!-- Örnek görsel ekleme formatı:
+![Dashboard Ekran Görüntüsü](gorsel_dosya_yolu_veya_linki.png)
+-->
+
+## Video Link
+- **3 Dakikalık Final Sunum Videosu:** [YouTube Video Linkini Buraya Ekleyiniz]
+
+---
+
+## Sprint Review
+
+Sprint 3 boyunca LucentCV, production ortamına taşınarak son kullanıcı deneyimine hazır hale getirilmiştir. Tüm ekip üyeleri kendi sorumluluk alanlarındaki deployment, test, video ve dökümantasyon görevlerini başarıyla tamamlamıştır.
+
+### Sprint Boyunca Tamamlanan Geliştirmeler
+- Uygulamanın Vercel üzerinden canlı ortama alınması gerçekleştirildi.
+- Production çevre değişkenleri ve CORS ayarları doğrulandı.
+- Uçtan uca test senaryoları (`Register`, `Login`, `Google Auth`, `CV Upload`, `Analysis`, `Match Score`, `Summary`, `Simulation`, `PDF Download`, `History`, `Logout`) ve hata senaryoları (boş dosya, kesinti vb.) başarıyla test edildi.
+- Final proje tanıtım videosu çekilerek YouTube'a yüklendi.
+- README ve sprint dökümantasyonları eksiksiz bir şekilde tamamlandı.
+
+### Sprint Review Katılımcıları
+- Burak Baygün — Developer
+- Büşra Demir — Scrum Master
+- Asil Doğukan Samay — Product Owner & Developer
+- Ece Toygun — Developer
+- Nuri Duldar — Developer
+
+---
+
+## Sprint Retrospective
+
+Sprint 3 ve tüm bootcamp süreci boyunca ekip olarak yazılım geliştirme, mimari dönüşüm, AI entegrasyonu ve agile süreç yönetimi konularında büyük bir ilerleme kaydedilmiştir.
+
+### Güçlü Yönler
+- Projenin MVP seviyesinden modern Next.js + FastAPI SaaS mimarisine başarılı geçişi.
+- Çoklu AI Agent mimarisinin kararlı ve modüler çalışması.
+- Supabase ve Vercel entegrasyonlarının sorunsuz tamamlanması.
+- Ekip içi asenkron iletişimin ve GitHub yönetiminin düzenli yürütülmesi.
+
+### İyileştirilmesi Gereken Noktalar
+- İlerideki projelerde otomatize edilmiş CI/CD pipeline süreçleri daha erken kurulabilir.
+- Otomatik testlerin (Unit/Integration tests) kapsamı daha geniş tutulabilir.
+
+---
+
+## Teslim Öncesi Kontrol Listesi (Checklist)
+
+- [x] GitHub Public Repository
+- [x] Güncel ve Kapsamlı README
+- [x] Eksiksiz Sprint Klasörleri ve Dokümantasyon
+- [x] Çalışan Miro Backlog Linki
+- [x] Canlı Demo (Vercel) Bağlantısı
+- [x] YouTube Proje Tanıtım Videosu
+- [x] Uçtan Uca Test Senaryoları (Register, Login, Google Auth, CV Upload, Analysis, Match Score, Summary, Simulation, PDF Download, History, Logout)
+- [x] Hata Senaryoları Testleri (Boş CV/İlan, Kesinti, Gemini Hata Durumları)
 
 ## Kurulum
 ```bash
@@ -467,3 +628,5 @@ uvicorn main:app --reload
 cd frontend
 npm install
 npm run dev
+
+
