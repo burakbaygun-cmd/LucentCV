@@ -110,14 +110,22 @@ def export_markdown(request: ExportRequest, export_service: ExportService = Depe
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-@api_router.post("/export/pdf", tags=["Export"])
-def export_pdf(request: ExportRequest, export_service: ExportService = Depends(get_export_service)):
+@api_router.api_route("/export/pdf", methods=["GET", "POST"], tags=["Export"])
+def export_pdf(
+    request: ExportRequest = None,
+    analysis_id: str = None,
+    export_service: ExportService = Depends(get_export_service)
+):
     try:
-        pdf_bytes = export_service.generate_pdf(request.analysis_id)
+        target_id = (request.analysis_id if request and hasattr(request, 'analysis_id') else None) or analysis_id
+        if not target_id:
+            raise HTTPException(status_code=400, detail="analysis_id query parameter or body is required")
+        pdf_bytes = export_service.generate_pdf(target_id)
         return Response(content=pdf_bytes, media_type="application/pdf", headers={
-            "Content-Disposition": f"attachment; filename=report_{request.analysis_id}.pdf"
+            "Content-Disposition": f"attachment; filename=report_{target_id}.pdf"
         })
     except ValueError as ve:
         raise HTTPException(status_code=404, detail=str(ve))
     except Exception as e:
+        logger.error(f"Failed to export PDF: {e}")
         raise HTTPException(status_code=500, detail=str(e))
