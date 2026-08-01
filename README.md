@@ -506,6 +506,11 @@ Sprint 3 planlama toplantısı yapılmıştır. Bu sprintte projenin production 
 
 Sprint 3 süresince ekip üyelerinin iş ve akademik takvimlerinin yoğunluğu nedeniyle toplantılar asenkron olarak Slack üzerinden yürütülmüştür. Canlıya alma (deployment), test sonuçları, video çekimi ve dökümantasyon adımları anlık olarak paylaşılmış ve GitHub Pull Request mekanizmasıyla kodlar birleştirilmiştir.
 
+İlgili iletişim sürecine aşağıdaki bağlantıdan ulaşılabilir:
+
+**İletişim Sürecinden Kesitler:** 
+https://imgur.com/a/TTIyVUg
+
 ### Toplantı Özeti
 
 #### Genel Durum
