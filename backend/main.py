@@ -44,15 +44,23 @@ app.state.limiter = limiter
 app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 
 # CORS configuration
-raw_origins = settings.ALLOWED_ORIGINS
-if raw_origins == "*":
-    origins = ["*"]
-else:
-    origins = [origin.strip() for origin in raw_origins.split(",") if origin.strip()]
+origins = [
+    "https://lucentcv.vercel.app",
+    "https://lucent-cv.vercel.app",
+    "https://frontend-rho-five-82.vercel.app",
+    "https://frontend-somei1.vercel.app",
+    "http://localhost:3000",
+    "http://localhost:8000",
+    "http://127.0.0.1:3000",
+]
+if settings.ALLOWED_ORIGINS and settings.ALLOWED_ORIGINS != "*":
+    extra = [o.strip() for o in settings.ALLOWED_ORIGINS.split(",") if o.strip()]
+    origins.extend(extra)
 
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
+    allow_origin_regex=r"https://.*\.vercel\.app",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
