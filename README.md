@@ -562,7 +562,11 @@ Projeyi lokalde veya production ortamında çalıştırmak için gerekli olan ç
 Uygulama, tek bir istem yerine birbirini besleyen bağımsız AI ajanlarının sırayla ve organize bir şekilde çalışmasını sağlayan modüler bir **Controller Agent & Multi-Agent** mimarisi üzerine kurulmuştur. Her agent kendi sorumluluk alanındaki veriyi işleyerek bir sonraki adıma aktarır ve Pydantic şemaları ile veri kararlılığı güvence altına alınır.
 
 ## Miro Link
-- **Product Backlog & Sprint Planlama Panosu:** [Miro Board Linkini Buraya Ekleyiniz](https://miro.com/app/board/uXjVH9pRtGM=/?share_link_id=600317486350)
+- **Product Backlog & Miro Board**
+  
+-<img width="589" height="501" alt="Sprint 3 Board" src="https://github.com/user-attachments/assets/b6537721-0142-4c4f-a57e-760daff75849" />
+
+[Miro Board: Sprint 3 (Final Release)](https://miro.com/app/board/uXjVH9pRtGM=/?share_link_id=600317486350)
 
 ## Screenshots
 *(Sprint 3 sonuna ait güncel arayüz, dashboard ve mülakat simülasyonu ekran görüntülerini aşağıda Markdown formatında ekleyebilirsiniz)*
