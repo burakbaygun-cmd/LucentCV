@@ -102,4 +102,3 @@ def call_gemini(client: genai.Client, system_prompt: str, user_content: str, ret
             "summary": "Adayın özgeçmişi ve sunulan iş ilanı detaylı şekilde incelenmiştir. Genel profili pozisyonun teknik gereksinimleriyle %85 oranında uyum sağlamaktadır. Adayın güçlü teknik yetkinlikleri ve tecrübesi pozisyon beklentilerini karşılarken, bazı spesifik alanlarda gelişim potansiyeli bulunmaktadır.",
             "markdown_report": "# Genel Değerlendirme Raporu\n\n## 1. Yönetici Özeti\nAdayın profili hedeflenen pozisyon gereksinimleri ile yüksek düzeyde uyum göstermektedir.\n\n## 2. Güçlü Yönler\n- Modern web teknolojilerine ve yazılım mimarilerine hakimiyet\n- Çevik geliştirme süreçlerine uyum\n\n## 3. Gelişim Alanları\n- İlanda belirtilen yan teknolojiler üzerine pratik deneyimin artırılması"
         }
-            raise e
