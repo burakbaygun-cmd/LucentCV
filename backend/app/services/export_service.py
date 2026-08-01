@@ -1,5 +1,6 @@
 import io
 import os
+import re
 import html
 from app.repositories.analysis_repository import AnalysisRepository
 from app.core.logging import logger
@@ -68,6 +69,48 @@ def _safe(text: str) -> str:
     does not crash or silently drop content containing &, <, >.
     """
     return html.escape(text, quote=False)
+
+
+# ---------------------------------------------------------------------------
+# Emoji / unsupported-glyph stripping
+# ---------------------------------------------------------------------------
+# The bundled Turkish-safe fonts (ArialUnicode / DejaVu / LiberationSans)
+# don't ship emoji or pictograph glyphs, so leaving emoji in report text
+# renders as broken boxes ("tofu") in the exported PDF. Since the AI report
+# generator is instructed not to use emoji, this is only a safety net for
+# any that slip through, plus older reports generated before that rule.
+_EMOJI_PATTERN = re.compile(
+    "["
+    "\U0001F000-\U0001FFFF"  # emoji, symbols, pictographs, supplemental blocks
+    "\U00002600-\U000026FF"  # misc symbols (☀ ☺ etc.)
+    "\U00002700-\U000027BF"  # dingbats (✅ ✔ ➤ etc.)
+    "\U00002190-\U000021FF"  # arrows
+    "\U00002B00-\U00002BFF"  # misc symbols and arrows (⭐ etc.)
+    "\U0000FE0F"              # variation selector-16
+    "\U0000200D"              # zero-width joiner
+    "]+",
+    flags=re.UNICODE,
+)
+
+
+def _strip_unsupported_glyphs(text: str) -> str:
+    """Removes emoji/pictographs that the bundled PDF font cannot render."""
+    return _EMOJI_PATTERN.sub("", text)
+
+
+def _inline_markdown_to_reportlab(escaped_text: str) -> str:
+    """
+    Converts simple inline Markdown (bold/italic) into ReportLab's mini-XML
+    tags. Must be called AFTER _safe() escaping, so the <b>/<i> tags this
+    inserts are not themselves escaped.
+    """
+    # **bold** -> <b>bold</b>
+    escaped_text = re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", escaped_text)
+    # *italic* -> <i>italic</i> (single asterisks not part of a ** pair)
+    escaped_text = re.sub(r"(?<!\*)\*(?!\*)(.+?)(?<!\*)\*(?!\*)", r"<i>\1</i>", escaped_text)
+    # _italic_ -> <i>italic</i>
+    escaped_text = re.sub(r"(?<!_)_(?!_)(.+?)(?<!_)_(?!_)", r"<i>\1</i>", escaped_text)
+    return escaped_text
 
 
 class ExportService:
@@ -153,23 +196,46 @@ class ExportService:
         flowables.append(Paragraph("LucentCV - Analiz Raporu", title_style))
         flowables.append(Spacer(1, 12))
 
-        # Markdown -> ReportLab with XML-safe escaping
-        for line in report_text.split("\n"):
-            line = line.strip()
+        # Markdown -> ReportLab with XML-safe escaping, emoji stripping,
+        # and inline bold/italic conversion.
+        for raw_line in report_text.split("\n"):
+            line = raw_line.strip()
             if not line:
                 flowables.append(Spacer(1, 8))
                 continue
 
+            # Drop stray horizontal rules ("---", "***") some models emit
+            # between sections; they don't map to a meaningful PDF element.
+            if line in ("---", "***", "___"):
+                flowables.append(Spacer(1, 4))
+                continue
+
+            # Strip glyphs the bundled font can't render (emoji, pictographs)
+            # before anything else, so downstream regexes work on clean text.
+            line = _strip_unsupported_glyphs(line).strip()
+            if not line:
+                continue
+
             if line.startswith("### "):
-                flowables.append(Paragraph(_safe(line[4:]), h3_style))
+                content = _inline_markdown_to_reportlab(_safe(line[4:]))
+                flowables.append(Paragraph(content, h3_style))
             elif line.startswith("## "):
-                flowables.append(Paragraph(_safe(line[3:]), h2_style))
+                content = _inline_markdown_to_reportlab(_safe(line[3:]))
+                flowables.append(Paragraph(content, h2_style))
             elif line.startswith("# "):
-                flowables.append(Paragraph(_safe(line[2:]), h1_style))
+                content = _inline_markdown_to_reportlab(_safe(line[2:]))
+                flowables.append(Paragraph(content, h1_style))
             elif line.startswith("- ") or line.startswith("* "):
-                flowables.append(Paragraph(f"\u2022 {_safe(line[2:])}", bullet_style))
+                content = _inline_markdown_to_reportlab(_safe(line[2:]))
+                flowables.append(Paragraph(f"\u2022 {content}", bullet_style))
+            elif re.match(r"^\d+\.\s", line):
+                # Numbered list item, e.g. "1. Some recommendation"
+                number, _, rest = line.partition(" ")
+                content = _inline_markdown_to_reportlab(_safe(rest.strip()))
+                flowables.append(Paragraph(f"{number} {content}", bullet_style))
             else:
-                flowables.append(Paragraph(_safe(line), body_style))
+                content = _inline_markdown_to_reportlab(_safe(line))
+                flowables.append(Paragraph(content, body_style))
 
         doc.build(flowables)
 

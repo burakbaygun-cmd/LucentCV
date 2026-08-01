@@ -67,6 +67,23 @@ def evaluate_interview(request: EvaluateInterviewRequest, ai_service: AIService 
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
+@api_router.get("/analysis/{id}", response_model=AnalyzeResponse, tags=["Analysis"])
+def get_analysis_by_id(id: str, repo: AnalysisRepository = Depends(get_analysis_repo)):
+    try:
+        record = repo.get_analysis(id)
+        if not record:
+            raise HTTPException(status_code=404, detail=f"Analysis {id} not found")
+        return AnalyzeResponse(
+            analysis_id=record["id"],
+            match_score=record.get("match_score", 0),
+            summary=record.get("summary", ""),
+            report=record.get("report", ""),
+        )
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
 @api_router.get("/history", response_model=List[HistoryItemResponse], tags=["History"])
 def get_history(user_id: str = "default-user-id", repo: AnalysisRepository = Depends(get_analysis_repo)):
     try:

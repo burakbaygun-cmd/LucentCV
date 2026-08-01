@@ -40,6 +40,11 @@ export const api = {
     return response.data;
   },
 
+  getAnalysisById: async (id: string): Promise<AnalyzeResponse> => {
+    const response = await apiClient.get<AnalyzeResponse>(`/analysis/${id}`);
+    return response.data;
+  },
+
   deleteHistory: async (id: string): Promise<{ status: string; deleted_id: string }> => {
     const response = await apiClient.delete(`/history/${id}`);
     return response.data;
