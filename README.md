@@ -32,6 +32,13 @@ LucentCV, modern **Next.js + FastAPI** mimarisi üzerine kurulmuş olup **Supaba
 
 ---
 
+## 🔗 Canlı Bağlantılar (Live Demo)
+
+- 🌐 **Canlı Web Uygulaması (Vercel):** [https://lucentcv.vercel.app](https://lucentcv.vercel.app) *(Alternatif: [https://lucent-cv.vercel.app](https://lucent-cv.vercel.app))*
+- ⚙️ **Canlı Backend API (Render):** [https://lucentcv.onrender.com/docs](https://lucentcv.onrender.com/docs)
+
+---
+
 ## Ürün Özellikleri
 
 - AI destekli CV ve iş ilanı analizi
