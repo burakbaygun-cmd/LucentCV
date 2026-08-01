@@ -1,4 +1,4 @@
-from fastapi import APIRouter, HTTPException, Depends
+from fastapi import APIRouter, HTTPException, Depends, UploadFile, File
 from fastapi.responses import Response
 from typing import List
 
@@ -12,14 +12,20 @@ from app.schemas.analysis import (
     HistoryItemResponse,
     DeleteHistoryResponse,
     ExportRequest,
-    ExportMarkdownResponse
+    ExportMarkdownResponse,
+    ParseFileResponse
 )
 from app.services.ai_service import AIService
 from app.services.export_service import ExportService
+from app.services.file_service import FileService, UnsupportedFileTypeError, FileParsingError
+from app.agents.base import AIGenerationError
 from app.repositories.analysis_repository import AnalysisRepository
 from app.core.logging import logger
 
 api_router = APIRouter()
+
+# Max upload size: 10 MB
+MAX_UPLOAD_SIZE_BYTES = 10 * 1024 * 1024
 
 # Dependency injection for services
 def get_ai_service():
@@ -31,6 +37,44 @@ def get_export_service():
 def get_analysis_repo():
     return AnalysisRepository()
 
+def get_file_service():
+    return FileService()
+
+@api_router.post("/parse-file", response_model=ParseFileResponse, tags=["Analysis"])
+async def parse_file(
+    file: UploadFile = File(..., description="A .pdf, .docx, or .txt file to extract text from"),
+    file_service: FileService = Depends(get_file_service)
+):
+    """
+    Accepts an uploaded file (CV or job description) and extracts its plain text
+    content so it can be used with the /analyze endpoint.
+    """
+    try:
+        content = await file.read()
+
+        if len(content) > MAX_UPLOAD_SIZE_BYTES:
+            raise HTTPException(status_code=413, detail="File is too large. Maximum size is 10MB.")
+
+        if not content:
+            raise HTTPException(status_code=400, detail="Uploaded file is empty.")
+
+        text = file_service.extract_text(file.filename, content)
+
+        return ParseFileResponse(
+            filename=file.filename,
+            text=text,
+            char_count=len(text)
+        )
+    except UnsupportedFileTypeError as e:
+        raise HTTPException(status_code=415, detail=str(e))
+    except FileParsingError as e:
+        raise HTTPException(status_code=422, detail=str(e))
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Failed to parse uploaded file: {e}")
+        raise HTTPException(status_code=500, detail=f"Failed to parse file: {e}")
+
 @api_router.post("/analyze", response_model=AnalyzeResponse, tags=["Analysis"])
 def analyze_resume(request: AnalyzeRequest, ai_service: AIService = Depends(get_ai_service)):
     try:
@@ -40,6 +84,9 @@ def analyze_resume(request: AnalyzeRequest, ai_service: AIService = Depends(get_
             user_id=request.user_id
         )
         return AnalyzeResponse(**result)
+    except AIGenerationError as e:
+        logger.error(f"AI generation failed during analysis: {e}")
+        raise HTTPException(status_code=503, detail=str(e))
     except Exception as e:
         logger.error(f"Failed to analyze resume: {e}")
         raise HTTPException(status_code=500, detail=str(e))
@@ -51,6 +98,9 @@ def generate_questions(request: GenerateQuestionsRequest, ai_service: AIService 
         return GenerateQuestionsResponse(**result)
     except ValueError as ve:
         raise HTTPException(status_code=404, detail=str(ve))
+    except AIGenerationError as e:
+        logger.error(f"AI generation failed during interview question generation: {e}")
+        raise HTTPException(status_code=503, detail=str(e))
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
@@ -64,6 +114,9 @@ def evaluate_interview(request: EvaluateInterviewRequest, ai_service: AIService 
             answers=request.answers
         )
         return EvaluateInterviewResponse(**result)
+    except AIGenerationError as e:
+        logger.error(f"AI generation failed during interview evaluation: {e}")
+        raise HTTPException(status_code=503, detail=str(e))
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 

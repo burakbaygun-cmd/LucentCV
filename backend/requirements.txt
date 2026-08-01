@@ -7,3 +7,6 @@ google-genai
 python-dotenv
 slowapi
 reportlab
+python-multipart
+pypdf
+python-docx

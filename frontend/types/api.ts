@@ -4,6 +4,12 @@ export interface AnalyzeRequest {
   user_id?: string;
 }
 
+export interface ParseFileResponse {
+  filename: string;
+  text: string;
+  char_count: number;
+}
+
 export interface AnalyzeResponse {
   analysis_id: string;
   match_score: number;

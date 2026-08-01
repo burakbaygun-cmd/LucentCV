@@ -6,6 +6,7 @@ import {
   EvaluateInterviewRequest,
   EvaluateInterviewResponse,
   HistoryItemResponse,
+  ParseFileResponse,
 } from "../types/api";
 
 const apiClient = axios.create({
@@ -18,6 +19,23 @@ const apiClient = axios.create({
 export const api = {
   analyze: async (data: AnalyzeRequest): Promise<AnalyzeResponse> => {
     const response = await apiClient.post<AnalyzeResponse>("/analyze", data);
+    return response.data;
+  },
+
+  /**
+   * Uploads a CV or job description file (.pdf, .docx, .txt) and returns
+   * the extracted plain text so it can be placed into the analyze form.
+   */
+  parseFile: async (file: File): Promise<ParseFileResponse> => {
+    const formData = new FormData();
+    formData.append("file", file);
+
+    const response = await apiClient.post<ParseFileResponse>("/parse-file", formData, {
+      headers: {
+        // Let the browser set the correct multipart boundary automatically.
+        "Content-Type": "multipart/form-data",
+      },
+    });
     return response.data;
   },
 
