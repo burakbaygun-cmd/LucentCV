@@ -584,6 +584,7 @@ Uygulama, tek bir istem yerine birbirini besleyen bağımsız AI ajanlarının s
 <p align="center">
   <img src="sprints/sprint3/images/register.png" width="440">
 </p>
+
 ### 2. Anasayfa (Dashboard)
 <p align="center">
   <img src="sprints/sprint3/images/dashboard-dark.png" width="900">
@@ -591,6 +592,7 @@ Uygulama, tek bir istem yerine birbirini besleyen bağımsız AI ajanlarının s
 <p align="center">
   <img src="sprints/sprint3/images/dashboard-light.png" width="900">
 </p>
+
 ### 3. Uyum Analizi - Özet ve Detaylı Rapor
 <p align="center">
   <img src="sprints/sprint3/images/analyze-score.png" width="900">
@@ -598,6 +600,7 @@ Uygulama, tek bir istem yerine birbirini besleyen bağımsız AI ajanlarının s
 <p align="center">
   <img src="sprints/sprint3/images/analyze-detailed.png" width="900">
 </p>
+
 ### 4. Mülakat Simülasyonu
 <p align="center">
   <img src="sprints/sprint3/images/simulation-1.png" width="440">
@@ -608,6 +611,7 @@ Uygulama, tek bir istem yerine birbirini besleyen bağımsız AI ajanlarının s
 <p align="center">
   <img src="sprints/sprint3/images/simulation-3.png" width="440">
 </p>
+
 ### 5. Geçmiş
 <p align="center">
   <img src="sprints/sprint3/images/history.png" width="900">
