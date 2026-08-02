@@ -14,4 +14,4 @@ SADECE asagidaki JSON formatinda cevap ver, baska hicbir metin ekleme:
 }"""
 
 def run(client: genai.Client, cv_text: str) -> dict:
-    return call_gemini(client, CV_ANALYZER_PROMPT, f"CV metni:\n\n{cv_text}")
+    return call_gemini(client, CV_ANALYZER_PROMPT, f"CV metni:\n\n{cv_text}", agent_type="cv")

@@ -39,4 +39,4 @@ SADECE aşağıdaki JSON formatında cevap ver, başka hiçbir açıklama ekleme
 
 def run(client: genai.Client, full_data: dict) -> dict:
     combined_input = f"Tüm Analiz Verisi:\n{json.dumps(full_data, ensure_ascii=False)}"
-    return call_gemini(client, REPORT_AGENT_PROMPT, combined_input)
+    return call_gemini(client, REPORT_AGENT_PROMPT, combined_input, agent_type="report")

@@ -14,4 +14,4 @@ SADECE asagidaki JSON formatinda cevap ver, baska hicbir metin ekleme:
 }"""
 
 def run(client: genai.Client, job_text: str) -> dict:
-    return call_gemini(client, JOB_ANALYZER_PROMPT, f"Is ilani metni:\n\n{job_text}")
+    return call_gemini(client, JOB_ANALYZER_PROMPT, f"Is ilani metni:\n\n{job_text}", agent_type="job")
