@@ -593,12 +593,12 @@ Uygulama, tek bir istem yerine birbirini besleyen bağımsız AI ajanlarının s
   <img src="sprints/sprint3/images/dashboard-light.png" width="900">
 </p>
 
-### 3. Uyum Analizi - Özet ve Detaylı Rapor
+### 3. CV - İş İlanı Analizi (Özet ve Detaylı Rapor)
 <p align="center">
-  <img src="sprints/sprint3/images/analyze-score.png" width="900">
+  <img src="sprints/sprint3/images/analyze-score.png" width="440">
 </p>
 <p align="center">
-  <img src="sprints/sprint3/images/analyze-detailed.png" width="900">
+  <img src="sprints/sprint3/images/analyze-detailed.png" width="440">
 </p>
 
 ### 4. Mülakat Simülasyonu
