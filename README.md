@@ -368,7 +368,7 @@ https://imgur.com/a/LcQ2C2o
   <img src="sprints/sprint2/images/cv-analysis.png" width="900">
 </p>
 
-### 3. Akıllı Mülakat Simülasyonu
+### 4. Mülakat Simülasyonu
 <p align="center">
   <img src="sprints/sprint2/images/simulation-1.png" width="440">
 </p>
@@ -533,7 +533,7 @@ https://imgur.com/a/TTIyVUg
 
 ---
 
-## 🚀 Canlı Demo & Ürün Durumu
+##  Canlı Demo & Ürün Durumu
 - **Frontend Canlı Demo (Vercel):** [https://lucentcv.vercel.app](https://lucentcv.vercel.app)
 
 ### Güncel Product Description
