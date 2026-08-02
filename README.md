@@ -575,30 +575,43 @@ Uygulama, tek bir istem yerine birbirini besleyen bağımsız AI ajanlarının s
 
 [Miro Board: Sprint 3 (Final Release)](https://miro.com/app/board/uXjVH9pRtGM=/?share_link_id=600317486350)
 
-## Product Showcase
-
-<!-- Örnek görsel ekleme formatı:
-![Dashboard Ekran Görüntüsü](gorsel_dosya_yolu_veya_linki.png)
--->
-<img width="1440" height="900" alt="Ekran Resmi 2026-08-02 16 32 43" src="https://github.com/user-attachments/assets/272c4a22-6b59-4b5d-89e5-e7a6c6558654" /><br>
-
-<div align="center">
-  
-<img width="589" height="652" alt="Ekran Resmi 2026-08-02 16 33 20" src="https://github.com/user-attachments/assets/0a604d56-51b9-4bf9-9f6a-ff3e8636bd4b" /><br>
-<img width="589" height="652" alt="Ekran Resmi 2026-08-02 16 33 40" src="https://github.com/user-attachments/assets/9c463314-385e-406b-b52f-2f26f6b5e718" /><br>
-<img width="1440" height="900" alt="Ekran Resmi 2026-08-02 16 34 09" src="https://github.com/user-attachments/assets/30628006-ae8a-4f3c-88c0-c4c01b8b6556" /><br><br>
-<img width="1310" height="664" alt="1" src="https://github.com/user-attachments/assets/db5258b8-5ce6-444a-9995-69ef26752233" /><br>
-<img width="1320" height="668" alt="2" src="https://github.com/user-attachments/assets/d7a7e8ae-a6db-46c9-8261-cd38eb49731f" /><br>
-<img width="1166" height="507" alt="1" src="https://github.com/user-attachments/assets/370fec6b-a669-462c-9aa1-d966740f7020" /><br>
-<img width="626" height="814" alt="2" src="https://github.com/user-attachments/assets/074ee9e1-c274-4146-91ce-f9c79d73ab3a" /><br>
-<img width="526" height="453" alt="1" src="https://github.com/user-attachments/assets/a713094b-7f84-45a6-ab79-be9d4da1e8e0" /><br>
-<img width="426" height="704" alt="2" src="https://github.com/user-attachments/assets/d1e1cbb3-49cf-4bca-8bcc-7205e07c985b" /><br>
-<img width="426" height="742" alt="3" src="https://github.com/user-attachments/assets/d4bdde0e-20e3-4675-9de0-f2edd1f783aa" /><br>
-<img width="427" height="810" alt="4" src="https://github.com/user-attachments/assets/a1b87814-5c8a-4f1d-a8c0-29f59f223b89" /><br>
-<img width="1310" height="657" alt="1" src="https://github.com/user-attachments/assets/feb3c085-b014-4e47-8cd8-42d762a6058d" /><br>
-  
-</div>
-
+## Ürün Durumu (Sprint 3)
+ 
+### 1. Giriş ve Kayıt Ekranı
+<p align="center">
+  <img src="sprints/sprint3/images/login.png" width="440">
+</p>
+<p align="center">
+  <img src="sprints/sprint3/images/register.png" width="440">
+</p>
+### 2. Anasayfa (Dashboard)
+<p align="center">
+  <img src="sprints/sprint3/images/dashboard-dark.png" width="900">
+</p>
+<p align="center">
+  <img src="sprints/sprint3/images/dashboard-light.png" width="900">
+</p>
+### 3. Uyum Analizi - Özet ve Detaylı Rapor
+<p align="center">
+  <img src="sprints/sprint3/images/analyze-score.png" width="900">
+</p>
+<p align="center">
+  <img src="sprints/sprint3/images/analyze-detailed.png" width="900">
+</p>
+### 4. Mülakat Simülasyonu
+<p align="center">
+  <img src="sprints/sprint3/images/simulation-1.png" width="440">
+</p>
+<p align="center">
+  <img src="sprints/sprint3/images/simulation-2.png" width="440">
+</p>
+<p align="center">
+  <img src="sprints/sprint3/images/simulation-3.png" width="440">
+</p>
+### 5. Geçmiş
+<p align="center">
+  <img src="sprints/sprint3/images/history.png" width="900">
+</p>
 
 
 ## Video Link
