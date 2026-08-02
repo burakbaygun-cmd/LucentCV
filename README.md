@@ -595,10 +595,10 @@ Uygulama, tek bir istem yerine birbirini besleyen bağımsız AI ajanlarının s
 
 ### 3. CV - İş İlanı Analizi (Özet ve Detaylı Rapor)
 <p align="center">
-  <img src="sprints/sprint3/images/analyze-score.png" width="440">
+  <img src="sprints/sprint3/images/analyze-score.png" width="900">
 </p>
 <p align="center">
-  <img src="sprints/sprint3/images/analyze-detailed.png" width="440">
+  <img src="sprints/sprint3/images/analyze-detailed.png" width="550">
 </p>
 
 ### 4. Mülakat Simülasyonu
