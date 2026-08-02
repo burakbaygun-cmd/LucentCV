@@ -582,7 +582,7 @@ Uygulama, tek bir istem yerine birbirini besleyen bağımsız AI ajanlarının s
 -->
 
 ## Video Link
-- **3 Dakikalık Final Sunum Videosu:** [YouTube Video Linkini Buraya Ekleyiniz]
+- **3 Dakikalık Final Sunum Videosu:** (https://youtu.be/VTqip2cWYSQ)
 
 ---
 
