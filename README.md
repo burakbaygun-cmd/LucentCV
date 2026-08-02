@@ -534,7 +534,7 @@ https://imgur.com/a/TTIyVUg
 ---
 
 ## 🚀 Canlı Demo & Ürün Durumu
-- **Frontend Canlı Demo (Vercel):** [https://frontend-rho-five-82.vercel.app](https://frontend-rho-five-82.vercel.app)
+- **Frontend Canlı Demo (Vercel):** [https://lucentcv.vercel.app](https://lucentcv.vercel.app)
 
 ### Güncel Product Description
 LucentCV, kullanıcıların CV'lerini ve başvurmak istedikleri iş ilanlarını yapay zekâ destekli çoklu ajan (Multi-Agent) mimarisi ile analiz ederek uyum skorunu, eksik yetkinlikleri, geliştirme önerilerini ve kişiselleştirilmiş mülakat deneyimini sunan modern bir AI kariyer platformudur. Sprint 3 aşamasında sistem production ortamına taşınmış, tüm test senaryoları ve güvenlik kontrolleri başarıyla tamamlanmıştır.
