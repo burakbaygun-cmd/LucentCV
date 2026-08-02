@@ -622,16 +622,6 @@ Sprint 3 ve tüm bootcamp süreci boyunca ekip olarak yazılım geliştirme, mim
 
 ---
 
-## Teslim Öncesi Kontrol Listesi (Checklist)
-
-- [x] GitHub Public Repository
-- [x] Güncel ve Kapsamlı README
-- [x] Eksiksiz Sprint Klasörleri ve Dokümantasyon
-- [x] Çalışan Miro Backlog Linki
-- [x] Canlı Demo (Vercel) Bağlantısı
-- [x] YouTube Proje Tanıtım Videosu
-- [x] Uçtan Uca Test Senaryoları (Register, Login, Google Auth, CV Upload, Analysis, Match Score, Summary, Simulation, PDF Download, History, Logout)
-- [x] Hata Senaryoları Testleri (Boş CV/İlan, Kesinti, Gemini Hata Durumları)
 
 ## Kurulum
 ```bash
