@@ -1,3 +1,4 @@
+import os
 from fastapi import APIRouter, HTTPException, Depends, UploadFile, File
 from fastapi.responses import Response
 from typing import List
@@ -23,6 +24,13 @@ from app.repositories.analysis_repository import AnalysisRepository
 from app.core.logging import logger
 
 api_router = APIRouter()
+
+@api_router.get("/debug/version", tags=["System"])
+def get_debug_version():
+    return {
+        "commit": os.environ.get("RENDER_GIT_COMMIT", "local-dev"),
+        "service": "LucentCV 2.0 Backend"
+    }
 
 # Max upload size: 10 MB
 MAX_UPLOAD_SIZE_BYTES = 10 * 1024 * 1024
