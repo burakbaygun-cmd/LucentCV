@@ -18,4 +18,4 @@ def run(client: genai.Client, cv_analysis: dict, job_analysis: dict, match_resul
         f"Ilan Analizi:\n{json.dumps(job_analysis, ensure_ascii=False)}\n\n"
         f"Uyum Degerlendirmesi:\n{json.dumps(match_result, ensure_ascii=False)}"
     )
-    return call_gemini(client, SUMMARY_AGENT_PROMPT, combined_input)
+    return call_gemini(client, SUMMARY_AGENT_PROMPT, combined_input, agent_type="summary")

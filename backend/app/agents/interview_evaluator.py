@@ -37,4 +37,4 @@ def run(client: genai.Client, questions: list, answers: dict) -> dict:
             "answer": answers.get(str(qid), answers.get(qid, "")),
         })
     combined_input = f"Soru-Cevap Ciftleri:\n{json.dumps(qa_pairs, ensure_ascii=False)}"
-    return call_gemini(client, INTERVIEW_EVALUATOR_PROMPT, combined_input)
+    return call_gemini(client, INTERVIEW_EVALUATOR_PROMPT, combined_input, agent_type="interview_evaluation")
